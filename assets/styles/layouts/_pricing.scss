@@ -1,0 +1,28 @@
+.layout-pricing{
+  .included{
+    color: $green;
+  }
+  .not-included{
+    color: rgba($gray-800, .1);
+  }
+  table{
+    th{
+      border-top: none;
+      border-bottom: 2px solid $gray-200;
+    }
+    tr{
+      td{
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        vertical-align: middle;
+
+        &.product-title{
+          font-weight: normal;
+        }
+        &.product-price{
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

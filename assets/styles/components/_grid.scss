@@ -1,0 +1,20 @@
+@include media-breakpoint-up(xl){
+  .col-xl-2-4{
+    @include make-col(2.4, 12)
+  }
+}
+@include media-breakpoint-up(md){
+  .col-md-2-4{
+    @include make-col(2.4, 12)
+  }
+}
+@include media-breakpoint-up(ld){
+  .col-lg-2-4{
+    @include make-col(2.4, 12)
+  }
+}
+@include media-breakpoint-up(sm){
+  .col-sm-2-4{
+    @include make-col(2.4, 12)
+  }
+}

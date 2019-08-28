@@ -1,0 +1,51 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "./../node_modules/bootstrap/dist/js/bootstrap.js",
+        "./../node_modules/aos/dist/aos.js",
+        "./../node_modules/slick-carousel/slick/slick.js",
+        "./../node_modules/smooth-scroll/dist/smooth-scroll.js",
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "./../node_modules/aos/dist/aos.css",
+        "./../node_modules/slick-carousel/slick/slick.scss",
+        "./../node_modules/font-awesome/scss/font-awesome.scss",
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "login.css": {
+      "files": [
+        "styles/login.scss"
+      ]
+    },
+    "admin.css": {
+      "files": [
+        "styles/admin.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "tinymce.js": {
+      "files": [
+        "scripts/tinymce.js"
+      ]
+    },
+    "jquery.js": {
+      "files": [
+        "./../node_modules/jquery/dist/jquery.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://imaga.local"
+  }
+}

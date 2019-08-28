@@ -1,0 +1,56 @@
+{
+  "name": "imaga",
+  "homepage": "https://odil.io/",
+  "authors": [
+    "Odilio Witteveen <hallo@odil.io>"
+  ],
+  "license": "GPL",
+  "private": true,
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./scss/_functions.scss",
+        "./scss/_variables.scss",
+        "./scss/_mixins.scss",
+        "./scss/_print.scss",
+        "./scss/_reboot.scss",
+        "./scss/_type.scss",
+        "./scss/_images.scss",
+        "./scss/_code.scss",
+        "./scss/_grid.scss",
+        "./scss/_tables.scss",
+        "./scss/_forms.scss",
+        "./scss/_buttons.scss",
+        "./scss/_transitions.scss",
+        "./scss/_dropdown.scss",
+        "./scss/_button-group.scss",
+        "./scss/_input-group.scss",
+        "./scss/_custom-forms.scss",
+        "./scss/_nav.scss",
+        "./scss/_navbar.scss",
+        "./scss/_card.scss",
+        "./scss/_breadcrumb.scss",
+        "./scss/_pagination.scss",
+        "./scss/_badge.scss",
+        "./scss/_jumbotron.scss",
+        "./scss/_alert.scss",
+        "./scss/_progress.scss",
+        "./scss/_media.scss",
+        "./scss/_list-group.scss",
+        "./scss/_close.scss",
+        "./scss/_modal.scss",
+        "./scss/_tooltip.scss",
+        "./scss/_popover.scss",
+        "./scss/_carousel.scss",
+        "./scss/_utilities.scss",
+        "./dist/js/bootstrap.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    }
+  }
+}

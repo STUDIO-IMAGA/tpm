@@ -1,0 +1,42 @@
+.acf-field{
+  .layout_columns{
+    .acf-repeater{
+      .acf-table{
+        .ui-sortable{
+          display: flex;
+          flex-wrap: wrap;
+          .acf-row{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+
+            td.acf-fields{
+              flex-basis: 0;
+              flex-grow: 1;
+              max-width: 100%;
+              border: none;
+            }
+            .acf-row-handle.order{
+              display: none;
+            }
+            .acf-row-handle.remove{
+              border-right: 1px solid #DFDFDF;
+              border-top: none;
+
+              .acf-icon.-plus{
+                display: none;
+              }
+            }
+            &:nth-last-child(2){
+              .acf-row-handle.remove{
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

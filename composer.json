@@ -1,0 +1,23 @@
+{
+  "name": "odil-io/imaga",
+  "type": "wordpress-theme",
+  "license": "GPL",
+  "description": "IMAGA Starter theme based on Sage 8.5.3.",
+  "homepage": "https://odil.io/",
+  "authors": [
+    {
+      "name": "Odilio Witteveen",
+      "email": "hallo@odil.io",
+      "homepage": "https://odil.io/"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "imaga"
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "composer/installers": "~1.0",
+    "tgmpa/tgm-plugin-activation": "^2.6"
+  }
+}
