@@ -1,10 +1,9 @@
-<?
+<?php
 
 $files = [
   'lib/setup.php',                        // Theme setup
   'lib/integrations/acf.php',             // Advanced Custom Fields
   'lib/integrations/bootstrap_walker.php',// Navigation Bootstrap Walker
-  'lib/integrations/classic-editor.php',  // TGM Plugin Activation
   'lib/integrations/tgmpa.php',           // TGM Plugin Activation
   'lib/integrations/version-info.php',    // Version Info
   'lib/integrations/wpsvg.php',           // WPSVG

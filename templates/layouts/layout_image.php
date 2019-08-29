@@ -3,25 +3,25 @@ use IMAGA\Theme\Extras;
 
 $image = get_sub_field('image'); ?>
 
-<? if( !empty($image) ): ?>
+<?php if( !empty($image) ): ?>
 
-  <? if( get_sub_field('appearence') == 'cover' ): ?>
+  <?php if( get_sub_field('appearence') == 'cover' ): ?>
 
-    <section id="section-<?= get_row_index(); ?>" class="layout-image bg-cover <? the_sub_field('background_color'); ?>" style="background-image: url(<?= $image['url']; ?>); min-height:<? the_sub_field('height'); ?>px">
+    <section id="section-<?php echo get_row_index(); ?>" class="layout-image bg-cover <?php the_sub_field('background_color'); ?>" style="background-image: url(<?php echo $image['url']; ?>); min-height:<?php the_sub_field('height'); ?>px">
     </section>
 
-  <? elseif( get_sub_field('appearence') == 'contain' ): ?>
+  <?php elseif( get_sub_field('appearence') == 'contain' ): ?>
 
-    <section id="section-<?= get_row_index(); ?>" class="layout-image <? the_sub_field('background_color'); ?>">
+    <section id="section-<?php echo get_row_index(); ?>" class="layout-image <?php the_sub_field('background_color'); ?>">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" />
+            <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
           </div>
         </div>
       </div>
     </section>
 
-  <? endif; ?>
+  <?php endif; ?>
 
-<? endif; ?>
+<?php endif; ?>

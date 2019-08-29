@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Theme plugins for production
  */

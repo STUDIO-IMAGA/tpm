@@ -1,6 +1,20 @@
 // Grid settings
 $main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1440px
+);
 
 // Color system
 $white:         #fff;
@@ -12,8 +26,8 @@ $gray-400:      #BDBDBD;
 $gray-500:      #9E9E9E;
 $gray-600:      #757575;
 $gray-700:      #616161;
-$gray-800:      #123340; //#424242;
-$gray-900:      #0B1E26; //#212121;
+$gray-800:      #123340;
+$gray-900:      #0B1E26;
 $black:         #000;
 
 $grays: (
@@ -29,8 +43,8 @@ $grays: (
   900: $gray-900
 );
 
-$blue:          #00b0ff; //#5980ec;
-$indigo:        #00A0D2; //#651FFF;
+$blue:          #00b0ff;
+$indigo:        #00A0D2;
 $purple:        #6f42c1;
 $pink:          #e83e8c;
 $red:           #EF4836;
@@ -39,7 +53,7 @@ $yellow:        #ffbc00;
 $green:         #0BDA51;
 $teal:          #466baa;
 $turquoise:     #00bfa5;
-$cyan:          #57E3F2; //#00b0ff;
+$cyan:          #57E3F2;
 
 $colors: (
   blue:         $blue,
@@ -129,30 +143,16 @@ $h4-font-size:                    1.4rem;
 $h5-font-size:                    1.2rem;
 $h6-font-size:                    1.1rem;
 
-$display1-size:                   2.4rem; //6rem !default;
-$display2-size:                   2rem;   //5.5rem !default;
-$display3-size:                   1.8rem; //4.5rem !default;
-$display4-size:                   1.4rem; //3.5rem !default;
+$display1-size:                   2.4rem;
+$display2-size:                   2rem;
+$display3-size:                   1.8rem;
+$display4-size:                   1.4rem;
 
-$lead-font-size:                  1.28rem; //1.25rem
+$lead-font-size:                  1.28rem;
 
-$nav-link-padding-y:              .4rem; //.5rem
-$navbar-padding-y:                0rem; //($spacer / 2)
+$nav-link-padding-y:              .4rem;
+$navbar-padding-y:                1.4rem;
 $navbar-nav-link-padding-x:       .8rem;
-
-$dropdown-bg:                     $gray-150;
-$dropdown-link-hover-bg:          transparent;
-$dropdown-link-active-bg:         transparent;
-$dropdown-link-color:             rgba($black, .6);
-$dropdown-link-hover-color:       $black;
-$dropdown-link-active-color:      $black;
-$dropdown-border-width:           0px;
-$dropdown-font-size:              $font-size-base;
-$dropdown-min-width:              100%;
-$dropdown-spacer:                 0px;
-$dropdown-padding-y:              0px;
-$dropdown-item-padding-y:         .5rem;
-$dropdown-item-padding-x:         1rem;
 
 $table-border-color:              rgba( $gray-800, .2);
 $table-hover-bg:                  rgba($gray-100, .3);

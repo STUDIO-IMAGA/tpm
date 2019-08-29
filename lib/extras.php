@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace IMAGA\Theme\Extras;
 
@@ -78,178 +78,18 @@ function recent_posts( $post_per_page = 4 ){
 
       <li class="list-item py-1">
 
-        <a href="<?= get_permalink(); ?>" class="text-gray-500">
-          <? the_title(); ?>
+        <a href="<?php echo get_permalink(); ?>" class="text-gray-500">
+          <?php the_title(); ?>
         </a>
 
-        <? if( $seconds < 172800 ): ?>
+        <?php if( $seconds < 172800 ): ?>
           <span class="badge badge-info">NEW</span>
-        <? endif; ?>
+        <?php endif; ?>
 
       </li>
 
-      <?
+      <?php
     endwhile;
-    wp_reset_postdata();
-    wp_reset_query();
-  endif;
-}
-
-/**
- * Shows all items in post type 'employees'.
- * Displayed in Bootstrap 4 styling.
- */
-function the_employees(){
-  $args = array('post_type' => 'employees','orderby' => 'post_date','order' => 'ASC');
-  $query = new wp_query( $args );
-  $modulus = 0;
-
-  if($query->have_posts()):
-    while( $query->have_posts() ) :
-      $modulus++;
-      $query->the_post();
-      $terms = get_field('skills');
-      if($modulus % 2 == 0):
-        $switch_class = 'order-2';
-        $switch_bg = 'bg-light';
-      else:
-        $switch_class = '';
-        $switch_bg = '';
-      endif;
-      ?>
-      <section id="<?= strtolower( str_replace(' ','', get_the_title() ) ); ?>" class="pt-6 <?= $switch_bg; ?>">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-              <div class="row">
-                <div class="col-4 col-md-2">
-                  <img class="img-fluid img-circle box-shadow" src="<? the_post_thumbnail_url('thumbnail'); ?>" alt="<? the_title(); ?>">
-                </div>
-                <div class="col-8 d-block d-md-none">
-                  <h1 class="display-1"><? the_title(); ?></h1>
-                </div>
-                <div class="col-12 col-md-10 pt-3 pt-md-0 pb-3">
-                  <h1 class="display-2 d-none d-md-block"><? the_title(); ?></h1>
-                  <? if( $terms ): ?>
-                    <? foreach( $terms as $term ): ?>
-                      <span class="badge badge-blue mr-2"><?= $term->name; ?></span>
-                    <? endforeach; ?>
-                  <? endif; ?>
-                </div>
-              </div>
-
-              <div class="row justify-content-end">
-                <div class="col-12 col-md-10">
-                  <? the_content(); ?>
-                </div>
-              </div>
-              <div class="row justify-content-end pt-3">
-                <div class="col-12 col-md-10">
-                  <? if( have_rows('content') ): ?>
-                    <? while( have_rows('content') ): the_row(); ?>
-                      <h1 class="display-1"><? the_sub_field('title'); ?></h1>
-                      <div class="mb-4">
-                        <? the_sub_field('content'); ?>
-                      </div>
-                    <? endwhile; ?>
-                  <? endif; ?>
-                </div>
-              </div>
-              <div class="row text-center py-4">
-                <? if( have_rows('badges') ): ?>
-                  <? while( have_rows('badges') ): the_row(); ?>
-                    <? $image = get_sub_field('image'); ?>
-                    <? if( !empty($image) ): ?>
-                      <div class="col">
-                        <img class="img-fluid" src="<?= $image['url']; ?>" alt="<? the_sub_field('title'); ?>">
-                      </div>
-                    <? endif; ?>
-                  <? endwhile; ?>
-                <? endif; ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <?
-    endwhile;
-    wp_reset_postdata();
-    wp_reset_query();
-  endif;
-}
-
-/**
- * Displays all items in $post_objects
- */
-function the_brands( $post_objects ){
-  $modulus = 0;
-
-  if( $post_objects ):
-    ?>
-    <div class="row">
-
-      <? foreach( $post_objects as $post_object): ?>
-        <div class="col-6 col-md-2-4 p-md-3">
-
-          <? if( get_field('url' ,$post_object->ID) ):?>
-            <a href="<? the_field('url', $post_object->ID); ?>" target="_blank" alt="<?= get_the_title($post_object->ID); ?>">
-          <? endif;?>
-
-              <img class="img-fluid brands-img" src="<?= get_the_post_thumbnail_url($post_object->ID, 'brand-thumbnail'); ?>" title="<?= get_the_title($post_object->ID); ?>" alt="<?= get_the_title($post_object->ID); ?>"/>
-
-          <? if( get_field('url', $post_object->ID) ):?>
-            </a>
-          <? endif;?>
-
-        </div>
-      <? endforeach; ?>
-    </div>
-    <?
-  endif;
-}
-
-/**
- * Displays all item in post type 'Reviews'
- */
-function recent_reviews( $post_per_page = 4 ){
-  $args = array('post_type' => 'reviews', 'posts_per_page' => $post_per_page);
-  $query = new wp_query( $args );
-
-  if($query->have_posts()):
-    ?>
-    <div class="review-slider w-100">
-    <?
-      while( $query->have_posts() ) :
-        $query->the_post();
-        ?>
-
-        <div class="review">
-          <div class="col-12">
-
-            <div class="row">
-              <div class="col-3 text-right">
-                <img class="img-fluid img-circle" src="<?= get_the_post_thumbnail_url(); ?>" alt="<? the_title(); ?>">
-              </div>
-              <div class="col-9">
-                <? the_title(); ?>, <? the_field('company'); ?> <? the_field('location'); ?>
-                <span class="review-stars text-orange">
-                  <? the_field('stars'); ?>
-                </span>
-                <p>
-                  <small>
-                    <? the_content(); ?>
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <?
-      endwhile;
-    ?>
-    </div>
-    <?
     wp_reset_postdata();
     wp_reset_query();
   endif;

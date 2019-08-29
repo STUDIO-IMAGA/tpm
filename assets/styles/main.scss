@@ -13,21 +13,14 @@ $fa-font-path: "../fonts";
 
 @import "common/global";
 
-@import "components/buttons";
 @import "components/backgrounds";
-@import "components/brands";
-@import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/typography";
 @import "components/grid";
-@import "components/cards";
 
-@import "layouts/header";
-@import "layouts/reviews";
 @import "layouts/footer";
+@import "layouts/header";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
-@import "layouts/pricing";
-@import "layouts/columns";

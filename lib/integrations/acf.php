@@ -1,4 +1,4 @@
-<?
+<?php
 namespace IMAGA\Theme\ACF;
 /**
 * Add Theme Settings page

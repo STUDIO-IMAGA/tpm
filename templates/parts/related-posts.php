@@ -8,41 +8,41 @@
       </div>
     </div>
     <div class="row">
-      <? $args = array( 'post_type' => 'post', 'orderby' => 'post_date', 'order' => 'desc', 'posts_per_page' => 4 ); ?>
-      <? $query = new wp_query( $args ); ?>
-      <? $i = 0;?>
+      <?php $args = array( 'post_type' => 'post', 'orderby' => 'post_date', 'order' => 'desc', 'posts_per_page' => 4 ); ?>
+      <?php $query = new wp_query( $args ); ?>
+      <?php $i = 0;?>
       <div class="card-deck">
-        <? if($query->have_posts()): ?>
-          <? while( $query->have_posts() ) :  $query->the_post(); $i++; ?>
+        <?php if($query->have_posts()): ?>
+          <?php while( $query->have_posts() ) :  $query->the_post(); $i++; ?>
 
-            <article <? post_class('card box-shadow overflow-hidden'); ?>>
-              <a class="text-body" href="<? the_permalink(); ?>">
-                <? if( has_post_thumbnail() ): ?>
-                  <img class="card-img-top" src="<? the_post_thumbnail_url('post-thumbnail-related'); ?>" alt="<? the_title(); ?>">
-                <? endif; ?>
+            <article <?php post_class('card box-shadow overflow-hidden'); ?>>
+              <a class="text-body" href="<?php the_permalink(); ?>">
+                <?php if( has_post_thumbnail() ): ?>
+                  <img class="card-img-top" src="<?php the_post_thumbnail_url('post-thumbnail-related'); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
                 <div class="card-body">
                   <div class="card-title">
                     <header>
                       <h1 class="display-4 text-body">
-                        <? the_title(); ?>
+                        <?php the_title(); ?>
                       </h1>
                     </header>
                   </div>
                   <div class="card-text text-muted">
-                    <? the_field('lead'); ?>
+                    <?php the_field('lead'); ?>
                   </div>
                 </div>
               </a>
             </article>
 
-            <? if($i % 4 == 0): ?>
+            <?php if($i % 4 == 0): ?>
           </div><div class="card-deck">
-            <? endif; ?>
+            <?php endif; ?>
 
-          <? endwhile; ?>
-          <? wp_reset_postdata(); ?>
-          <? wp_reset_query(); ?>
-        <? endif; ?>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php wp_reset_query(); ?>
+        <?php endif; ?>
     </div>
   </div>
 </section>

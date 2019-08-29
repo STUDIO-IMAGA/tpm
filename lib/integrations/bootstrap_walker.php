@@ -1,5 +1,4 @@
-<?
-
+<?php
 namespace IMAGA\Theme\Bootstrap_Walker;
 
 use Walker_Nav_Menu;

@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace IMAGA\Theme\Setup;
 
@@ -20,8 +20,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Hoofd Menu', 'imaga'),
-    'secondary_navigation' => __('Footer Menu', 'imaga'),
-    'tertiary_navigation' => __(' Copyright Menu', 'imaga'),
+    'secondary_navigation' => __('Info Menu', 'imaga'),
+    'tertiary_navigation' => __(' Footer Menu', 'imaga'),
+    'quaternary_navigation' => __(' Copyright Menu', 'imaga'),
   ]);
 
   // Enable post thumbnails
@@ -30,6 +31,9 @@ function setup() {
 
   // Enable HTML5 markup support
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
+
+  // Enable the custom logo field in the Customizer
+  add_theme_support( 'custom-logo' );
 
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
