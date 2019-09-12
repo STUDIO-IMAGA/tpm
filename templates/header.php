@@ -1,60 +1,29 @@
-<?php
-use IMAGA\Theme\Assets;
-use IMAGA\Theme\Bootstrap_Walker;
+<?php $header = get_field('header');?>
+<?php $featured = get_field('featured');?>
 
-// Set Custom Logo variables
-$custom_logo_id = get_theme_mod( 'custom_logo' );
-$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-$phone = get_field('company_phone', 'options');
-?>
-
-<header class="navbar-container">
-
-  <nav class="navbar navbar-dark navbar-expand-lg">
-    <div class="container">
-
-      <a class="navbar-brand" href="<?php esc_url( home_url('/') ); ?>">
-        <?php if ( has_custom_logo() ): ?>
-            <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
-        <?php else: ?>
-          <?php echo get_bloginfo('name'); ?>
-        <?php endif; ?>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="<?php _e('Toggle navigation','imaga'); ?>">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div id="primary_navigation" class="collapse navbar-collapse navbar-toggle">
-        <?php
-        // Hoofd menu
-        wp_nav_menu(
-          array(
-            'theme_location'    => 'primary_navigation',
-            'container'         => false,
-            'menu_class'        => 'mr-auto nav navbar-nav',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new Bootstrap_Walker\WP_Bootstrap_Navwalker()
-          )
-        );
-
-        // Secundair menu
-        wp_nav_menu(
-          array(
-            'theme_location'    => 'secondary_navigation',
-            'container'         => false,
-            'menu_class'        => 'nav navbar-nav',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new Bootstrap_Walker\WP_Bootstrap_Navwalker()
-          )
-        );
-        ?>
-        <span class="navbar-text">
-          <i class="fa fa-phone"></i><a href="tel:<?php echo esc_url($phone); ?>"><?php echo $phone; ?></a>
-        </span>
+<section id="header" class="bg-gray-300">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 py-md-5">
+        <div class="content py-md-6">
+          <h1><?php echo $header['title'];?></h1>
+          <?php echo $header['introduction'];?>
+        </div>
       </div>
-
+      <div class="col-12 col-md-6 text-center">
+        <img class="img-fluid" src="https://placehold.it/800x400" alt="TPM Logo met foto invulling">
+      </div>
     </div>
-  </nav>
-
-</header>
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="enumeration">
+          <span>Project management & Consultancy</span>
+          <span class="seperator"></span>
+          <span>Enginering</span>
+          <span class="seperator"></span>
+          <span>Interim professionals</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

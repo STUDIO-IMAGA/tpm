@@ -24,11 +24,6 @@
         "styles/login.scss"
       ]
     },
-    "admin.css": {
-      "files": [
-        "styles/admin.scss"
-      ]
-    },
     "customizer.js": {
       "files": [
         "scripts/customizer.js"

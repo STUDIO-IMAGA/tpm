@@ -1,26 +1,24 @@
 @import "common/variables";
 @import "common/mixins";
+@import "common/global";
 
+// Load Bootstrap
 @import "./../../node_modules/bootstrap/scss/bootstrap";
 
+// Load FontAwesome
 $fa-font-path: "../fonts";
 @import "./../../node_modules/font-awesome/scss/font-awesome";
 
-
-// Automatically injected Bower dependencies via wiredep (never manually edit this block)
-// bower:scss
-// endbower
-
-@import "common/global";
 
 @import "components/backgrounds";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/typography";
+@import "components/buttons";
 @import "components/grid";
 
-@import "layouts/footer";
 @import "layouts/header";
+@import "layouts/navigation";
+@import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
-@import "layouts/tinymce";

@@ -7,6 +7,7 @@ $files = [
   'lib/integrations/tgmpa.php',           // TGM Plugin Activation
   'lib/integrations/version-info.php',    // Version Info
   'lib/integrations/wpsvg.php',           // WPSVG
+  'lib/integrations/tinymce.php',         // WYSIWYG setup
 
   'lib/assets.php',                       // Scripts and stylesheets
   'lib/customizer.php',                   // Theme customizer
@@ -34,5 +35,3 @@ foreach ($files as $file):
 endforeach;
 
 unset($file, $filepath);
-
-add_filter('use_block_editor_for_post', '__return_false', 10);

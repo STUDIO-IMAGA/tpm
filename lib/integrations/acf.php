@@ -1,5 +1,7 @@
 <?php
+
 namespace IMAGA\Theme\ACF;
+
 /**
 * Add Theme Settings page
 */
@@ -18,7 +20,7 @@ endif;
 */
 function acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
 
-  // some magic
+  // some magic (requires PHP 7.3 or up)
   // see: https://stackoverflow.com/a/40607717
   $desc = strip_tags( get_sub_field( 'title' ) ??0?: get_sub_field( 'lead' ) ??0?: get_sub_field( 'author' ) ??0?: get_sub_field( 'text' ) );
 
@@ -50,3 +52,27 @@ function acf_json_load_point( $paths ) {
     return $paths;
 }
 add_filter('acf/settings/load_json', __NAMESPACE__ . '\\acf_json_load_point');
+
+/**
+* Modify WYSIWYG Toolbar
+* source: https://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
+*/
+function my_toolbars( $toolbars ) {
+
+  // Add toolbars
+  // Simple Title toolbar used for titles bacause we don't want button and stuff in it
+  $toolbars['Simple Title'] = array();
+  $toolbars['Simple Title'][1] = array('bold', 'italic', 'underline', 'link', 'undo', 'redo');
+
+  // Simple Content toolbar used for all content type fields. Here you can add buttons and stuff
+	$toolbars['Simple Content'] = array();
+	$toolbars['Simple Content'][1] = array('bold', 'italic', 'underline', 'bullist', 'numlist', 'alignleft', 'alignright', 'aligncenter', 'link', 'undo', 'redo', 'styleselect');
+
+
+	// remove the 'Basic' toolbar completely
+	unset( $toolbars['Basic'] );
+
+  // Important!
+	return $toolbars;
+}
+add_filter( 'acf/fields/wysiwyg/toolbars' , __NAMESPACE__ . '\\my_toolbars'  );

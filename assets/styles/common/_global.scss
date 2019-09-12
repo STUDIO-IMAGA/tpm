@@ -9,3 +9,10 @@
 .img-circle{
   border-radius: 9999px !important;
 }
+
+@for $i from 0 through ceil(500/50) {
+  $num: ($i - 0)*50;
+  .z-#{$num} {
+    z-index: $num !important;
+  }
+}

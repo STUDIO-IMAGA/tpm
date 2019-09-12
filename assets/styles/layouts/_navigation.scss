@@ -1,0 +1,29 @@
+header{
+  background-image: url('../images/header-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .navbar{
+    &-nav{
+      .nav-item{
+        .nav-link{
+          position: relative;
+          font-weight: bold;
+          z-index: 1;
+        }
+        &.active{
+          .nav-link:after{
+            position: absolute;
+            content:'';
+            height: 12px;
+            background-color: #02183c;
+            left: 0px;
+            right: 0px;
+            bottom: .3rem;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}

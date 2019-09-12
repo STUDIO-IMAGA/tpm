@@ -1,0 +1,157 @@
+{
+    "key": "group_bedrijfsinformatie",
+    "title": "Bedrijfsinformatie",
+    "fields": [
+        {
+            "key": "field_5d67dc22ec83a",
+            "label": "Bedrijfsnaam",
+            "name": "company_name",
+            "type": "text",
+            "instructions": "Voer hier de naam van het bedrijf in zoals het in de Kamer van Koophandel staat",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Bedrijfsnaam B.V.",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dcffec83e",
+            "label": "Zakelijk telefoonnummer",
+            "name": "company_phone",
+            "type": "text",
+            "instructions": "Voer hier het telefoonnummer waarop het bedrijf bereikbaar is",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "+ 31 58 12 34 56 78",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dcc6ec83d",
+            "label": "Zakelijk e-mailadres",
+            "name": "company_email",
+            "type": "text",
+            "instructions": "Voer hier het publiekelijke e-mail adres in van het bedrijf",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "info@bedrijf.nl",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dc3dec83b",
+            "label": "Straatnaam",
+            "name": "company_streetname",
+            "type": "text",
+            "instructions": "Voer hier de straatnaam van het bezoekadres in",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dd9bec840",
+            "label": "Huisnummer",
+            "name": "company_homenumber",
+            "type": "text",
+            "instructions": "Voer hier het huisnummer\/pandnummer in",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dd79ec83f",
+            "label": "Postcode",
+            "name": "company_postalcode",
+            "type": "text",
+            "instructions": "Voer hier de postcode in",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dde4ec841",
+            "label": "Plaatsnaam",
+            "name": "company_city",
+            "type": "text",
+            "instructions": "Voer hier de plaatsnaam in welke in het Kamer van Koophandel register staat",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1568286685
+}

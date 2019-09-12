@@ -12,6 +12,9 @@ function setup() {
   // Make theme available for translation
   load_theme_textdomain('imaga', get_template_directory() . '/lang');
 
+  // Load main CSS for WYSIWYG
+  add_editor_style(Assets\asset_path('styles/main.css'));
+
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
@@ -34,10 +37,6 @@ function setup() {
 
   // Enable the custom logo field in the Customizer
   add_theme_support( 'custom-logo' );
-
-  // Use main stylesheet for visual editor
-  // To add custom styles edit /assets/styles/layouts/_tinymce.scss
-  add_editor_style(Assets\asset_path('styles/main.css'));
 
   // Add image sizes
   // Used for related posts and more reviews
@@ -137,14 +136,6 @@ function admin_bar_render() {
 add_action( 'wp_before_admin_bar_render', __NAMESPACE__ . '\\admin_bar_render' );
 
 /**
- * Add custom styling for Layout Columns in ACF
- */
-function register_admin_styles(){
-  wp_enqueue_style( 'imaga/admin-styles', Assets\asset_path('styles/admin.css') );
-}
-add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\register_admin_styles');
-
-/**
 * Disable auto-paragraphing for Contact Form 7
 */
 add_filter('wpcf7_autop_or_not', '__return_false');
@@ -167,3 +158,6 @@ add_filter('rest_jsonp_enabled', '_return_false');
  * Source: https://www.wpbeginner.com/plugins/how-to-disable-xml-rpc-in-wordpress/
  */
 add_filter('xmlrpc_enabled', '__return_false');
+
+// Disabled block editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
