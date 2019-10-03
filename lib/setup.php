@@ -22,10 +22,13 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Hoofd Menu', 'imaga'),
-    'secondary_navigation' => __('Info Menu', 'imaga'),
-    'tertiary_navigation' => __(' Footer Menu', 'imaga'),
-    'quaternary_navigation' => __(' Copyright Menu', 'imaga'),
+    'primary_navigation'    => __('Hoofd Menu', 'imaga'),
+    'secondary_navigation'  => __('Secondair Menu', 'imaga'),
+    'tertiary_navigation'   => __('Copyright Menu', 'imaga'),
+    'footer_nav_1'          => __('Footer Menu #1', 'imaga'),
+    'footer_nav_2'          => __('Footer Menu #2', 'imaga'),
+    'footer_nav_3'          => __('Footer menu #3', 'imaga'),
+    'footer_nav_4'          => __('Footer Menu #4', 'imaga'),
   ]);
 
   // Enable post thumbnails
@@ -65,6 +68,14 @@ function add_login_stylesheet() {
   wp_enqueue_style( 'imaga/login');
 }
 add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\\add_login_stylesheet' );
+
+/**
+* Login logo URL
+*/
+function login_logo_url($url) {
+  return get_bloginfo('url');
+}
+add_filter( 'login_headerurl', __NAMESPACE__ . '\\login_logo_url' );
 
 /*
 * ACF Google Maps API Key

@@ -1,19 +1,21 @@
 // Global settings
 $enable-shadows:        true;
+$grid-gutter-width:     40px;
 
+// Grid system
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
-  xl: 1400px
+  lg: 1366px,
+  xl: 1600px
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1440px
+  lg: 1280px,
+  xl: 1480px
 );
 
 // Color system
@@ -45,6 +47,7 @@ $grays: (
 
 $blue:          #0048ae;
 $blue-dark:     #02183c;
+$blue-light:    #7fb5df;
 $indigo:        #00A0D2;
 $purple:        #6f42c1;
 $pink:          #e83e8c;
@@ -59,6 +62,7 @@ $cyan:          #57E3F2;
 $colors: (
   blue:         $blue,
   blue-dark:    $blue-dark,
+  blue-light:   $blue-light,
   indigo:       $indigo,
   purple:       $purple,
   pink:         $pink,
@@ -85,6 +89,7 @@ $theme-colors: (
   dark:         $gray-800,
   blue:         $blue,
   blue-dark:    $blue-dark,
+  blue-light:   $blue-light,
   indigo:       $indigo,
   purple:       $purple,
   pink:         $pink,

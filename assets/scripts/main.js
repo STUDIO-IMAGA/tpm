@@ -37,43 +37,29 @@
            once: 'true',
         });
 
-        // init review slider
-        $(".review-slider").slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+        // init slick instance
+        $(".slick-projecten").slick({
+          infinite: false,
           dots: false,
-          arrows: true,
-          centerMode: true,
-          centerPadding: 0,
+          arrows: false,
+          centerMode: false,
           draggable: true,
           mobileFirst: true,
-          responsive: [
-            {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              arrows: true
-            }
-          },
-            {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              arrows: true
-            }
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              arrows: true
-            }
-          }
-        ]
+          swipeToSlide: true,
+          variableWidth: true,
+        });
+
+        // init slick instance
+        $(".slick-gallery").slick({
+          infinite: false,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          draggable: true,
+          mobileFirst: true,
+          swipeToSlide: true,
+          slidesToShow: 1,
+          fade: true,
         });
 
         // init Smooth Scroll

@@ -1,20 +1,9 @@
-@include media-breakpoint-up(xl){
-  .col-xl-2-4{
-    @include make-col(2.4, 12)
-  }
-}
-@include media-breakpoint-up(md){
-  .col-md-2-4{
-    @include make-col(2.4, 12)
-  }
-}
-@include media-breakpoint-up(ld){
-  .col-lg-2-4{
-    @include make-col(2.4, 12)
-  }
-}
-@include media-breakpoint-up(sm){
-  .col-sm-2-4{
-    @include make-col(2.4, 12)
+section{
+  position: relative;
+  background-color: rgba( #0a0 ,.2);
+  border-bottom: 1px solid rgba(#00a, .2);
+
+  .container{
+    background-color: rgba( #a00 ,.2);
   }
 }

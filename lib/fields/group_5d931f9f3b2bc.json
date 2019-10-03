@@ -1,0 +1,46 @@
+{
+    "key": "group_5d931f9f3b2bc",
+    "title": "Project informatie",
+    "fields": [
+        {
+            "key": "field_5d931fb2b9e93",
+            "label": "Opdrachtgever",
+            "name": "opdrachtgever",
+            "type": "post_object",
+            "instructions": "Kies hier de opdrachtgever uit voor dit project",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "opdrachtgevers"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "projecten"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1569923289
+}

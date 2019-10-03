@@ -58,11 +58,17 @@ function get_layout( $row_layout ){
   if( locate_template( array('templates/layouts/'. $row_layout .'.php') ) ):
     get_template_part('templates/layouts/'. $row_layout );
   else:
-    echo '<div class="alert alert-danger m-0">De layout "'.$row_layout.'" wordt niet ondersteund.</div>';
+    echo '<div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-danger m-0">De layout "'.$row_layout.'" wordt niet ondersteund.</div>
+        </div>
+      </div>
+    </div>';
   endif;
 }
 
-/**
+/** NOT USED
  * Shows recent posts as Bootstrap 4 list items.
  */
 function recent_posts( $post_per_page = 4 ){
@@ -95,7 +101,7 @@ function recent_posts( $post_per_page = 4 ){
   endif;
 }
 
-/**
+/** NOT USED
  * Add Bootstrap styles to Gravityforms
  */
 function add_bootstrap_container_class( $field_container, $field, $form, $css_class, $style, $field_content ) {
@@ -123,13 +129,6 @@ function acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
 }
 add_filter( 'acf/fields/flexible_content/layout_title', __NAMESPACE__ . '\\acf_flexible_content_layout_title', 10, 4 );
 
-/**
- * Fire BrowserSync reload on post save
- */
-add_action('save_post', function() {
-  $args = ['blocking' => false];
-  wp_remote_get('http://'.$_SERVER['SERVER_ADDR'].':3000/__browser_sync__?method=reload', $args);
-} );
 /**
  * Shorten $text by $limit amount of words
  */

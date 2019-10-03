@@ -13,7 +13,7 @@ $phone = get_field('company_phone', 'options');
   <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container">
 
-      <a class="navbar-brand" href="<?php esc_url( home_url('/') ); ?>">
+      <a class="navbar-brand" href="<?php echo esc_url( get_bloginfo('url') ); ?>">
         <?php if ( has_custom_logo() ): ?>
             <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
         <?php else: ?>
@@ -21,7 +21,7 @@ $phone = get_field('company_phone', 'options');
         <?php endif; ?>
       </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="<?php _e('Toggle navigation','imaga'); ?>">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="<?php _e('Toggle navigation','imaga'); ?>">
         <span class="navbar-toggler-icon"></span>
       </button>
 

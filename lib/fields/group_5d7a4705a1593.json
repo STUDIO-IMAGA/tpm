@@ -16,49 +16,121 @@
                 "id": ""
             },
             "layouts": {
-                "layout_5d7a47180ee20": {
-                    "key": "layout_5d7a47180ee20",
-                    "name": "layout_content",
-                    "label": "Simpele Content",
+                "layout_5d936698defb1": {
+                    "key": "layout_5d936698defb1",
+                    "name": "callout",
+                    "label": "Callout",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d7a47b1e9cf9",
-                            "label": "Titel",
-                            "name": "title",
-                            "type": "textarea",
+                            "key": "field_5d9366b0defb2",
+                            "label": "Content Links",
+                            "name": "content_left",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": 2,
-                            "new_lines": "br"
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d9366d7defb3",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d9366e1defb4",
+                                    "label": "Tekst",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "simple_content",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
                         },
                         {
-                            "key": "field_5d7a47c4e9cfa",
-                            "label": "Content",
-                            "name": "content",
-                            "type": "wysiwyg",
+                            "key": "field_5d93670fdefb5",
+                            "label": "Content Rechts",
+                            "name": "content_right",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "simple_content",
-                            "media_upload": 0,
-                            "delay": 0
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d93670fdefb6",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d93670fdefb7",
+                                    "label": "Tekst",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "simple_content",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -66,13 +138,13 @@
                 },
                 "layout_5d7a48111b5cf": {
                     "key": "layout_5d7a48111b5cf",
-                    "name": "layout_content_tabs",
-                    "label": "Content + Tabbladen",
+                    "name": "content_tabs",
+                    "label": "Content & Tabs",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5d7a484e1b5d2",
-                            "label": "Tekst",
+                            "label": "Content",
                             "name": "",
                             "type": "tab",
                             "instructions": "",
@@ -87,10 +159,10 @@
                             "endpoint": 0
                         },
                         {
-                            "key": "field_5d7a48281b5d0",
+                            "key": "field_5d935c4e8becc",
                             "label": "Titel",
                             "name": "title",
-                            "type": "textarea",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -101,13 +173,13 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "maxlength": "",
-                            "rows": 2,
-                            "new_lines": "br"
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_5d7a483f1b5d1",
-                            "label": "Content",
+                            "label": "Tekst",
                             "name": "content",
                             "type": "wysiwyg",
                             "instructions": "",
@@ -198,6 +270,44 @@
                                     "delay": 0
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_5d93554804c85",
+                            "label": "Instellingen",
+                            "name": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5d93557204c86",
+                            "label": "Content Positie",
+                            "name": "content_position",
+                            "type": "button_group",
+                            "instructions": "Kies hier aan welke kant de test\/tabbladen staan.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "content-tabs": "Tabbladen Rechts",
+                                "tabs-content": "Tabbladen Links"
+                            },
+                            "allow_null": 0,
+                            "default_value": "tabs-content",
+                            "layout": "horizontal",
+                            "return_format": "value"
                         }
                     ],
                     "min": "",
@@ -226,5 +336,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1568295144
+    "modified": 1569941264
 }

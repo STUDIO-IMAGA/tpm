@@ -1,0 +1,57 @@
+#footer{
+  padding-top: 70px;
+  background-image: url('../images/header-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h6{
+    color: $white;
+  }
+  .seperator{
+    background-color: $blue-dark;
+    height: 3px;
+    width: 72px;
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+  .nav{
+    .nav-item{
+      &.telefoon:before,
+      &.email:before,
+      &.adres:before{
+        content:'';
+        display:inline-block;
+        vertical-align: middle;
+        height: 27px;
+        width: 27px;
+        margin-right: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &.telefoon:before{
+        background-image: url('../images/phone-icon.png');
+      }
+      &.email:before{
+        background-image: url('../images/mail-icon.png');
+      }
+      &.adres:before{
+        vertical-align: top;
+        margin-top: 9px;
+        background-image: url('../images/marker-icon.png');
+      }
+      .nav-link{
+        display: inline-block;
+        color: $blue-light;
+
+        &:hover{
+          color:$white;
+        }
+      }
+    }
+  }
+  .nav-copyright{
+    margin-top: 16px;
+    margin-bottom: 19px;
+  }
+}

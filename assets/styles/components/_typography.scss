@@ -1,3 +1,30 @@
 a:not(.btn):not(.nav-link){
   text-decoration: underline;
 }
+
+.list-checkmark{
+  list-style: none;
+  padding: 0;
+
+  @each $color, $value in $theme-colors {
+    &-#{$color}{
+      li:before{
+        color: $value;
+      }
+    }
+  }
+
+  li{
+    padding-left: 2.4rem;
+
+    &:before{
+      content: $fa-var-check;
+      font-family: FontAwesome;
+      font-size: 1.8rem;
+      display: inline-block;
+      margin-left: -2.4rem;
+      width: 2.4rem;
+      vertical-align: middle;
+    }
+  }
+}
