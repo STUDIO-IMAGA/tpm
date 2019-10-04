@@ -1,6 +1,29 @@
+.layout{}
+.blog-posts{
+  background-color: #f5f6f7;
+
+  .title{
+    text-align: left;
+  }
+  .slick-blog{
+    .slick-slide{
+      width: 394px;
+      height: 360px;
+      padding: 17px;
+      border-radius: 2px;
+
+      .blog-item{
+        padding: 38px;
+        background-color: $white;
+      }
+    }
+  }
+}
 .video-icons{
   .slick-gallery{
     .gallery-item{
+      border-radius: 2px;
+
       .title{
         position: absolute;
         left: 20px;
@@ -154,5 +177,22 @@
     right: 0px;
     background-color: #f5f6f7;
     z-index: -1;
+  }
+}
+
+@include media-breakpoint-up(md){
+  .layout{
+    &.blog-posts{
+      background-color: #f5f6f7;
+
+      .title{
+        text-align: right;
+        border-right: 2px solid #7fb5df;
+        padding-right: 56px;
+      }
+      .positioned{
+        position: absolute;
+      }
+    }
   }
 }

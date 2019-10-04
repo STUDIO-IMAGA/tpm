@@ -28,29 +28,6 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-
-/**
-* Selecting Display heading based on length of string
-* TODO: find a better function name
-*/
-function heading_based_on_length( $string , $wrapper = "h2", $alignment = null){
-
-  $count = mb_strlen( $string );
-
-  switch ($count):
-    case $count < 10: $size = "display-4 mb-3"; break;
-    case $count < 15: $size = "display-3 mb-3"; break;
-    case $count < 30: $size = "display-2 mb-3"; break;
-    case $count < 40: $size = "display-1 mb-3"; break;
-    default:
-    $size = "display-3 mb-3";
-    break;
-  endswitch;
-
-  return '<'.$wrapper.' class="'.$size.' '.$alignment.'">'.do_shortcode($string).'</'.$wrapper.'>';
-
-}
-
 /**
  * Get the flexible layout and return template file.
  */
@@ -67,49 +44,6 @@ function get_layout( $row_layout ){
     </div>';
   endif;
 }
-
-/** NOT USED
- * Shows recent posts as Bootstrap 4 list items.
- */
-function recent_posts( $post_per_page = 4 ){
-  $args = array('post_type' => 'post', 'posts_per_page' => $post_per_page);
-  $query = new wp_query( $args );
-
-  if($query->have_posts()):
-
-    while( $query->have_posts() ) :
-      $query->the_post();
-      $seconds = strtotime("now") - strtotime(get_the_date("Y/m/d"));
-      ?>
-
-      <li class="list-item py-1">
-
-        <a href="<?php echo get_permalink(); ?>" class="text-gray-500">
-          <?php the_title(); ?>
-        </a>
-
-        <?php if( $seconds < 172800 ): ?>
-          <span class="badge badge-info">NEW</span>
-        <?php endif; ?>
-
-      </li>
-
-      <?php
-    endwhile;
-    wp_reset_postdata();
-    wp_reset_query();
-  endif;
-}
-
-/** NOT USED
- * Add Bootstrap styles to Gravityforms
- */
-function add_bootstrap_container_class( $field_container, $field, $form, $css_class, $style, $field_content ) {
-	$id = $field->id;
-  $field_id = is_admin() || empty( $form ) ? "field_{$id}" : 'field_' . $form['id'] . "_$id";
-	return '<li id="' . $field_id . '" class="' . $css_class . ' form-group">{FIELD_CONTENT}</li>';
-}
-add_filter( 'gform_field_container', __NAMESPACE__ . '\\add_bootstrap_container_class', 10, 6 );
 
 /**
  * Replace Flex Layout title with content
@@ -132,7 +66,7 @@ add_filter( 'acf/fields/flexible_content/layout_title', __NAMESPACE__ . '\\acf_f
 /**
  * Shorten $text by $limit amount of words
  */
-function limit_text($text, $limit, $prepend) {
+function limit_text($text, $limit = 50, $prepend = "") {
 
   $text = strip_tags($text);
 

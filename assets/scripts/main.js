@@ -38,6 +38,17 @@
         });
 
         // init slick instance
+        $(".slick-blog").slick({
+          infinite: false,
+          dots: false,
+          arrows: false,
+          draggable: true,
+          mobileFirst: true,
+          swipeToSlide: true,
+          variableWidth: true,
+        });
+
+        // init slick instance
         $(".slick-projecten").slick({
           infinite: false,
           dots: false,
