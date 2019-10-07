@@ -1,0 +1,46 @@
+{
+    "key": "group_5d9b3c3ee437c",
+    "title": "Informatie",
+    "fields": [
+        {
+            "key": "field_5d9b3c68ac8d0",
+            "label": "Bedrijf",
+            "name": "bedrijf",
+            "type": "post_object",
+            "instructions": "Kies hier het bedrijf waarbij deze ervaring bij hoort.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "opdrachtgevers"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "ervaringen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1570454687
+}

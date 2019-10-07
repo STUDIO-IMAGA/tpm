@@ -38,6 +38,19 @@
         });
 
         // init slick instance
+        $(".slick-ervaringen").slick({
+          infinite: false,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          draggable: true,
+          mobileFirst: true,
+          swipeToSlide: true,
+          slidesToShow: 1,
+          fade: true,
+        });
+
+        // init slick instance
         $(".slick-blog").slick({
           infinite: false,
           dots: false,
@@ -89,21 +102,6 @@
           sh = 'scrollHeight';
           return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
         }
-
-        // Toggle scroll-to-top anchor
-        document.addEventListener('scroll', function(){
-
-          var percentage = Math.floor( getScrollPercentage() );
-
-          if( percentage >= 40){
-            document.getElementById("scroll-to-top").classList.add('showing');
-            document.getElementById("scroll-to-top").classList.remove('hidden');
-          }else{
-            document.getElementById("scroll-to-top").classList.add('hidden');
-            document.getElementById("scroll-to-top").classList.remove('showing');
-          }
-        });
-
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

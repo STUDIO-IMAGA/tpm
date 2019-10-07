@@ -19,6 +19,7 @@ $files = [
 
   'lib/posttypes/opdrachtgevers.php',     // Custom Post Type
   'lib/posttypes/projecten.php',          // Custom Post Type
+  'lib/posttypes/ervaringen.php',         // Custom Post Type
 
 ];
 

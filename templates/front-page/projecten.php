@@ -1,4 +1,4 @@
-<section class="projecten-en-opdrachtgevers">
+<section class="front-page projecten-en-opdrachtgevers">
   <div class="container">
     <div class="row">
       <div class="col-12 pt-6">
