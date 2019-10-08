@@ -10,9 +10,9 @@
   <?php endwhile; ?>
 <?php endif; ?>
 
-<?php get_template_part('templates/front-page/blog-posts'); ?>
+<?php get_template_part('templates/front-page/gallery-icons'); ?>
 
-<?php get_template_part('templates/front-page/video-icons'); ?>
+<?php get_template_part('templates/front-page/blog-posts'); ?>
 
 <?php get_template_part('templates/front-page/ervaringen'); ?>
 

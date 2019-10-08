@@ -1,6 +1,9 @@
 .layout{}
 .blog-posts{
   background-color: #f5f6f7;
+  padding-top: 80px;
+  margin-top: -80px;
+  z-index: 0;
 
   .title{
     text-align: left;
@@ -9,7 +12,7 @@
     .slick-slide{
       width: 394px;
       height: 360px;
-      padding: 17px;
+      padding: 0 17px;
       border-radius: 2px;
 
       .blog-item{
@@ -19,7 +22,9 @@
     }
   }
 }
-.video-icons{
+.gallery-icons{
+  z-index: 1;
+
   .slick-gallery{
     .gallery-item{
       border-radius: 2px;
@@ -183,8 +188,6 @@
 @include media-breakpoint-up(md){
   .layout{
     &.blog-posts{
-      background-color: #f5f6f7;
-
       .title{
         text-align: right;
         border-right: 2px solid #7fb5df;

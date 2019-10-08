@@ -33,3 +33,16 @@
     }
   }
 }
+.mss-selector{
+  border-bottom: 2px solid $blue-light;
+  .arrow{
+  }
+  .market-solution{
+    border-right: 2px solid $blue-light;
+    border-bottom: 2px solid $blue-light;
+
+    &:hover{
+      background-color: $gray-200;
+    }
+  }
+}

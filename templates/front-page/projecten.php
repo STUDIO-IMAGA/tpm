@@ -7,9 +7,9 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-12 pl-3 pr-0">
+      <div class="col-12 pl-5 pr-0">
         <?php $args = array( 'post_type' => 'projecten' ); ?>
         <?php $query = new wp_query( $args );?>
         <?php if($query->have_posts()): ?>

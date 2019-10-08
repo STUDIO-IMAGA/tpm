@@ -7,17 +7,17 @@
         <h4>Ontdek onze Market Specific Solutions</h4>
         <div class="row text-center icons">
           <div class="col-4">
-            <img class="img-fluid" src="https://placeholder.com/150" alt="">
+            <img class="img-fluid" src="https://placehold.it/150" alt="">
             <br/>
             <a href="#">energy</a>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="https://placeholder.com/150" alt="">
+            <img class="img-fluid" src="https://placehold.it/150" alt="">
             <br/>
             <a href="#">food</a>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="https://placeholder.com/150" alt="">
+            <img class="img-fluid" src="https://placehold.it/150" alt="">
             <br/>
             <a href="#">health</a>
           </div>

@@ -13,7 +13,7 @@
           <div class="slick-ervaringen">
             <?php while( $query->have_posts() ) : $query->the_post(); ?>
               <div class="ervaringen-item">
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
                 <div class="handtekening">
                   <div class="persoon">
                     <?php the_title(); ?>

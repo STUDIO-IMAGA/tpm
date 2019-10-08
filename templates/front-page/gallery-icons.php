@@ -1,4 +1,4 @@
-<section class="layout video-icons">
+<section class="layout gallery-icons">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-6">

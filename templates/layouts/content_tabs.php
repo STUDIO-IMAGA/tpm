@@ -18,7 +18,7 @@ switch (get_sub_field('content_position')) {
         <h2><?php the_sub_field('title'); ?></h2>
         <?php the_sub_field('content'); ?>
       </div>
-      <div class="col-12 col-md-6 order-2">
+      <div class="col-12 col-md-6 pt-4 order-2">
         <?php $tabs = get_sub_field('tabs'); ?>
 
         <ul class="tabs-nav nav" id="tab-<?php echo get_row_index(); ?>" role="tablist">
