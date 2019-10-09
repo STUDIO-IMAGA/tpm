@@ -14,6 +14,35 @@ function imaga_mce_before_init_insert_formats( $init_array ) {
   $style_formats = array(
     // Each array child is a format with it's own settings
     array(
+      'title'   => __( 'Kopteksten', 'imaga' ),
+      'items'   => array(
+        array(
+          'title' => 'H1',
+          'block' => 'h1',
+        ),
+        array(
+          'title' => 'H2',
+          'block' => 'h2',
+        ),
+        array(
+          'title' => 'H3',
+          'block' => 'h3',
+        ),
+        array(
+          'title' => 'H4',
+          'block' => 'h4',
+        ),
+        array(
+          'title' => 'H5',
+          'block' => 'h5',
+        ),
+        array(
+          'title' => 'H6',
+          'block' => 'h6',
+        ),
+      ),
+    ),
+    array(
       'title'	=> __( 'Knoppen', 'imaga' ),
       'items'	=> array(
         array(

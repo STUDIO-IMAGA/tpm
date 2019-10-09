@@ -16,6 +16,35 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5d9df6b24ef11": {
+                    "key": "layout_5d9df6b24ef11",
+                    "name": "content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d9df6bb4ef12",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "simple_content",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d936698defb1": {
                     "key": "layout_5d936698defb1",
                     "name": "callout",
@@ -336,5 +365,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1569941264
+    "modified": 1570633418
 }
