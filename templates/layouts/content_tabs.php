@@ -13,7 +13,7 @@ switch (get_sub_field('content_position')) {
 
 <section class="layout content-tabs">
   <div class="container">
-    <div class="row">
+    <div class="row pt-6 pb-5">
       <div class="col-12 col-md-6 <?php echo $order; ?>">
         <h2><?php the_sub_field('title'); ?></h2>
         <?php the_sub_field('content'); ?>

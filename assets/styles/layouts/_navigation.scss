@@ -6,9 +6,12 @@ header{
   .navbar{
     &-nav{
       .nav-item{
+        margin-left: .6rem;
+        margin-right: .6rem;
         .nav-link{
           position: relative;
-          font-weight: bold;
+          font-weight: 500;
+          letter-spacing: 0.01rem;
           z-index: 1;
         }
         &.active{
@@ -19,7 +22,7 @@ header{
             background-color: #02183c;
             left: 0px;
             right: 0px;
-            bottom: .3rem;
+            bottom: .48rem;
             z-index: -1;
           }
         }

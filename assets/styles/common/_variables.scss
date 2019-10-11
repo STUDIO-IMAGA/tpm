@@ -136,14 +136,30 @@ $link-decoration:                 none; // it includes buttons and nav links
 $link-hover-color:                darken($link-color, 15%);
 $link-hover-decoration:           underline;
 
+$font-family-sans-serif:          'Heebo', sans-serif;
+$font-size-base:                  1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:                    $font-size-base * 1.25;
+$font-size-sm:                    $font-size-base * .875;
+
+$font-weight-lighter:             lighter;
+$font-weight-light:               300;
+$font-weight-normal:              400;
+$font-weight-bold:                700;
+$font-weight-bolder:              bolder;
+
+
 $font-size-base:                  1.1rem;
 $line-height-base:                1.5;
 
 $font-weight-normal:              300;
 $font-weight-bold:                600;
 
-$headings-font-weight:            300;
-$headings-line-height:            1.3;
+$headings-font-family:            'Prompt', sans-serif;
+$headings-margin-bottom:          $spacer / 2;
+$headings-font-weight:            600;
+$headings-line-height:            1.2;
+$headings-color:                  $blue;
+
 $h1-font-size:                    2.4rem;
 $h2-font-size:                    2rem;
 $h3-font-size:                    1.8rem;
@@ -160,12 +176,10 @@ $lead-font-size:                  1.28rem;
 
 $nav-link-padding-y:              .4rem;
 $navbar-padding-y:                1.4rem;
-$navbar-nav-link-padding-x:       .8rem;
+$navbar-nav-link-padding-x:       .65rem;
 
 $table-border-color:              rgba( $gray-800, .2);
 $table-hover-bg:                  rgba($gray-100, .3);
-
-$font-family-sans-serif:          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, -apple-system, sans-serif;
 
 // Forms
 $input-focus-color:               $gray-900;

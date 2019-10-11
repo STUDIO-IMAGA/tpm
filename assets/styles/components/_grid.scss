@@ -1,3 +1,30 @@
 section{
   position: relative;
 }
+@include media-breakpoint-up(md){
+  .col-arrow{
+    &-left:after,
+    &-right:after,
+    &-left:before,
+    &-right:before{
+      display: block;
+      position: absolute;
+      content: '';
+      height: 52%;
+      width: 0px;
+      border-right: 2px solid rgba($white ,.6);
+    }
+    &-left:before,
+    &-right:before{
+      top: 0px;
+      right: -5px;
+      transform: rotate(-15deg);
+    }
+    &-left:after,
+    &-right:after{
+      top: 50%;
+      right: -5px;
+      transform: rotate(15deg);
+    }
+  }
+}

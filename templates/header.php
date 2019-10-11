@@ -1,7 +1,7 @@
 <?php $header = get_field('header');?>
 <?php $featured = get_field('featured');?>
 
-<section id="header" class="bg-gray-300">
+<section id="header" class="bg-gray-300 bg-grid">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-6 py-md-5">

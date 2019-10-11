@@ -87,6 +87,32 @@
       }
     }
   }
+  .icons{
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .icon{
+      padding-top: 1rem;
+      img{
+        margin-bottom: .6rem;
+      }
+      a{
+        display: block;
+        position: relative;
+        text-decoration: none;
+
+        &:after{
+          position: absolute;
+          content:'';
+          width: 100%;
+          height: 2px;
+          background-color: $blue-light;
+          bottom: 0px;
+        }
+      }
+    }
+  }
 }
 .content-tabs{
   .tabs-nav{
