@@ -6,14 +6,14 @@ $grid-gutter-width:     40px;
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
-  md: 768px,
+  md: 980px,
   lg: 1366px,
   xl: 1600px
 );
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
+  md: 960px,
   lg: 1280px,
   xl: 1480px
 );
@@ -145,7 +145,7 @@ $font-weight-lighter:             lighter;
 $font-weight-light:               300;
 $font-weight-normal:              400;
 $font-weight-bold:                700;
-$font-weight-bolder:              bolder;
+$font-weight-bolder:              700;
 
 
 $font-size-base:                  1.1rem;

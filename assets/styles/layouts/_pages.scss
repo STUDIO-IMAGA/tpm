@@ -97,8 +97,8 @@
       img{
         margin-bottom: .6rem;
       }
-      a{
-        display: block;
+      .link{
+        display: inline-block;
         position: relative;
         text-decoration: none;
 
@@ -107,6 +107,7 @@
           content:'';
           width: 100%;
           height: 2px;
+          left:0px;
           background-color: $blue-light;
           bottom: 0px;
         }

@@ -1,6 +1,18 @@
 .front-page{
   &.ervaringen{
     .slick-ervaringen{
+      &:before{
+        position: absolute;
+        top: -6px;
+        left: -28px;
+        content:'';
+        width: 51px;
+        height: 26px;
+        background-image: url('../images/icon/quote.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
       .handtekening{
         margin-top: 30px;
       }

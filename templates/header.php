@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6 text-center">
-        <img class="img-fluid" src="https://placehold.it/800x400" alt="TPM Logo met foto invulling">
+        <img class="img-fluid" src="<?php echo $header['image']['url']; ?>" alt="TPM Logo met foto invulling">
       </div>
     </div>
     <div class="row">

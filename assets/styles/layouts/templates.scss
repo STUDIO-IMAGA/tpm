@@ -1,0 +1,55 @@
+.market-specific-solution{
+  .mss-selector{
+    border-bottom: 2px solid $blue-light;
+    .separator{
+      position: absolute;
+      display: block;
+      width: 30px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+
+      #svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        polygon{
+          fill: $white;
+          stroke: $blue-light;
+        }
+      }
+    }
+    .market-solution{
+      border-right: 2px solid $blue-light;
+
+      &:hover{
+        background-color: $gray-200;
+        a{
+          h3:after{
+            background-color: $blue;
+          }
+        }
+      }
+
+      a{
+        text-decoration: none;
+
+        h3{
+          position: relative;
+          display: inline-block;
+
+          &:after{
+            position: absolute;
+            content:'';
+            height: 2px;
+            left: 0px;
+            right: 0px;
+            bottom: -6px;
+            background-color: $blue-light;
+          }
+        }
+      }
+    }
+  }
+}

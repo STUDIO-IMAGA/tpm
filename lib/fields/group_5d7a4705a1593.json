@@ -320,7 +320,7 @@
                             "key": "field_5d93557204c86",
                             "label": "Content Positie",
                             "name": "content_position",
-                            "type": "button_group",
+                            "type": "text",
                             "instructions": "Kies hier aan welke kant de test\/tabbladen staan.",
                             "required": 0,
                             "conditional_logic": 0,
@@ -329,14 +329,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "content-tabs": "Tabbladen Rechts",
-                                "tabs-content": "Tabbladen Links"
-                            },
+                            "choices": "tabs-content : Tabbladen Links\r\ncontent-tabs : Tabbladen Rechts",
                             "allow_null": 0,
                             "default_value": "tabs-content",
                             "layout": "horizontal",
-                            "return_format": "value"
+                            "return_format": "value",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -365,5 +366,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1570633418
+    "modified": 1571054796
 }

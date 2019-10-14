@@ -25,20 +25,32 @@
         height: 27px;
         width: 27px;
         margin-right: 10px;
-        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        background-color: $blue-light;
       }
       &.telefoon:before{
-        background-image: url('../images/phone-icon.png');
+        background-image: url('../images/icon/phone-white.png');
+      }
+      &.telefoon:hover:before{
+        background-color: $white;
+        background-image: url('../images/icon/phone-blue.png');
       }
       &.email:before{
-        background-image: url('../images/mail-icon.png');
+        background-image: url('../images/icon/enveloppe-white.png');
+      }
+      &.email:hover:before{
+        background-color: $white;
+        background-image: url('../images/icon/enveloppe-blue.png');
       }
       &.adres:before{
         vertical-align: top;
         margin-top: 9px;
-        background-image: url('../images/marker-icon.png');
+        background-image: url('../images/icon/marker-white.png');
+      }
+      &.adres:hover:before{
+        background-color: $white;
+        background-image: url('../images/icon/marker-blue.png');
       }
       .nav-link{
         display: inline-block;

@@ -4,6 +4,7 @@
 */
 
 use IMAGA\Theme\Extras;
+use IMAGA\Theme\Assets;
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -21,7 +22,7 @@ use IMAGA\Theme\Extras;
           </div>
         </div>
         <div class="col-12 col-md-6 text-center">
-          <img class="img-fluid" src="https://placehold.it/800x400" alt="TPM Logo met foto invulling">
+          <img class="img-fluid" src="<?php echo $featured['image']['url']; ?>" alt="TPM Logo met foto invulling">
         </div>
       </div>
     </div>
@@ -39,31 +40,31 @@ use IMAGA\Theme\Extras;
             </svg>
           </span>
           <a class="row align-items-center" href="/energy">
-            <div class="col-12 col-md-4 p-0">
-              <img class="img-fluid" src="https://placehold.it/200" alt="Energy market specific solution">
+            <div class="col-12 col-md-4 text-center p-0">
+              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/energy-large-blue.png'); ?>" alt="Energy market specific solution">
             </div>
             <div class="col-12 col-md-8">
-              energy
+              <h3>energy</h3>
             </div>
           </a>
         </div>
         <div class="col-12 col-md-3 py-5 pl-6 pr-0 market-solution">
           <a class="row align-items-center" href="/food">
-            <div class="col-12 col-md-4 p-0">
-              <img class="img-fluid" src="https://placehold.it/200" alt="Food market specific solution">
+            <div class="col-12 col-md-4 text-center p-0">
+              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/food-large-blue.png'); ?>" alt="Food market specific solution">
             </div>
             <div class="col-12 col-md-8">
-              food
+              <h3>food</h3>
             </div>
           </a>
         </div>
         <div class="col-12 col-md-3 py-5 pl-6 pr-0 market-solution">
           <a class="row align-items-center" href="/health">
-            <div class="col-12 col-md-4 p-0">
-              <img class="img-fluid" src="https://placehold.it/200" alt="Health market specific solution">
+            <div class="col-12 col-md-4 text-center p-0">
+              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/health-large-blue.png'); ?>" alt="Health market specific solution">
             </div>
             <div class="col-12 col-md-8">
-              health
+              <h3>health</h3>
             </div>
           </a>
         </div>
