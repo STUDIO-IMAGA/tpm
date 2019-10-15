@@ -6,11 +6,12 @@ use IMAGA\Theme\Bootstrap_Walker;
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 $phone = get_field('company_phone', 'options');
+$navbar_color = (is_home())?'navbar-dark':'navbar-light';
 ?>
 
 <header class="navbar-container">
 
-  <nav class="navbar navbar-dark navbar-expand-lg">
+  <nav class="navbar <?php echo $navbar_color; ?> navbar-expand-lg">
     <div class="container">
 
       <a class="navbar-brand" href="<?php echo esc_url( get_bloginfo('url') ); ?>">

@@ -263,8 +263,8 @@ gulp.task('zip', function(callback) {
   ], {
    base: '.'
   })
-  .pipe(loadplugins.zip(pkg.name + '-' + newversion +'.zip'))
-  .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name));
+  .pipe(loadplugins.zip(pkg.name +'.zip'))
+  .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name + '/v' + newversion));
 });
 
 gulp.task('version', function() {

@@ -12,17 +12,14 @@ use IMAGA\Theme\Assets;
   <?php $header = get_field('header');?>
   <?php $featured = get_field('featured');?>
 
-  <section id="header" class="bg-gray-300">
-    <div class="container">
+  <section id="header" class="bg-blue-dark">
+    <div class="container" style="background-image: url('<?php echo $featured['image']['url']; ?>');">
       <div class="row align-items-center">
-        <div class="col-12 col-md-6 py-md-5">
-          <div class="content py-md-6">
-            <h1><?php echo $header['title'];?></h1>
+        <div class="col-12 col-md-6">
+          <div class="content text-white py-md-8">
+            <h1 class="text-white"><?php echo $header['title'];?></h1>
             <?php echo $header['introduction'];?>
           </div>
-        </div>
-        <div class="col-12 col-md-6 text-center">
-          <img class="img-fluid" src="<?php echo $featured['image']['url']; ?>" alt="TPM Logo met foto invulling">
         </div>
       </div>
     </div>
