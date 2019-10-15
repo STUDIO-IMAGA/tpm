@@ -6,7 +6,7 @@ use IMAGA\Theme\Bootstrap_Walker;
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 $phone = get_field('company_phone', 'options');
-$navbar_color = (is_home())?'navbar-dark':'navbar-light';
+$navbar_color = ( is_front_page() ) ? 'navbar-dark' : 'navbar-light' ;
 ?>
 
 <header class="navbar-container">
@@ -15,8 +15,10 @@ $navbar_color = (is_home())?'navbar-dark':'navbar-light';
     <div class="container">
 
       <a class="navbar-brand" href="<?php echo esc_url( get_bloginfo('url') ); ?>">
-        <?php if ( has_custom_logo() ): ?>
-            <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
+        <?php if ( is_front_page() ): ?>
+          <img src="<?php echo Assets\asset_path('images/tpm-logo-wit.png'); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
+        <?php elseif( has_custom_logo() ): ?>
+          <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
         <?php else: ?>
           <?php echo get_bloginfo('name'); ?>
         <?php endif; ?>
