@@ -104,22 +104,66 @@
 
     .icon{
       padding-top: 1rem;
-      img{
-        margin-bottom: .6rem;
-      }
+
       .link{
-        display: inline-block;
         position: relative;
+        display: inline-block;
         text-decoration: none;
+        padding-top: 80px;
+        width: 60px;
+
+        &:before{
+          position: absolute;
+          content:'';
+          width: 60px;
+          height: 60px;
+          top: 0;
+          left: 0;
+          background-image: url('../images/assets-sprite.png');
+          background-position: 0px 0px;
+          background-repeat: no-repeat;
+        }
 
         &:after{
           position: absolute;
           content:'';
           width: 100%;
           height: 2px;
-          left:0px;
+          left: 0px;
           background-color: $blue-light;
           bottom: 0px;
+        }
+      }
+      &.energy{
+        .link:before{
+          background-position: -375px 0px;
+        }
+      }
+      &.food{
+        .link:before{
+          background-position: -315px 0px;
+        }
+      }
+      &.health{
+        .link:before{
+          background-position: -255px 0px;
+        }
+      }
+      &:hover{
+        &.energy{
+          .link:before{
+            background-position: -375px -60px;
+          }
+        }
+        &.food{
+          .link:before{
+            background-position: -315px -60px;
+          }
+        }
+        &.health{
+          .link:before{
+            background-position: -255px -60px;
+          }
         }
       }
     }

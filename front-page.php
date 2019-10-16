@@ -105,21 +105,13 @@ $projects = get_field('projects');
       <div class="col-12 col-md-6 text-center">
         <h4>Ontdek onze Market Specific Solutions</h4>
         <div class="row justify-content-center text-center icons">
-          <div class="col-4 icon">
-            <a href="/market-specific-solutions/energy">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/energy-blue.png'); ?>" alt="Energy Market Specific Solution">
-            </a>
+          <div class="col-4 icon energy">
             <a class="link" href="/market-specific-solutions/energy">energy</a>
           </div>
-          <div class="col-4 icon">
-            <a href="/market-specific-solutions/food">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/food-blue.png'); ?>" alt=" Food Market Specific Solution">
-            </a>
+          <div class="col-4 icon food">
             <a class="link" href="/market-specific-solutions/food">food</a>
           </div>
-          <div class="col-4 icon">
-            <a href="/market-specific-solutions/health">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/health-blue.png'); ?>" alt="Health Market Specific Solution">
+          <div class="col-4 icon health">
             <a class="link" href="/market-specific-solutions/health">health</a>
           </div>
         </div>

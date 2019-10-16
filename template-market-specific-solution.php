@@ -24,43 +24,35 @@ use IMAGA\Theme\Assets;
       </div>
     </div>
   </section>
+
   <section class="mss-selector">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-3">
           <h4>Selecteer één van<br/>onze market specific<br/>solutions</h4>
         </div>
-        <div class="col-12 col-md-3 py-5 pl-6 pr-0 market-solution">
+        <div class="col-12 col-md-3 py-5 market-solution energy">
           <span class="separator" aria-hidden="true">
             <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon stroke-linecap="square" points="-20,-20 80,50 -20,120" stroke-width="4"></polygon>
             </svg>
           </span>
           <a class="row align-items-center" href="/energy">
-            <div class="col-12 col-md-4 text-center p-0">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/energy-large-blue.png'); ?>" alt="Energy market specific solution">
-            </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 text-center">
               <h3>energy</h3>
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-3 py-5 pl-6 pr-0 market-solution">
+        <div class="col-12 col-md-3 py-5 market-solution food">
           <a class="row align-items-center" href="/food">
-            <div class="col-12 col-md-4 text-center p-0">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/food-large-blue.png'); ?>" alt="Food market specific solution">
-            </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 text-center">
               <h3>food</h3>
             </div>
           </a>
         </div>
-        <div class="col-12 col-md-3 py-5 pl-6 pr-0 market-solution">
+        <div class="col-12 col-md-3 py-5 market-solution health">
           <a class="row align-items-center" href="/health">
-            <div class="col-12 col-md-4 text-center p-0">
-              <img class="img-fluid" src="<?php echo Assets\asset_path('images/icon/health-large-blue.png'); ?>" alt="Health market specific solution">
-            </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 text-center">
               <h3>health</h3>
             </div>
           </a>
