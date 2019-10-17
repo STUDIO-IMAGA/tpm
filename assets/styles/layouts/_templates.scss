@@ -1,40 +1,42 @@
-.market-specific-solution{
-  .mss-selector{
+.market-specific-solutions{
+  #selector{
     border-bottom: 2px solid $blue-light;
-    .separator{
-      position: absolute;
-      display: block;
-      width: 30px;
-      top: 0;
-      left: 0;
-      bottom: 0;
-
-      #svg{
+    .market-solution-type{
+      text-decoration: none;
+      border-right: 2px solid $blue-light;
+      text-align: center;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      .separator{
         display: block;
-        width: 100%;
-        height: 100%;
-
-        polygon{
-          fill: $white;
-          stroke: $blue-light;
+        position: absolute;
+        width: 30px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        #svg{
+          display: block;
+          width: 100%;
+          height: 100%;
+          polygon{
+            fill: $white;
+            stroke: $blue-light;
+          }
         }
       }
-    }
-    .market-solution{
-      border-right: 2px solid $blue-light;
-      a{
-        text-decoration: none;
+      .row{
         h3{
           position: relative;
           display: inline-block;
-
+          margin: 0;
+          transform: translateX(42.5px);
           &:before{
             position: absolute;
             content:'';
             height: 85px;
             width: 85px;
-            top: -20px;
-            left: -85px;
+            top: -25px;
+            left: -105px;
             background-image: url('../images/assets-sprite.png');
             background-position: 0px 0px;
             background-repeat: no-repeat;
@@ -50,26 +52,119 @@
           }
         }
       }
-      &.energy a h3:before{
-        background-position: -160px 0px;
+      &.energy .row h3:before{
+        background-position: -170px 0px;
       }
-      &.food a h3:before{
+      &.food .row h3:before{
         background-position: -85px 0px;
       }
-
       &:hover{
         background-color: $gray-200;
-        a h3:after{
+        .row h3:after{
           background-color: $blue;
         }
-        &.energy a h3:before{
-          background-position: -160px -85px;
+        &.energy .row h3:before{
+          background-position: -170px -85px;
         }
-        &.food a h3:before{
+        &.food .row h3:before{
           background-position: -85px -85px;
         }
-        &.health a h3:before{
+        &.health .row h3:before{
           background-position: 0px -85px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(lg){
+  .market-specific-solutions{
+    #selector{
+      h4{
+        font-size: 1.5rem;
+      }
+      .market-solution-type{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .row{
+          h3{
+            transform: translateX(34px);
+            &:before{
+              top: -20px;
+              left: -84px;
+              transform: scale(.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(md){
+  .market-specific-solutions{
+    #selector{
+      h4{
+        font-size: 1.4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        br{
+          display: none;
+        }
+      }
+      .market-solution-type{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        .row{
+          h3{
+            transform: translateX(28px);
+            &:before{
+              top: -20px;
+              left: -80px;
+              transform: scale(.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .market-specific-solutions{
+    #selector{
+      .market-solution-type{
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+        border: none;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xs){
+  .market-specific-solutions{
+    #selector{
+      .market-solution-type{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-right: none;
+        &.energy,
+        &.health{
+          border: none;
+        }
+        .row{
+          h3{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+            transform: translateX(0px);
+            font-size: 1.4rem;
+            &:before{
+              top: 25px;
+              left: calc(50% - 42.5px);
+              transform: scale(.6);
+            }
+            &:after{
+              bottom: -2px;
+            }
+          }
         }
       }
     }

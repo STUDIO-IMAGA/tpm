@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Market Specific Solution
+* Template Name: Market Specific Solutions
 */
 
 use IMAGA\Theme\Extras;
@@ -12,12 +12,12 @@ use IMAGA\Theme\Assets;
   <?php $header = get_field('header');?>
   <?php $featured = get_field('featured');?>
 
-  <section id="header" class="bg-blue-dark">
-    <div class="container" style="background-image: url('<?php echo $featured['image']['url']; ?>');">
+  <section id="header">
+    <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
-          <div class="content text-white py-md-8">
-            <h1 class="text-white"><?php echo $header['title'];?></h1>
+          <div class="content">
+            <h1><?php echo $header['title'];?></h1>
             <?php echo $header['introduction'];?>
           </div>
         </div>
@@ -25,42 +25,41 @@ use IMAGA\Theme\Assets;
     </div>
   </section>
 
-  <section class="mss-selector">
+  <section id="selector">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12 col-md-3">
-          <h4>Selecteer één van<br/>onze market specific<br/>solutions</h4>
+        <div class="col-12 col-md col-lg-3">
+          <h4 class="m-0">Selecteer één van<br/> onze market specific<br/> solutions</h4>
         </div>
-        <div class="col-12 col-md-3 py-5 market-solution energy">
-          <span class="separator" aria-hidden="true">
+        <a class="col-4 col-md market-solution-type energy" href="/energy">
+          <span class="separator d-none d-md-block" aria-hidden="true">
             <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon stroke-linecap="square" points="-20,-20 80,50 -20,120" stroke-width="4"></polygon>
             </svg>
           </span>
-          <a class="row align-items-center" href="/energy">
-            <div class="col-12 text-center">
+          <div class="row align-items-center">
+            <div class="col-12 p-0">
               <h3>energy</h3>
             </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-3 py-5 market-solution food">
-          <a class="row align-items-center" href="/food">
-            <div class="col-12 text-center">
+          </div>
+        </a>
+        <a class="col-4 col-md market-solution-type food" href="/food">
+          <div class="row align-items-center">
+            <div class="col-12 p-0">
               <h3>food</h3>
             </div>
-          </a>
-        </div>
-        <div class="col-12 col-md-3 py-5 market-solution health">
-          <a class="row align-items-center" href="/health">
-            <div class="col-12 text-center">
+          </div>
+        </a>
+        <a class="col-4 col-md market-solution-type health" href="/health">
+          <div class="row align-items-center">
+            <div class="col-12 p-0">
               <h3>health</h3>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-
 
   <?php if( have_rows('layouts') ): ?>
     <?php while( have_rows('layouts') ): the_row(); ?>
@@ -74,7 +73,7 @@ use IMAGA\Theme\Assets;
     <div class="container">
       <div class="row">
         <div class="col-12 text-center pb-5">
-          <span>Vrijblijvend afspreken om de mogelijkheden te bespreken?</span><a class="btn btn-blue ml-4" href="#"><i class="fa fa-calendar pr-4"></i>Afspraak maken</a>
+          <span>Vrijblijvend afspreken om de mogelijkheden te bespreken?</span><a class="btn btn-blue btn-agenda ml-4" href="/contact">Afspraak maken</a>
         </div>
       </div>
     </div>

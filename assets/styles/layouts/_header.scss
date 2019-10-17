@@ -38,14 +38,34 @@
   }
 }
 #header{
-  .container{
+  background-image: url('../images/math-fade.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before{
+    position: absolute;
+    content:'';
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url('../images/tpm-logo-composiet-large.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    opacity: .4;
   }
   .content{
     position: relative;
+    color: $white;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
     z-index: 0;
+
+    h1, h2, h3{
+      color: $white;
+    }
 
     &:after{
       display: block;
@@ -58,6 +78,17 @@
       background-color: rgba($blue-dark ,.45);
       top: 0px;
       z-index: -1;
+    }
+  }
+}
+
+@include media-breakpoint-up(md){
+  .page{
+    #header{
+      .content{
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+      }
     }
   }
 }

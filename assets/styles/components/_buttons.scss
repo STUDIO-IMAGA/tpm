@@ -1,5 +1,19 @@
 .btn{
+  position: relative;
   &.btn-white{
     color: $blue-dark !important;
+  }
+  &.btn-agenda{
+    padding-left: 3.6rem !important;
+    &:before{
+      position: absolute;
+      content:'';
+      top: calc(50% - 12.5px);
+      left: 1.1rem;
+      width: 25px;
+      height: 25px;
+      background-image: url('../images/assets-sprite.png');
+      background-position: -380px -145px;
+    }
   }
 }

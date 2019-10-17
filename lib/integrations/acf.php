@@ -2,6 +2,8 @@
 
 namespace IMAGA\Theme\ACF;
 
+use IMAGA\Theme\Assets;
+
 /**
 * Add Theme Settings page
 */
@@ -57,7 +59,7 @@ add_filter('acf/settings/load_json', __NAMESPACE__ . '\\acf_json_load_point');
 * Modify WYSIWYG Toolbar
 * source: https://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
 */
-function my_toolbars( $toolbars ) {
+function acf_toolbars( $toolbars ) {
 
   // Add toolbars
   // Simple Title toolbar used for titles bacause we don't want button and stuff in it
@@ -75,4 +77,14 @@ function my_toolbars( $toolbars ) {
   // Important!
 	return $toolbars;
 }
-add_filter( 'acf/fields/wysiwyg/toolbars' , __NAMESPACE__ . '\\my_toolbars'  );
+add_filter( 'acf/fields/wysiwyg/toolbars' , __NAMESPACE__ . '\\acf_toolbars'  );
+
+/**
+* Add custom stylesheet to Back-End
+*/
+function acf_admin_enqueue_scripts() {
+    wp_register_style( 'acf-imaga', Assets\asset_path('styles/admin.css'), false, '1.0.1' );
+    wp_enqueue_style( 'acf-imaga' );
+}
+
+add_action( 'acf/input/admin_enqueue_scripts', __NAMESPACE__ . '\\acf_admin_enqueue_scripts' );

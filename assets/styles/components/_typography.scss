@@ -1,11 +1,9 @@
 a:not(.btn):not(.nav-link){
   text-decoration: underline;
 }
-
 .list-checkmark{
   list-style: none;
   padding: 0;
-
   @each $color, $value in $theme-colors {
     &-#{$color}{
       li:before{
@@ -13,10 +11,8 @@ a:not(.btn):not(.nav-link){
       }
     }
   }
-
   li{
     padding-left: 2.4rem;
-
     &:before{
       content: $fa-var-check;
       font-family: FontAwesome;
@@ -27,4 +23,12 @@ a:not(.btn):not(.nav-link){
       vertical-align: middle;
     }
   }
+}
+@include media-breakpoint-up(sm) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(xl) {
 }

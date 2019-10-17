@@ -1,0 +1,24 @@
+@import "common/variables";
+@import "common/mixins";
+@import "common/global";
+
+.acf-field{
+  &.acf-h1,
+  &.acf-h2,
+  &.acf-h3,
+  &.acf-h4,
+  &.acf-h5,
+  &.acf-h6{
+    .acf-input > *{
+      font-family: Prompt,sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: $blue;
+    }
+  }
+  &.acf-h1{
+    .acf-input > *{
+      font-size: 2.4rem;
+    }
+  }
+}

@@ -1,12 +1,12 @@
 {
-    "key": "group_layouts",
-    "title": "Pagina's",
+    "key": "group_5da82aa05f36b",
+    "title": "Template: Market Specific Solutions",
     "fields": [
         {
-            "key": "field_5c741ddaaef16",
+            "key": "field_5da82aa06cee7",
             "label": "Header",
-            "name": "",
-            "type": "tab",
+            "name": "header",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,26 +15,10 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d7a2ae84ef7a",
-            "label": "Header Tekst",
-            "name": "header",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "70",
-                "class": "",
-                "id": ""
-            },
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5c8770e1dba66",
+                    "key": "field_5da82aa06e60b",
                     "label": "Titel",
                     "name": "title",
                     "type": "textarea",
@@ -43,7 +27,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "acf-h1",
                         "id": ""
                     },
                     "default_value": "",
@@ -53,7 +37,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5d7a29d37b9a4",
+                    "key": "field_5da82aa06e63e",
                     "label": "Introductie",
                     "name": "introduction",
                     "type": "wysiwyg",
@@ -74,64 +58,7 @@
             ]
         },
         {
-            "key": "field_5d7a2b144ef7b",
-            "label": "Uitgelichte Afbeelding",
-            "name": "featured",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5c8770cfdba65",
-                    "label": "Afbeelding",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "Kies hier de uitgelichte afbeelding in voor in de header.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5c741de6aef17",
-            "label": "Inhoud",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d7a46f79b74d",
+            "key": "field_5da82addb4e2c",
             "label": "Secties",
             "name": "secties",
             "type": "clone",
@@ -160,19 +87,14 @@
                 "value": "page"
             },
             {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "front_page"
-            },
-            {
                 "param": "page_template",
-                "operator": "!=",
+                "operator": "==",
                 "value": "template-market-specific-solutions.php"
             }
         ]
     ],
-    "menu_order": 1,
-    "position": "acf_after_title",
+    "menu_order": 0,
+    "position": "normal",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -181,8 +103,6 @@
         "excerpt",
         "discussion",
         "comments",
-        "revisions",
-        "slug",
         "format",
         "featured_image",
         "categories",
@@ -191,5 +111,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571302494
+    "modified": 1571304425
 }
