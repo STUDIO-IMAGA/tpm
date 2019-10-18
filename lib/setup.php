@@ -38,9 +38,6 @@ function setup() {
   // Enable HTML5 markup support
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
-  // Enable the custom logo field in the Customizer
-  add_theme_support( 'custom-logo' );
-
   // Add image sizes
   // Used for related posts and more reviews
   add_image_size('post-thumbnail-related', 500, 300, true);

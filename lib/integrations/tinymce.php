@@ -60,6 +60,21 @@ function imaga_mce_before_init_insert_formats( $init_array ) {
       ),
     ),
     array(
+      'title'	=> __( 'Knop icons', 'imaga' ),
+      'items'	=> array(
+        array(
+          'title' => 'Pijl',
+          'selector' => 'a',
+          'classes' => 'btn-arrow'
+        ),
+        array(
+          'title' => 'Agenda',
+          'selector' => 'a',
+          'classes' => 'btn-arrow'
+        ),
+      ),
+    ),
+    array(
       'title' => 'Lijst met Checkmarks',
       'selector' => 'ul',
       'wrapper' => true,

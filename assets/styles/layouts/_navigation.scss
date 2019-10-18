@@ -15,15 +15,56 @@
         }
       }
     }
+    .phone{
+      position: relative;
+      padding-left: 1.6rem !important;
+      text-decoration: none;
+      z-index: 1;
+      &:before{
+        position: absolute;
+        content:'';
+        top: calc(50% - 12.5px);
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background-image: url('../images/assets-sprite.png');
+        background-position: -255px -120px;
+      }
+      &:hover{
+        &:before{
+          background-position: -255px -145px;
+        }
+        &:after{
+          position: absolute;
+          content:'';
+          height: 12px;
+          background-color: #02183c;
+          left: 0px;
+          right: 0px;
+          bottom: .48rem;
+          z-index: -1;
+        }
+      }
+    }
   }
 }
 header{
   .navbar{
     &-nav{
+      &#menu-hoofd-menu{
+        .nav-link{
+          font-weight: 500;
+        }
+      }
       .nav-item{
         margin-left: .6rem;
         margin-right: .6rem;
-
+        .nav-link{
+          position: relative;
+          letter-spacing: 0.01rem;
+          z-index: 1;
+          font-weight: 400;
+        }
         &:hover,
         &.active{
           .nav-link:after{
@@ -37,11 +78,18 @@ header{
             z-index: -1;
           }
         }
-        .nav-link{
-          position: relative;
-          font-weight: 500;
-          letter-spacing: 0.01rem;
-          z-index: 1;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .home{
+    header{
+      background-image: none !important;
+      .navbar-toggler{
+        &:before{
+          content:'menu';
+          color: $blue-light;
         }
       }
     }

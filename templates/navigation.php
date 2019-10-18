@@ -11,16 +11,15 @@ $navbar_color = ( is_front_page() ) ? 'navbar-dark' : 'navbar-light' ;
 
 <header class="navbar-container">
 
-  <nav class="navbar <?php echo $navbar_color; ?> navbar-expand-lg">
+  <nav class="navbar <?php echo $navbar_color; ?> navbar-expand-md">
     <div class="container">
 
       <a class="navbar-brand" href="<?php echo esc_url( get_bloginfo('url') ); ?>">
         <?php if ( is_front_page() ): ?>
-          <img src="<?php echo Assets\asset_path('images/tpm-logo-wit.png'); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
-        <?php elseif( has_custom_logo() ): ?>
-          <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
+          <img class="brand-img d-none d-md-inline-block" src="<?php echo Assets\asset_path('images/tpm-logo-light.png'); ?>" width="150" alt="<?php echo bloginfo('name'); ?>">
+          <img class="brand-img d-inline-block d-md-none" src="<?php echo Assets\asset_path('images/tpm-logo-dark.png'); ?>" width="150" alt="<?php echo bloginfo('name'); ?>">
         <?php else: ?>
-          <?php echo get_bloginfo('name'); ?>
+          <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
         <?php endif; ?>
       </a>
 
@@ -28,7 +27,7 @@ $navbar_color = ( is_front_page() ) ? 'navbar-dark' : 'navbar-light' ;
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="primary_navigation" class="collapse navbar-collapse navbar-toggle">
+      <div id="primary_navigation" class="collapse navbar-collapse navbar-toggle flex-wrap">
         <?php
         // Hoofd menu
         wp_nav_menu(
@@ -52,9 +51,7 @@ $navbar_color = ( is_front_page() ) ? 'navbar-dark' : 'navbar-light' ;
           )
         );
         ?>
-        <span class="navbar-text">
-          <i class="fa fa-phone"></i><a href="tel:<?php echo esc_url($phone); ?>"><?php echo $phone; ?></a>
-        </span>
+        <a class="navbar-text phone" href="tel:<?php echo esc_url($phone); ?>"><?php echo $phone; ?></a>
       </div>
 
     </div>

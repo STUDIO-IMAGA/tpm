@@ -1,7 +1,21 @@
 .btn{
   position: relative;
   &.btn-white{
-    color: $blue-dark !important;
+    color: $blue !important;
+  }
+  &.btn-arrow{
+    padding-right: 3.6rem !important;
+    &:before{
+      position: absolute;
+      content:'';
+      top: calc(50% - 12.5px);
+      right: 1.1rem;
+      width: 25px;
+      height: 25px;
+      background-image: url('../images/assets-sprite.png');
+      background-position: -405px -170px;
+      transform: rotate(180deg);
+    }
   }
   &.btn-agenda{
     padding-left: 3.6rem !important;

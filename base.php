@@ -21,7 +21,7 @@ use IMAGA\Theme\Wrapper;
 
     <div class="wrap" role="document">
 
-      <div class="fixed-bottom">
+      <div class="fixed-top bg-blue text-white" style="width:30px;">
         <div class="d-block d-sm-none">
           XS
         </div>

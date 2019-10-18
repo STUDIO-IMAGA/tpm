@@ -2,27 +2,38 @@
   #header{
     .content{
       position: relative;
+      color: $blue;
+      font-weight: 400;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
       z-index: 0;
-
       &:after{
         display: block;
         position: absolute;
         content: " ";
         left: -200vw;
         bottom: 0px;
-        transform: skew(-384deg);
+        transform: skew(-375deg);
         right: -50px;
-        background-color: rgba(255,255,255,.8);
+        background-color: rgba(255,255,255,.7);
         top: 0px;
         z-index: -1;
+      }
+      p{
+        margin-bottom: 1.6rem;
       }
     }
     .enumeration{
       padding-top: 2rem;
       padding-bottom: 2rem;
+      text-align: center;
 
       span{
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 1.25rem;
+        letter-spacing: .1px;
 
         &.seperator{
           display: inline-block;
@@ -37,57 +48,112 @@
     }
   }
 }
-#header{
-  background-image: url('../images/math-fade.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &:before{
-    position: absolute;
-    content:'';
-    top:0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-image: url('../images/tpm-logo-composiet-large.png');
+.page:not(.home){
+  #header{
+    background-image: url('../images/math-fade.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    opacity: .4;
-  }
-  .content{
-    position: relative;
-    color: $white;
-    font-weight: 400;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    z-index: 0;
-
-    h1, h2, h3{
-      color: $white;
-    }
-
-    &:after{
-      display: block;
+    background-size: cover;
+    &:before{
       position: absolute;
-      content: " ";
-      left: -200vw;
-      bottom: 0px;
-      transform: skew(-384deg);
+      content:'';
+      top:0px;
+      left: 0px;
       right: 0px;
-      background-color: rgba($blue-dark ,.45);
-      top: 0px;
-      z-index: -1;
+      bottom: 0px;
+      background-image: url('../images/tpm-logo-composiet-large.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: .4;
+    }
+    .content{
+      position: relative;
+      color: $white;
+      font-weight: 400;
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+      z-index: 0;
+
+      h1, h2, h3{
+        color: $white;
+      }
+
+      &:after{
+        display: block;
+        position: absolute;
+        content: " ";
+        left: -200vw;
+        bottom: 0px;
+        transform: skew(-384deg);
+        right: 0px;
+        background-color: rgba($blue-dark ,.45);
+        top: 0px;
+        z-index: -1;
+      }
     }
   }
 }
-
-@include media-breakpoint-up(md){
-  .page{
+@include media-breakpoint-down(sm){
+  .home{
     #header{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-image: url('../images/math-fade.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      img{
+        max-width: 300px;
+        margin-bottom: -1.6rem;
+      }
       .content{
-        padding-top: 6rem;
-        padding-bottom: 8rem;
+        position: relative;
+        color: $white;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        &:after{
+          display: none;
+        }
+        h1,
+        a{
+          color: $white;
+        }
+        h1{
+          font-size: 2rem;
+          br{
+            display: none;
+          }
+        }
+        p{
+          margin-bottom: 1rem;
+        }
+      }
+      .enumeration{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        text-align: left;
+        span{
+          position: relative;
+          display: block;
+          font-size: 1rem;
+          color: $white;
+          &:before{
+            display:block;
+            position: absolute;
+            content:'';
+            top: calc(50% - 12.5px);
+            left: -2rem;
+            width: 25px;
+            height: 25px;
+            background-image: url('../images/assets-sprite.png');
+            background-position: -355px -145px;
+          }
+          &.seperator{
+            display: none;
+          }
+        }
       }
     }
   }

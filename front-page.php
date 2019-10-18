@@ -16,18 +16,18 @@ $projects = get_field('projects');
 <section id="header" class="bg-gray-300 bg-grid">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12 col-md-6 py-md-5">
-        <div class="content py-md-6">
+      <div class="col-12 col-md-6 order-2">
+        <div class="content">
           <h1><?php echo $header['title'];?></h1>
           <?php echo $header['introduction'];?>
         </div>
       </div>
-      <div class="col-12 col-md-6 text-center">
+      <div class="col-12 col-md-6 text-md-center order-1 order-md-3">
         <img class="img-fluid" src="<?php echo $header['image']['url']; ?>" alt="TPM Logo met foto invulling">
       </div>
     </div>
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12">
         <div class="enumeration">
           <span>Project management & Consultancy</span>
           <span class="seperator"></span>
@@ -42,7 +42,7 @@ $projects = get_field('projects');
 
 <section class="layout content-tabs">
   <div class="container">
-    <div class="row pt-6 pb-6">
+    <div class="row py-5 py-md-6">
       <div class="col-12 col-md-6">
         <h2><?php echo $content_tabs['title']; ?></h2>
         <?php echo $content_tabs['content']; ?>
@@ -84,7 +84,7 @@ $projects = get_field('projects');
 <section class="layout gallery-icons">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 order-2 pb-3 pb-md-0">
         <?php $post_objects = $market_specific_solutions['gallery']?>
         <?php if( $post_objects ): ?>
           <div class="slick-gallery">
@@ -102,7 +102,7 @@ $projects = get_field('projects');
           <?php wp_reset_postdata(); ?>
         <?php endif;?>
       </div>
-      <div class="col-12 col-md-6 text-center">
+      <div class="col-12 col-md-6 text-center order-1 order-md-3 pb-4 pb-md-0">
         <h4>Ontdek onze Market Specific Solutions</h4>
         <div class="row justify-content-center text-center icons">
           <div class="col-4 icon energy">
@@ -123,13 +123,13 @@ $projects = get_field('projects');
 <section class="layout blog-posts">
   <div class="container">
     <div class="row pt-md-8 pb-md-6">
-      <div class="col-12 col-md-3">
+      <div class="col-12 col-md-4 col-lg-3">
         <div class="title">
           <h2><?php echo $projects_blog['title']; ?></h2>
           <p><?php echo $projects_blog['content']; ?></p>
         </div>
       </div>
-      <div class="col-12 col-md-9">
+      <div class="col-12 col-md-8 col-lg-9">
         <?php $args = array( 'post_type' => 'post' ); ?>
         <?php $query = new wp_query( $args );?>
         <?php if($query->have_posts()): ?>
@@ -151,7 +151,7 @@ $projects = get_field('projects');
 
 <section class="bg-blue bg-grid">
   <div class="container">
-    <div class="row justify-content-around py-6">
+    <div class="row justify-content-around pt-3 py-md-6">
       <div class="col-12 col-md-4 text-white col-arrow-right">
         <h3 class="text-white"><?php echo $callout['title_left']; ?></h3>
         <?php echo $callout['content_left']; ?>
@@ -166,7 +166,7 @@ $projects = get_field('projects');
 
 <section class="front-page ervaringen">
   <div class="container">
-    <div class="row pt-md-8 pb-md-6">
+    <div class="row py-4 pt-md-8 pb-md-6">
       <div class="col-12 col-md-3">
         <div class="title">
           <h3><?php echo $ervaringen['title']; ?></h3>

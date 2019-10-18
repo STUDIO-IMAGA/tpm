@@ -110,7 +110,6 @@
         display: inline-block;
         text-decoration: none;
         padding-top: 80px;
-        width: 60px;
 
         &:before{
           position: absolute;
@@ -118,7 +117,7 @@
           width: 60px;
           height: 60px;
           top: 0;
-          left: 0;
+          left: calc(50% - 30px);
           background-image: url('../images/assets-sprite.png');
           background-position: 0px 0px;
           background-repeat: no-repeat;
