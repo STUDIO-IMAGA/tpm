@@ -167,7 +167,7 @@
                 },
                 "layout_5d7a48111b5cf": {
                     "key": "layout_5d7a48111b5cf",
-                    "name": "content_tabs",
+                    "name": "content-tabs",
                     "label": "Content & Tabs",
                     "display": "block",
                     "sub_fields": [
@@ -366,5 +366,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571054796
+    "modified": 1571757824
 }

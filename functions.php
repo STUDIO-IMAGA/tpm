@@ -21,6 +21,7 @@ $files = [
   'lib/posttypes/projecten.php',          // Custom Post Type
   'lib/posttypes/ervaringen.php',         // Custom Post Type
 
+  'lib/taxonomies/projecten-market-specific-solution.php',         // Custom Taxonomy
 ];
 
 foreach ($files as $file):
@@ -32,6 +33,5 @@ endforeach;
 unset($file, $filepath);
 
 // Init updater
-$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/TPM', __FILE__, 'imaga' );
-
+$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/tpm', __FILE__, 'imaga' );
 $puc->getVcsApi()->enableReleaseAssets();

@@ -12,15 +12,44 @@ use IMAGA\Theme\Assets;
   <?php $header = get_field('header');?>
   <?php $featured = get_field('featured');?>
 
-  <section id="header" class="bg-blue-dark">
+  <section id="header">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
-          <div class="content text-white py-md-8">
-            <h5 class="text-blue-light m-0"><?php echo $header['title'];?></h5>
-            <h1 class="text-white"><?php echo $header['title'];?></h1>
-            <?php echo $header['introduction'];?>
+          <div class="content text-white py-md-5">
+            <h5 class="text-blue-light m-0">Market specific solution</h5>
+            <?php the_field('introduction'); ?>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured-projects">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <?php $post_objects = get_field('featured_projects');?>
+          <?php if( $post_objects ): ?>
+            <div class="slick-featured-projects">
+              <?php foreach( $post_objects as $post): ?>
+                <?php setup_postdata($post); ?>
+                <div class="featured-item">
+                  <div class="project-image">
+                    <img class="img-fluid" src="<?php the_post_thumbnail_url('featured-projects'); ?>" alt="<?php the_title(); ?>">
+                  </div>
+                  <div class="project-description">
+                    <h6><?php the_title(); ?></h6>
+                    <div>
+                      <?php echo Extras\limit_text(get_field('excerpt'),'20'); ?>...
+                      <a href="<?php echo get_permalink(); ?>">Bekijk project</a>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <?php wp_reset_postdata(); ?>
+          <?php endif;?>
         </div>
       </div>
     </div>
@@ -28,20 +57,14 @@ use IMAGA\Theme\Assets;
 
   <?php if( have_rows('layouts') ): ?>
     <?php while( have_rows('layouts') ): the_row(); ?>
-
       <?php Extras\get_layout( get_row_layout() ); ?>
-
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center pb-5">
-          <span>Vrijblijvend afspreken om de mogelijkheden te bespreken?</span><a class="btn btn-blue btn-agenda ml-4" href="/contact">Afspraak maken</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <?php get_template_part('templates/layouts/callout','small'); ?>
+
+  <?php get_template_part('templates/layouts/callout','checkmarks'); ?>
+
+  <?php get_template_part('templates/layouts/projects'); ?>
 
 <?php endwhile; ?>

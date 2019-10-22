@@ -42,6 +42,7 @@ function setup() {
   // Used for related posts and more reviews
   add_image_size('post-thumbnail-related', 500, 300, true);
   add_image_size('gallery_icon', 720, 440, true);
+  add_image_size('featured-projects', 1920, 1080, true);
 
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');

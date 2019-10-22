@@ -37,8 +37,20 @@
            once: 'true',
         });
 
-        // init slick instance
-        $(".slick-ervaringen").slick({
+        // init slick instances
+        $(".slick-featured-projects").slick({
+          infinite: true,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          draggable: true,
+          mobileFirst: true,
+          swipeToSlide: true,
+          slidesToShow: 1,
+          fade: true,
+        });
+
+        $(".slick-reviews").slick({
           infinite: false,
           dots: true,
           arrows: false,
@@ -50,7 +62,6 @@
           fade: true,
         });
 
-        // init slick instance
         $(".slick-blog").slick({
           infinite: false,
           dots: false,
@@ -61,7 +72,6 @@
           variableWidth: true,
         });
 
-        // init slick instance
         $(".slick-projecten").slick({
           infinite: false,
           dots: false,
@@ -73,7 +83,6 @@
           variableWidth: true,
         });
 
-        // init slick instance
         $(".slick-gallery").slick({
           infinite: false,
           dots: true,

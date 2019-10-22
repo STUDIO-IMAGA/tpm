@@ -1,19 +1,15 @@
-<?php
+<?php $callout = get_field('callout'); ?>
 
-$content_left = get_sub_field('content_left');
-$content_right = get_sub_field('content_right');
-
-?>
-<section class="bg-blue bg-grid">
+<section class="callout">
   <div class="container">
-    <div class="row justify-content-around py-6">
+    <div class="row justify-content-around pt-3 py-md-6">
       <div class="col-12 col-md-4 text-white col-arrow-right">
-        <h3 class="text-white"><?php echo $content_left['title']; ?></h3>
-        <?php echo $content_left['content']; ?>
+        <h3 class="text-white"><?php echo $callout['title_left']; ?></h3>
+        <?php echo $callout['content_left']; ?>
       </div>
       <div class="col-12 col-md-6 text-white">
-        <h3 class="text-white"><?php echo $content_right['title']; ?></h3>
-        <?php echo $content_right['content']; ?>
+        <h3 class="text-white"><?php echo $callout['title_right']; ?></h3>
+        <?php echo $callout['content_right']; ?>
       </div>
     </div>
   </div>

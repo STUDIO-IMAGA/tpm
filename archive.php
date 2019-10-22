@@ -21,7 +21,7 @@
             <div class="project">
               <h4><?php the_title(); ?></h4>
               <p><?php echo Extras\limit_text(get_the_content(),'30'); ?></p>
-              <a href="#leesmeer">Meer</a>
+              <a href="<?php echo get_permalink(); ?>">Meer</a>
             </div>
           </div>
         <?php endwhile; ?>

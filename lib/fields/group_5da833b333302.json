@@ -3,9 +3,71 @@
     "title": "Template: Single Market Specific Solution",
     "fields": [
         {
-            "key": "field_5da833b338656",
-            "label": "Header",
-            "name": "header",
+            "key": "field_5daf1d113b6e2",
+            "label": "introduction",
+            "name": "introduction",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "simple_content",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5daf229ee9ae1",
+            "label": "Uitgelichte Projecten",
+            "name": "featured_projects",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "projecten"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5daf1f9cf78b8",
+            "label": "Layouts",
+            "name": "Content",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5d7a4713d5279"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5daf31cea03f3",
+            "label": "Projecten en opdrachtgevers",
+            "name": "projects",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -18,48 +80,10 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5da833b339b4f",
+                    "key": "field_5daf31cea03f4",
                     "label": "Titel",
                     "name": "title",
-                    "type": "textarea",
-                    "instructions": "Voer hier de titel in van de pagina voor in de header.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "60",
-                        "class": "acf-h1",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5da833b339b6b",
-                    "label": "Introductie",
-                    "name": "introduction",
-                    "type": "wysiwyg",
-                    "instructions": "Voer hier de introductie tekst in van de pagina.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "visual",
-                    "toolbar": "simple_content",
-                    "media_upload": 0,
-                    "delay": 0
-                },
-                {
-                    "key": "field_5da833b339b82",
-                    "label": "Uitgelichte afbeeldingen",
-                    "name": "uitgelichte_afbeeldingen",
-                    "type": "group",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -68,104 +92,35 @@
                         "class": "",
                         "id": ""
                     },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5da833b3411ca",
-                            "label": "Grote afbeelding",
-                            "name": "big_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "60",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5da833b3411e4",
-                            "label": "Kleine afbeelding boven",
-                            "name": "small_image_1",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "40",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5da833b3411fa",
-                            "label": "Kleine afbeelding onder",
-                            "name": "small_image_2",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "40",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ]
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5daf31cea03f5",
+                    "label": "Projecten",
+                    "name": "projecten",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "projecten"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
                 }
             ]
-        },
-        {
-            "key": "field_5da833b347ac0",
-            "label": "Secties",
-            "name": "secties",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_5d7a4705a1593"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         }
     ],
     "location": [
@@ -200,5 +155,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571304618
+    "modified": 1571762727
 }

@@ -1,0 +1,45 @@
+.single{
+  &-projecten{
+    #header{
+      position: relative;
+      background-image: url('../images/math-fade.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      .content{
+        h1{
+          color: $white;
+        }
+        color: $white;
+      }
+    }
+    #featured-images{
+      margin-top: -2.5rem;
+      margin-bottom: 2rem;
+      .container{
+        .row{
+          min-height: 400px;
+          .main-image{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 3px;
+          }
+          .sub-image{
+            padding-top: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+    section{
+      &.reviews{
+        background-color: $gray-100;
+      }
+    }
+  }
+}

@@ -1,36 +1,203 @@
-.layout{}
-.blog-posts{
-  background-color: #f5f6f7;
-  padding-top: 80px;
-  margin-top: -80px;
-  z-index: 0;
-
-  .title{
-    text-align: left;
+section{
+  &.reviews{
+    .slick-reviews{
+      &:before{
+        position: absolute;
+        top: -6px;
+        left: -28px;
+        content:'';
+        width: 51px;
+        height: 26px;
+        background-image: url('../images/assets-sprite.png');
+        background-repeat: no-repeat;
+        background-position: 0px -170px;
+      }
+      .handtekening{
+        margin-top: 30px;
+      }
+      .slick-dots{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 26px;
+        li{
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background-color: #dedede;
+          margin-right: 7px;
+          cursor: pointer;
+          &.slick-active{
+            background-color: #7fb5df;
+          }
+          button{
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            color: transparent;
+            font-size: 0;
+            line-height: 0;
+            border: 0;
+          }
+        }
+      }
+    }
   }
-  .slick-blog{
+  &.projects{
+    .seperator{
+      height: 2px;
+      width: 90px;
+      background-color: $blue-light;
+      margin-bottom: 4rem;
+      margin-top: 2.5rem;
+    }
     .slick-slide{
-      width: 394px;
-      height: 360px;
-      padding: 0 17px;
+      width: 392px;
+      height: 322px;
+      padding: 16px;
       border-radius: 2px;
+    }
+    .project-item{
+      position: relative;
+      height: 290px;
+      .project-opdrachtgever-logo{
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        height: 200px;
+        z-index: 20;
+        .helper{
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+        img{
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      .project-opdrachtgever{
+        position: absolute;
+        left: 28px;
+        bottom: 48px;;
+        z-index: 20;
+        color: $blue-light;
+      }
+      .project-titel{
+        position: absolute;
+        left: 26px;
+        bottom: 26px;
+        z-index: 20;
+        color: $white;
+      }
+      .background-image{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10;
+        &:before{
+          position: absolute;
+          content:'';
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          z-index: 11;
+          background-color: rgba($blue, .6);
+        }
+      }
+    }
+    &:after{
+      position: absolute;
+      content:'';
+      top: 0px;
+      bottom: 0px;
+      left: 100px;
+      right: 0px;
+      background-color: #f5f6f7;
+      z-index: -1;
+    }
+  }
+  &.callout{
+    position: relative;
+    background-image: url('../images/math-fade.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.blog{
+    background-color: #f5f6f7;
+    padding-top: 80px;
+    margin-top: -80px;
+    z-index: 0;
 
-      .blog-item{
-        padding: 38px;
-        background-color: $white;
+    .title{
+      text-align: left;
+    }
+    .slick-blog{
+      .slick-slide{
+        width: 394px;
+        height: 360px;
+        padding: 0 17px;
+        border-radius: 2px;
+
+        .blog-item{
+          padding: 38px;
+          background-color: $white;
+        }
       }
     }
   }
 }
+@include media-breakpoint-up(md){
+  section{
+    &.reviews{
+      .title{
+        border-right: 2px solid #7fb5df;
+      }
+    }
+    &.blog-posts{
+      .title{
+        text-align: right;
+        border-right: 2px solid #7fb5df;
+        padding-right: 56px;
+      }
+      .positioned{
+        position: absolute;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .gallery-icons{
   z-index: 1;
-
   .slick-gallery{
-
     .gallery-item{
       display: block !important;
       border-radius: 2px;
-
       .title{
         position: absolute;
         height: 64px;
@@ -45,14 +212,12 @@
         background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.6) 100%);
         background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.6) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#99000000',GradientType=0 );
-
         a{
           position: relative;
           text-transform: uppercase;
           color: #b5dcfc;
           padding: .4rem .8rem;
           text-decoration: none;
-
           &:after{
             position: absolute;
             content: "";
@@ -73,7 +238,6 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
-
       li{
         display: inline-block;
         width: 14px;
@@ -81,7 +245,6 @@
         background-color: #dedede;
         margin-left: 7px;
         cursor: pointer;
-
         &.slick-active{
           background-color: #7fb5df;
         }
@@ -101,16 +264,13 @@
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
-
     .icon{
       padding-top: 1rem;
-
       .link{
         position: relative;
         display: inline-block;
         text-decoration: none;
         padding-top: 80px;
-
         &:before{
           position: absolute;
           content:'';
@@ -122,7 +282,6 @@
           background-position: 0px 0px;
           background-repeat: no-repeat;
         }
-
         &:after{
           position: absolute;
           content:'';
@@ -179,103 +338,5 @@
   .tab-content{
     background-color: #f5f6f7;
     padding: 2rem;
-  }
-}
-.projecten-en-opdrachtgevers{
-  .seperator{
-    height: 2px;
-    width: 90px;
-    background-color: $blue-light;
-    margin-bottom: 4rem;
-    margin-top: 2.5rem;
-  }
-  .slick-slide{
-    width: 392px;
-    height: 322px;
-    padding: 16px;
-    border-radius: 2px;
-  }
-  .project-item{
-    position: relative;
-    height: 290px;
-
-    .project-opdrachtgever-logo{
-      position: relative;
-      text-align: center;
-      white-space: nowrap;
-      height: 200px;
-      z-index: 20;
-
-      .helper{
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-      }
-      img{
-        vertical-align: middle;
-        display: inline-block;
-      }
-    }
-    .project-opdrachtgever{
-      position: absolute;
-      left: 28px;
-      bottom: 48px;;
-      z-index: 20;
-      color: $blue-light;
-    }
-    .project-titel{
-      position: absolute;
-      left: 26px;
-      bottom: 26px;
-      z-index: 20;
-      color: $white;
-    }
-    .background-image{
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 10;
-
-      &:before{
-        position: absolute;
-        content:'';
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        z-index: 11;
-        background-color: rgba($blue, .6);
-      }
-    }
-  }
-  &:after{
-    position: absolute;
-    content:'';
-    top: 0px;
-    bottom: 0px;
-    left: 100px;
-    right: 0px;
-    background-color: #f5f6f7;
-    z-index: -1;
-  }
-}
-
-@include media-breakpoint-up(md){
-  .layout{
-    &.blog-posts{
-      .title{
-        text-align: right;
-        border-right: 2px solid #7fb5df;
-        padding-right: 56px;
-      }
-      .positioned{
-        position: absolute;
-      }
-    }
   }
 }

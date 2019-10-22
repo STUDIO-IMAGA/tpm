@@ -70,7 +70,7 @@ function imaga_mce_before_init_insert_formats( $init_array ) {
         array(
           'title' => 'Agenda',
           'selector' => 'a',
-          'classes' => 'btn-arrow'
+          'classes' => 'btn-agenda'
         ),
       ),
     ),

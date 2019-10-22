@@ -3,7 +3,6 @@
   background-image: url('../images/header-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
   h6{
     color: $white;
   }
@@ -16,46 +15,45 @@
   }
   .nav{
     .nav-item{
-      &.telefoon:before,
-      &.email:before,
-      &.adres:before{
-        content:'';
-        display:inline-block;
-        vertical-align: middle;
-        height: 27px;
-        width: 27px;
-        margin-right: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: $blue-light;
+      &.telefoon,
+      &.email,
+      &.adres{
+        &:before{
+          content:'';
+          display:inline-block;
+          vertical-align: middle;
+          height: 25px;
+          width: 25px;
+          margin-right: 10px;
+          outline: 2px solid $blue-light;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: $blue-light;
+          background-image: url('../images/assets-sprite.png');
+          background-position-y: -145px;
+        }
+        &:hover{
+          &:before{
+            outline: 2px solid $white;
+            background-color: $white;
+            background-position-y: -120px;
+          }
+        }
       }
       &.telefoon:before{
-        background-image: url('../images/icon/phone-white.png');
-      }
-      &.telefoon:hover:before{
-        background-color: $white;
-        background-image: url('../images/icon/phone-blue.png');
+        background-position-x: -255px;
       }
       &.email:before{
-        background-image: url('../images/icon/enveloppe-white.png');
-      }
-      &.email:hover:before{
-        background-color: $white;
-        background-image: url('../images/icon/enveloppe-blue.png');
+        background-position-x: -305px;
       }
       &.adres:before{
         vertical-align: top;
         margin-top: 9px;
-        background-image: url('../images/icon/marker-white.png');
-      }
-      &.adres:hover:before{
-        background-color: $white;
-        background-image: url('../images/icon/marker-blue.png');
+        background-position-x: -280px;
       }
       .nav-link{
         display: inline-block;
         color: $blue-light;
-
         &:hover{
           color:$white;
         }

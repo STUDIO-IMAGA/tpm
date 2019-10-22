@@ -1,3 +1,57 @@
+
+.single-market-specific-solution{
+  #featured-projects{
+    margin-top: -2.5rem;
+    .slick-featured-projects{
+      .featured-item{
+        .project-image{
+          img{
+            border-radius: 3px;
+          }
+        }
+        .project-description{
+          position: absolute;
+          right: 46px;
+          bottom: 60px;
+          width: 420px;
+          color: $white;
+          h6{
+            color: $white;
+          }
+          a{
+            color: $white;
+          }
+        }
+      }
+      .slick-dots{
+        position: absolute;
+        list-style-type: none;
+        right: 360px;
+        bottom: 0px;
+        li{
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background-color: #dedede;
+          margin-right: 7px;
+          cursor: pointer;
+          &.slick-active{
+            background-color: #7fb5df;
+          }
+          button{
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            color: transparent;
+            font-size: 0;
+            line-height: 0;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
 .market-specific-solutions{
   #selector{
     border-bottom: 2px solid $blue-light;

@@ -4,23 +4,27 @@ a:not(.btn):not(.nav-link){
 .list-checkmark{
   list-style: none;
   padding: 0;
-  @each $color, $value in $theme-colors {
-    &-#{$color}{
-      li:before{
-        color: $value;
-      }
+  li{
+    position: relative;
+    padding-left: 2rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    &:before{
+      position: absolute;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      top: calc(50% - 12.5px);
+      left: 0px;
+      width: 25px;
+      height: 25px;
+      background-image: url('../images/assets-sprite.png');
+      background-position: -330px -120px;
     }
   }
-  li{
-    padding-left: 2.4rem;
-    &:before{
-      content: $fa-var-check;
-      font-family: FontAwesome;
-      font-size: 1.8rem;
+  &.list-inline{
+    li{
       display: inline-block;
-      margin-left: -2.4rem;
-      width: 2.4rem;
-      vertical-align: middle;
     }
   }
 }

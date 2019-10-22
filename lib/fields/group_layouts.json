@@ -168,6 +168,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "template-market-specific-solutions.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-single-market-specific-solution.php"
             }
         ]
     ],
@@ -191,5 +196,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571302494
+    "modified": 1571757152
 }

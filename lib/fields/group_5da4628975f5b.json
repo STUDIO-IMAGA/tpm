@@ -450,7 +450,7 @@
         {
             "key": "field_5da46a1f9e6a5",
             "label": "Ervaringen",
-            "name": "ervaringen",
+            "name": "reviews",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -484,7 +484,7 @@
                 {
                     "key": "field_5da46a439e6a7",
                     "label": "Ervaringen",
-                    "name": "reviews",
+                    "name": "items",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
@@ -596,5 +596,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571057320
+    "modified": 1571762647
 }
