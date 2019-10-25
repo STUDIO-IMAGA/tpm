@@ -2,6 +2,20 @@
   position: relative;
   &.btn-white{
     color: $blue !important;
+    &.btn-arrow:before{
+      background-position: -405px -170px;
+    }
+    &.btn-agenda:before{
+      background-position: -380px -170px;
+    }
+  }
+  &.btn-blue{
+    &.btn-arrow:before{
+      background-position: -405px -145px;
+    }
+    &.btn-agenda:before{
+      background-position: -380px -145px;
+    }
   }
   &.btn-arrow{
     padding-right: 3.6rem !important;
@@ -13,7 +27,6 @@
       width: 25px;
       height: 25px;
       background-image: url('../images/assets-sprite.png');
-      background-position: -405px -170px;
       transform: rotate(180deg);
     }
   }
@@ -27,7 +40,6 @@
       width: 25px;
       height: 25px;
       background-image: url('../images/assets-sprite.png');
-      background-position: -380px -145px;
     }
   }
 }

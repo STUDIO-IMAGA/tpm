@@ -1,17 +1,18 @@
-<?php
-ini_set('zlib.output_compression_level',6); if(substr_count($_SERVER['HTTP_ACCEPT_ENCODING'],'gzip')) ob_start('ob_gzhandler'); else ob_start();
-use IMAGA\Theme\Setup;
-use IMAGA\Theme\Wrapper;
-
-?>
+<?php ini_set('zlib.output_compression_level',6); if(substr_count($_SERVER['HTTP_ACCEPT_ENCODING'],'gzip')) ob_start('ob_gzhandler'); else ob_start(); ?>
+<?php use IMAGA\Theme\Setup; ?>
+<?php use IMAGA\Theme\Wrapper; ?>
 
 <!doctype html>
+
 <html <?php language_attributes(); ?>>
+
   <?php get_template_part('templates/head'); ?>
+
   <body <?php body_class(); ?> >
+
     <!--[if IE]>
       <div class="alert alert-warning">
-        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'imaga'); ?>
+        <?php _e('Je gebruikt een <strong>verouderde</strong> browser. Installeer <a href="http://browsehappy.com/">een moderne browser</a> voor de beste ervaring.', 'imaga'); ?>
       </div>
     <![endif]-->
 
@@ -20,24 +21,6 @@ use IMAGA\Theme\Wrapper;
     <?php get_template_part('templates/navigation'); ?>
 
     <div class="wrap" role="document">
-
-      <div class="fixed-top bg-blue text-white" style="width:30px;">
-        <div class="d-block d-sm-none">
-          XS
-        </div>
-        <div class="d-none d-sm-block d-md-none">
-          SM
-        </div>
-        <div class="d-none d-md-block d-lg-none">
-          MD
-        </div>
-        <div class="d-none d-lg-block d-xl-none">
-          LG
-        </div>
-        <div class="d-none d-xl-block">
-          XL
-        </div>
-      </div>
 
       <main>
 
@@ -56,4 +39,5 @@ use IMAGA\Theme\Wrapper;
   </body>
 
 </html>
+
 <?php ob_end_flush();?>

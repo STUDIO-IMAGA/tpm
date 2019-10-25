@@ -41,5 +41,17 @@
         background-color: $gray-100;
       }
     }
+    #footer{
+      padding-top: 0px;
+      background-image: url('../images/math-fade.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      section{
+        &.callout{
+          padding-bottom: 3rem;
+          background: none !important;
+        }
+      }
+    }
   }
 }

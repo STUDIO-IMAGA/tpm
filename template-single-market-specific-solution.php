@@ -61,6 +61,8 @@ use IMAGA\Theme\Assets;
     <?php endwhile; ?>
   <?php endif; ?>
 
+  <?php get_template_part('templates/layouts/reviews'); ?>
+
   <?php get_template_part('templates/layouts/callout','small'); ?>
 
   <?php get_template_part('templates/layouts/callout','checkmarks'); ?>

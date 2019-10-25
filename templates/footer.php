@@ -3,6 +3,9 @@ use IMAGA\Theme\Bootstrap_Walker;
 ?>
 
 <footer id="footer">
+  <?php if(is_single() && 'projecten' == get_post_type()): ?>
+    <?php get_template_part('templates/layouts/callout'); ?>
+  <?php endif; ?>
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">

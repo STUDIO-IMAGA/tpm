@@ -1,9 +1,19 @@
-
 .single-market-specific-solution{
+  #header{
+    .content{
+      h5{
+        font-family: 'Prompt', sans-serif;
+      }
+    }
+  }
   #featured-projects{
     margin-top: -2.5rem;
     .slick-featured-projects{
+      .slick-slide > div{
+        line-height: 0;
+      }
       .featured-item{
+        position: relative;
         .project-image{
           img{
             border-radius: 3px;
@@ -11,10 +21,16 @@
         }
         .project-description{
           position: absolute;
-          right: 46px;
-          bottom: 60px;
+          right: 0px;
+          bottom: 0px;
           width: 420px;
           color: $white;
+          padding-top: 46px;
+          padding-left: 46px;
+          padding-right: 46px;
+          padding-bottom: 60px;
+          background-color: rgba($blue, .6);
+          line-height: 1.5;
           h6{
             color: $white;
           }
@@ -26,8 +42,10 @@
       .slick-dots{
         position: absolute;
         list-style-type: none;
-        right: 360px;
-        bottom: 0px;
+        right: 270px;
+        bottom: 30px;
+        margin-bottom: 0;
+        height: 14px;
         li{
           display: inline-block;
           width: 14px;

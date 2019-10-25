@@ -49,6 +49,7 @@
   }
 }
 header{
+  background-color: $white;
   .navbar{
     &-nav{
       &#menu-hoofd-menu{
@@ -86,12 +87,12 @@ header{
   .home{
     header{
       background-image: none !important;
-      .navbar-toggler{
-        &:before{
-          content:'menu';
-          color: $blue-light;
-        }
-      }
+    }
+  }
+  .navbar-toggler{
+    &:before{
+      content:'menu';
+      color: $blue-light;
     }
   }
 }

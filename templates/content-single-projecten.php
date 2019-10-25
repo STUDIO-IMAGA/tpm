@@ -17,7 +17,5 @@
 
     <?php get_template_part('templates/layouts/reviews'); ?>
 
-    <?php get_template_part('templates/layouts/callout'); ?>
-
   </article>
 <?php endwhile; ?>

@@ -1,8 +1,39 @@
 .archive{
+  @extend .bg-grid;
+  @extend .bg-gray-100;
   &.post-type-archive-projecten{
     .project{
-      background-color: $white;
-      padding: 38px;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 18%;
+      .content{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 2;
+        padding: 38px;
+        h4{
+          color: $white;
+        }
+      }
+      &:after{
+        position: absolute;
+        top:0;
+        right:0;
+        left:0;
+        bottom: 0;
+        content:'';
+        transition: all .3s ease;
+        background-color: rgba($blue, .6);
+        z-index: 1;
+      }
+      &:hover:after{
+        background-color: rgba($blue, .4)
+      }
     }
   }
 }

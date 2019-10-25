@@ -4,26 +4,34 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 pt-6 pb-4">
             <?php if(is_archive()): ?>
-              <h2><?php post_type_archive_title(); ?></h2>
-            <h2><?php single_term_title(); ?></h2>
+              <h1><?php post_type_archive_title(); ?></h1>
+              <h2><?php single_term_title(); ?></h2>
             <?php endif;?>
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-gray-300 bg-grid">
-    <div class="container-fluid py-6">
-      <div class="row justify-content-around">
+  <section>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
         <?php while (have_posts()) : the_post();?>
-          <div class="col-12 col-sm-6 col-md-3 p-4">
-            <div class="project">
-              <h4><?php the_title(); ?></h4>
-              <p><?php echo Extras\limit_text(get_the_content(),'30'); ?></p>
-              <a href="<?php echo get_permalink(); ?>">Meer</a>
+          <a class="col-12 col-sm-6 col-md-3 project" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');" href="<?php echo get_permalink(); ?>">
+            <div class="project-opdrachtgever-logo">
+              <span class="helper"></span>
+              <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
             </div>
-          </div>
+            <div class="project-opdrachtgever">
+              <?php echo get_the_title(get_field('opdrachtgever')); ?>
+            </div>
+            <div class="project-titel">
+              <?php the_title(); ?>
+            </div>
+            <div class="hover">
+              <p><?php echo Extras\limit_text(get_the_content(),'30'); ?></p>
+            </div>
+          </a>
         <?php endwhile; ?>
       </div>
     </div>

@@ -3,31 +3,15 @@
     "title": "Pagina's",
     "fields": [
         {
-            "key": "field_5c741ddaaef16",
-            "label": "Header",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_5d7a2ae84ef7a",
-            "label": "Header Tekst",
+            "label": "Header",
             "name": "header",
             "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "70",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -43,7 +27,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "acf-h1",
                         "id": ""
                     },
                     "default_value": "",
@@ -74,66 +58,9 @@
             ]
         },
         {
-            "key": "field_5d7a2b144ef7b",
-            "label": "Uitgelichte Afbeelding",
-            "name": "featured",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "30",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5c8770cfdba65",
-                    "label": "Afbeelding",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "Kies hier de uitgelichte afbeelding in voor in de header.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5c741de6aef17",
-            "label": "Inhoud",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_5d7a46f79b74d",
-            "label": "Secties",
-            "name": "secties",
+            "label": "Layouts",
+            "name": "content",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -189,12 +116,11 @@
         "revisions",
         "slug",
         "format",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1571757152
+    "modified": 1571835678
 }

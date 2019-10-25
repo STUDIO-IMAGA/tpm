@@ -145,14 +145,14 @@ $font-weight-normal:              400;
 $font-weight-bold:                700;
 $font-weight-bolder:              700;
 
-$line-height-base:                1.5;
+$line-height-base:                1.6;
 
 $font-weight-normal:              300;
 $font-weight-bold:                600;
 
 $headings-font-family:            'Prompt', sans-serif;
 $headings-margin-bottom:          $spacer;
-$headings-font-weight:            600;
+$headings-font-weight:            500;
 $headings-line-height:            1.2;
 $headings-color:                  $blue;
 
@@ -169,6 +169,8 @@ $display3-size:                   1.8rem;
 $display4-size:                   1.4rem;
 
 $lead-font-size:                  1.28rem;
+
+$paragraph-margin-bottom:         1.5rem;
 
 $nav-link-padding-y:              .4rem;
 $navbar-padding-y:                1.4rem;

@@ -7,7 +7,7 @@
           <h3><?php echo $ervaringen['title']; ?></h3>
         </div>
       </div>
-      <div class="col-12 col-md-9 pl-md-6">
+      <div class="col-12 col-md-9 pl-md-8">
         <?php $post_objects = $ervaringen['items']?>
         <?php if( $post_objects ): ?>
           <div class="slick-reviews">
