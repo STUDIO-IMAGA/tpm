@@ -1,13 +1,13 @@
 {
   "name": "tpm",
   "theme": "TPM Drachten",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Odilio Witteveen <hallo@odil.io>",
   "homepage": "https://odil.io/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/odil-io/imaga.git"
+    "url": "git://github.com/STUDIO-IMAGA/tpm.git"
   },
   "licenses": [
     {
@@ -35,9 +35,9 @@
     "gulp-concat": "2.6.0",
     "gulp-cssnano": "2.1.0",
     "gulp-flatten": "0.3.1",
+    "gulp-github-release": "^1.2.1",
     "gulp-if": "2.0.1",
     "gulp-imagemin": "3.0.3",
-    "imagemin-mozjpeg": "7.0.0",
     "gulp-jshint": "2.0.1",
     "gulp-less": "3.0.3",
     "gulp-load-plugins": "0.10.0",
@@ -49,6 +49,7 @@
     "gulp-sourcemaps": "1.5.2",
     "gulp-uglify": "2.0.0",
     "gulp-zip": "3.0.2",
+    "imagemin-mozjpeg": "7.0.0",
     "imagemin-pngcrush": "5.0.0",
     "jshint": "2.9.3",
     "jshint-stylish": "2.0.1",
