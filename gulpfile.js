@@ -318,6 +318,7 @@ gulp.task('release', ['zip'], function(){
       manifest: require('./package.json')
     }));
   return del([
-    pkg.name + '/**'
+    pkg.name + '/**',
+    pkg.name + '.zip'
   ]);
 });
