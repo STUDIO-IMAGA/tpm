@@ -5,8 +5,11 @@
   overflow: hidden;
 }
 
-.img-circle{
+.img-round{
   border-radius: 9999px !important;
+}
+.img-rounded{
+  border-radius: 3px !important;
 }
 
 @for $i from 0 through ceil(500/50) {

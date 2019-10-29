@@ -3,18 +3,16 @@
 @import "common/global";
 
 .acf-field{
-  &.acf-h1,
-  &.acf-h2,
-  &.acf-h3,
-  &.acf-h4,
-  &.acf-h5,
-  &.acf-h6{
-    .acf-input > *{
-      font-family: Prompt,sans-serif;
+  &.acf-heading{
+    .acf-input *{
+      font-family: 'Prompt', sans-serif;
       font-size: 2rem;
       font-weight: 600;
       line-height: 1.2;
       color: $blue;
     }
+  }
+  &.acf-profile{
+
   }
 }

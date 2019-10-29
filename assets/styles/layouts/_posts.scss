@@ -6,10 +6,15 @@
       background-size: cover;
       background-repeat: no-repeat;
       .content{
+        color: $white;
         h1{
           color: $white;
         }
-        color: $white;
+        h5{
+          span{
+            text-transform: uppercase;
+          }
+        }
       }
     }
     #featured-images{

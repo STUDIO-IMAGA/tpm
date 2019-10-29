@@ -24,8 +24,8 @@ var bump          = require('gulp-bump');
 var fs            = require('fs');
 var semver        = require('semver');
 var smushit       = require('gulp-smushit');
+
 var manifest      = require('asset-builder')('./assets/manifest.json');
-var release       = require('gulp-github-release');
 var path          = manifest.paths;
 var config        = manifest.config || {};
 var globs         = manifest.globs;
@@ -230,7 +230,8 @@ gulp.task('build', function(callback) {
   ];
 
   if (argv.production) {
-    tasks.push('release');
+    tasks.push('version');
+    tasks.push('zip');
   }
 
   runSequence.apply(
@@ -243,11 +244,33 @@ gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
 
+gulp.task('zip', function(callback) {
+  var pkg = getPackageJSON();
+  var newversion = semver.inc(pkg.version, argv.production);
+  return gulp.src([
+    'dist/**/*',
+    'acf-json/*',
+    'templates/**/*',
+    'woocommerce/**/*',
+    'vendor/**/*',
+    'lang/*',
+    'lib/**/*',
+    '*.css',
+    '*.md',
+    '*.php',
+    '*.txt',
+    '*.png',
+  ], {
+   base: '.'
+  })
+  .pipe(loadplugins.zip(pkg.name +'.zip'))
+  .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name + '/v' + newversion));
+});
+
 gulp.task('version', function() {
   var pkg = getPackageJSON();
   var newversion = semver.inc(pkg.version, argv.production);
-  var banner = [
-    '/*',
+  var banner = ['/*',
     'Theme Name: ' + pkg.theme,
     'Theme URI: '+ pkg.homepage,
     'Version: '+ newversion,
@@ -259,7 +282,7 @@ gulp.task('version', function() {
     'License: '+ pkg.licenses[0].type,
     'License URI: '+ pkg.licenses[0].url,
     '*/',
-  ].join('\n');
+    ''].join('\n');
 
   gulp.src('./package.json')
     .pipe(bump({version: newversion}))
@@ -271,54 +294,4 @@ gulp.task('version', function() {
       this.emit('end');
     }
   });
-});
-
-gulp.task('move', ['version'], function() {
-  var pkg = getPackageJSON();
-  return gulp.src([
-    'dist/**',
-    'acf-json/**',
-    'templates/**',
-    'woocommerce/**',
-    'vendor/**',
-    'lang/*',
-    'lib/**',
-    '*.css',
-    '*.md',
-    '*.php',
-    '*.txt',
-    '*.png',
-  ], {
-   base: '.'
-  })
-  .pipe(gulp.dest( './' + pkg.name ));
-});
-
-gulp.task('zip',['move'], function() {
-  var pkg = getPackageJSON();
-  var newversion = semver.inc(pkg.version, argv.production);
-  return gulp.src([
-    pkg.name + '/**',
-  ], {
-   base: '.'
-  })
-  .pipe(loadplugins.zip(pkg.name +'.zip'))
-  // .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name + '/v' + newversion ));
-  .pipe(gulp.dest( './' ));
-});
-
-gulp.task('release', ['zip'], function(){
-  var pkg = getPackageJSON();
-  var del = require('del');
-  gulp.src('./' + pkg.name + '.zip')
-    .pipe(release({
-      token: process.env.GITHUB_TOKEN,
-      notes: 'Automated Release',
-      prerelease: false,
-      manifest: require('./package.json')
-    }));
-  return del([
-    pkg.name + '/**',
-    pkg.name + '.zip'
-  ]);
 });

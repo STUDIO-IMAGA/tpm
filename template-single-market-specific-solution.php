@@ -18,6 +18,7 @@ use IMAGA\Theme\Assets;
         <div class="col-12 col-md-6">
           <div class="content text-white py-md-5">
             <h5 class="text-blue-light m-0">Market specific solution</h5>
+            <h1><?php the_title(); ?></h1>
             <?php the_field('introduction'); ?>
           </div>
         </div>
@@ -27,8 +28,8 @@ use IMAGA\Theme\Assets;
 
   <section id="featured-projects">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-10">
+      <div class="row justify-content-center mb-6">
+        <div class="col-12 col-md-10">
           <?php $post_objects = get_field('featured_projects');?>
           <?php if( $post_objects ): ?>
             <div class="slick-featured-projects">
@@ -61,9 +62,9 @@ use IMAGA\Theme\Assets;
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php get_template_part('templates/layouts/reviews'); ?>
-
   <?php get_template_part('templates/layouts/callout','small'); ?>
+
+  <?php get_template_part('templates/layouts/reviews'); ?>
 
   <?php get_template_part('templates/layouts/callout','checkmarks'); ?>
 

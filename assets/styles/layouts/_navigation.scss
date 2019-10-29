@@ -2,14 +2,28 @@ header{
   background-image: url('../images/header-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  .navbar{
-    &-nav{
-      .nav-item{
-        &:hover,
-        &.active{
-          .nav-link:after{
-            background-color: #02183c;
-          }
+  .navbar-nav{
+    .nav-item{
+      margin-left: .6rem;
+      margin-right: .6rem;
+      .nav-link{
+        position: relative;
+        letter-spacing: 0.01rem;
+        z-index: 1;
+        font-weight: 400;
+        font-weight: 500;
+      }
+      &:hover,
+      &.active{
+        .nav-link:after{
+          position: absolute;
+          content:'';
+          height: 12px;
+          background-color: $blue-dark;
+          left: 0px;
+          right: 0px;
+          bottom: .48rem;
+          z-index: -1;
         }
       }
     }
@@ -37,7 +51,7 @@ header{
         position: absolute;
         content:'';
         height: 12px;
-        background-color: #02183c;
+        background-color: $blue-dark;
         left: 0px;
         right: 0px;
         bottom: .48rem;
@@ -47,11 +61,6 @@ header{
   }
 }
 @include media-breakpoint-down(sm){
-  .home{
-    header{
-      background-image: none !important;
-    }
-  }
   .navbar-toggler{
     &:before{
       content:'menu';

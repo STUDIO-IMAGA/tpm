@@ -27,7 +27,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "acf-h1",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -54,6 +54,46 @@
                     "toolbar": "simple_content",
                     "media_upload": 0,
                     "delay": 0
+                },
+                {
+                    "key": "field_5db0497dbd1b2",
+                    "label": "Uitgelichten woorden",
+                    "name": "featured_list",
+                    "type": "repeater",
+                    "instructions": "Vul hier de uitgelichte woorden onderaan de header in.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "field_5db0499dbd1b3",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Nieuw item",
+                    "sub_fields": [
+                        {
+                            "key": "field_5db0499dbd1b3",
+                            "label": "Naam",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
                 },
                 {
                     "key": "field_5db0497dbd1b2",
@@ -122,7 +162,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -323,7 +363,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "60",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -395,7 +435,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "50",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -414,7 +454,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "50",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -488,7 +528,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -496,6 +536,28 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5da46a439e6a7",
+                    "label": "Ervaringen",
+                    "name": "items",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "ervaringen"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "return_format": "object",
+                    "ui": 1
                 },
                 {
                     "key": "field_5da46a439e6a7",
@@ -546,7 +608,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -611,5 +673,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571835327
+    "modified": 1572348230
 }

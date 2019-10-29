@@ -8,14 +8,19 @@ use IMAGA\Theme\Extras;
 
 <?php while (have_posts()) : the_post(); ?>
 
-  <?php get_template_part('templates/header','jumbotron'); ?>
+  <?php get_template_part('templates/header'); ?>
 
-  <?php if( have_rows('layouts') ): ?>
-    <?php while( have_rows('layouts') ): the_row(); ?>
+  <section class="contact-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <?php do_shortcode(''); ?>
+        </div>
+        <div class="col-12 col-md-6">
 
-      <?php Extras\get_layout( get_row_layout() ); ?>
-
-    <?php endwhile; ?>
-  <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <?php endwhile; ?>

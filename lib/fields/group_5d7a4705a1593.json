@@ -23,6 +23,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5db817ec9832a",
+                            "label": "Tint",
+                            "name": "tint",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Achtergrond tint activeren op dit element",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Aan",
+                            "ui_off_text": "Uit"
+                        },
+                        {
                             "key": "field_5d9df6bb4ef12",
                             "label": "Content",
                             "name": "content",
@@ -45,17 +64,17 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d936698defb1": {
-                    "key": "layout_5d936698defb1",
-                    "name": "callout",
-                    "label": "Callout",
+                "layout_5db81a9641a6a": {
+                    "key": "layout_5db81a9641a6a",
+                    "name": "content-image",
+                    "label": "Content & Afbeelding",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d9366b0defb2",
-                            "label": "Content Links",
-                            "name": "content_left",
-                            "type": "group",
+                            "key": "field_5db81c5736c9f",
+                            "label": "Tint",
+                            "name": "tint",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -64,53 +83,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5d9366d7defb3",
-                                    "label": "Titel",
-                                    "name": "title",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5d9366e1defb4",
-                                    "label": "Tekst",
-                                    "name": "content",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "visual",
-                                    "toolbar": "simple_content",
-                                    "media_upload": 0,
-                                    "delay": 0
-                                }
-                            ]
+                            "message": "Achtergrond tint activeren op dit element",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Aan",
+                            "ui_off_text": "Uit"
                         },
                         {
-                            "key": "field_5d93670fdefb5",
-                            "label": "Content Rechts",
-                            "name": "content_right",
-                            "type": "group",
+                            "key": "field_5db81aab41a6b",
+                            "label": "Volgorde",
+                            "name": "reverse",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -119,47 +102,54 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5d93670fdefb6",
-                                    "label": "Titel",
-                                    "name": "title",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5d93670fdefb7",
-                                    "label": "Tekst",
-                                    "name": "content",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "visual",
-                                    "toolbar": "simple_content",
-                                    "media_upload": 0,
-                                    "delay": 0
-                                }
-                            ]
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Tekst\/Afbeelding",
+                            "ui_off_text": "Afbeelding\/Tekst"
+                        },
+                        {
+                            "key": "field_5db81aca41a6c",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "simple_content",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5db81ae441a6d",
+                            "label": "Afbeelding",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -197,7 +187,7 @@
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "",
+                                "class": "acf-heading",
                                 "id": ""
                             },
                             "default_value": "",
@@ -301,6 +291,46 @@
                             ]
                         },
                         {
+                            "key": "field_5d7a488f1b5d4",
+                            "label": "Tabbladen",
+                            "name": "tabs",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_5d7a489b1b5d5",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d7a48bf1b5d6",
+                                    "label": "Content",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "simple_content",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
+                        },
+                        {
                             "key": "field_5d93554804c85",
                             "label": "Instellingen",
                             "name": "",
@@ -342,6 +372,255 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d936698defb1": {
+                    "key": "layout_5d936698defb1",
+                    "name": "callout",
+                    "label": "Callout",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d9366b0defb2",
+                            "label": "Content Links",
+                            "name": "content_left",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d9366d7defb3",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "acf-heading",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d9366e1defb4",
+                                    "label": "Tekst",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "simple_content",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5d93670fdefb5",
+                            "label": "Content Rechts",
+                            "name": "content_right",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d93670fdefb6",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "acf-heading",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d93670fdefb7",
+                                    "label": "Tekst",
+                                    "name": "content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "simple_content",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5db81d9645b20": {
+                    "key": "layout_5db81d9645b20",
+                    "name": "profile",
+                    "label": "Profiel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5db81db445b22",
+                            "label": "Tint",
+                            "name": "tint",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Achtergrond tint activeren op dit element",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Aan",
+                            "ui_off_text": "Uit"
+                        },
+                        {
+                            "key": "field_5db81db745b23",
+                            "label": "Volgorde",
+                            "name": "reverse",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Afbeelding\/Tekst",
+                            "ui_off_text": "Tekst\/Afbeelding"
+                        },
+                        {
+                            "key": "field_5db81e38c5396",
+                            "label": "Titel",
+                            "name": "title",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "70",
+                                "class": "acf-heading",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 1,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5db82b69cdbfa",
+                            "label": "Positie",
+                            "name": "job_title",
+                            "type": "text",
+                            "instructions": "Functie binnen het bedrijf",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5db81e67c5397",
+                            "label": "Tekst",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "80",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "simple_content",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5db81e6dc5398",
+                            "label": "Profiel afbeelding",
+                            "name": "avatar",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "acf-profile",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Layout toevoegen",
@@ -366,5 +645,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571757824
+    "modified": 1572350860
 }

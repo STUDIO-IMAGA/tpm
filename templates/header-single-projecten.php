@@ -3,7 +3,7 @@
 
 <section id="header">
   <div class="container">
-    <div class="row">
+    <div class="row px-sm-3 px-md-4 px-lg-5 px-xl-6">
       <div class="col-12 col-md-6">
         <div class="content py-md-6">
           <h5 class="text-blue-light m-0">Market specific solution : <span class="solution-type"><?php echo $solution->name; ?></span></h5>
@@ -16,7 +16,7 @@
 
 <section id="featured-images">
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center px-sm-3 px-md-4 px-lg-5 px-xl-6">
       <div class="col-10">
         <div class="row align-items-stretch">
           <div class="col-9 pb-2 px-2">

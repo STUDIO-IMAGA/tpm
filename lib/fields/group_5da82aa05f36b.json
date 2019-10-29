@@ -27,7 +27,7 @@
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
-                        "class": "acf-h1",
+                        "class": "acf-heading",
                         "id": ""
                     },
                     "default_value": "",
@@ -111,5 +111,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1571304425
+    "modified": 1572348023
 }

@@ -1,4 +1,16 @@
 section{
+  &.profile{
+    h3{
+      span{
+        display: block;
+        color: $blue-light;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
   &.content-tabs{
     .tabs-nav{
       .nav-link{
@@ -143,11 +155,12 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     &-small{
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      text-align: center;
       span{
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
   }

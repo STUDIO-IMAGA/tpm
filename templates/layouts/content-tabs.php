@@ -2,7 +2,7 @@
 
 <section class="content-tabs">
   <div class="container">
-    <div class="row py-5 py-md-6">
+    <div class="row py-5 py-md-6 px-sm-3 px-md-4 px-lg-5 px-xl-6">
       <div class="col-12 col-md-6">
         <h2><?php echo $content_tabs['title']; ?></h2>
         <?php echo $content_tabs['content']; ?>

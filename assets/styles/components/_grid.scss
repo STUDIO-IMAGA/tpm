@@ -17,13 +17,13 @@ section{
     &-left:before,
     &-right:before{
       top: 0px;
-      right: -5px;
+      right: 20px;
       transform: rotate(-15deg);
     }
     &-left:after,
     &-right:after{
       top: 50%;
-      right: -5px;
+      right: 20px;
       transform: rotate(15deg);
     }
   }

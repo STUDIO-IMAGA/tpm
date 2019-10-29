@@ -6,67 +6,72 @@
       }
     }
   }
-  #featured-projects{
-    margin-top: -2.5rem;
-    .slick-featured-projects{
-      .slick-slide > div{
-        line-height: 0;
-      }
-      .featured-item{
-        position: relative;
-        .project-image{
-          img{
-            border-radius: 3px;
+  section{
+    &#featured-projects{
+      margin-top: -2.5rem;
+      .slick-featured-projects{
+        .slick-slide > div{
+          line-height: 0;
+        }
+        .featured-item{
+          position: relative;
+          .project-image{
+            img{
+              border-radius: 3px;
+            }
+          }
+          .project-description{
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 420px;
+            color: $white;
+            padding-top: 46px;
+            padding-left: 46px;
+            padding-right: 46px;
+            padding-bottom: 60px;
+            background-color: rgba($blue, .6);
+            line-height: 1.5;
+            h6{
+              color: $white;
+            }
+            a{
+              color: $white;
+            }
           }
         }
-        .project-description{
+        .slick-dots{
           position: absolute;
-          right: 0px;
-          bottom: 0px;
-          width: 420px;
-          color: $white;
-          padding-top: 46px;
-          padding-left: 46px;
-          padding-right: 46px;
-          padding-bottom: 60px;
-          background-color: rgba($blue, .6);
-          line-height: 1.5;
-          h6{
-            color: $white;
-          }
-          a{
-            color: $white;
-          }
-        }
-      }
-      .slick-dots{
-        position: absolute;
-        list-style-type: none;
-        right: 270px;
-        bottom: 30px;
-        margin-bottom: 0;
-        height: 14px;
-        li{
-          display: inline-block;
-          width: 14px;
+          list-style-type: none;
+          right: 270px;
+          bottom: 30px;
+          margin-bottom: 0;
           height: 14px;
-          background-color: #dedede;
-          margin-right: 7px;
-          cursor: pointer;
-          &.slick-active{
-            background-color: #7fb5df;
-          }
-          button{
-            width: 16px;
-            height: 16px;
-            background-color: transparent;
-            color: transparent;
-            font-size: 0;
-            line-height: 0;
-            border: 0;
+          li{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-color: #dedede;
+            margin-right: 7px;
+            cursor: pointer;
+            &.slick-active{
+              background-color: #7fb5df;
+            }
+            button{
+              width: 16px;
+              height: 16px;
+              background-color: transparent;
+              color: transparent;
+              font-size: 0;
+              line-height: 0;
+              border: 0;
+            }
           }
         }
       }
+    }
+    &.reviews{
+      background-color: $gray-100;
     }
   }
 }

@@ -1,19 +1,18 @@
 <?php $projects = get_field('projects'); ?>
-
-<section class="projects">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 pt-6">
-        <h3>Projecten en opdrachtgevers</h3>
-        <div class="seperator"></div>
+<?php $post_objects = $projects['projecten']?>
+<?php if( $post_objects ): ?>
+  <section class="projects">
+    <div class="container">
+      <div class="row px-sm-3 px-md-4 px-lg-5 px-xl-6">
+        <div class="col-12 pt-6">
+          <h3>Projecten en opdrachtgevers</h3>
+          <div class="seperator"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 pl-0 pr-0">
-        <?php $post_objects = $projects['projecten']?>
-        <?php if( $post_objects ): ?>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0">
           <div class="slick-projecten">
             <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
               <?php setup_postdata($post); ?>
@@ -33,8 +32,8 @@
             <?php endforeach; ?>
           </div>
           <?php wp_reset_postdata(); ?>
-        <?php endif;?>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<?php endif;?>
