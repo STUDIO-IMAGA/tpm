@@ -3,11 +3,30 @@
     "title": "Pagina's",
     "fields": [
         {
-            "key": "field_5d7a2ae84ef7a",
-            "label": "Header",
-            "name": "header",
-            "type": "group",
-            "instructions": "",
+            "key": "field_5c8770e1dba66",
+            "label": "Titel",
+            "name": "title",
+            "type": "textarea",
+            "instructions": "Dit is de titel in de header.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-heading",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5d7a29d37b9a4",
+            "label": "Introductie",
+            "name": "introduction",
+            "type": "wysiwyg",
+            "instructions": "Dit is de tekst in de header.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,47 +34,11 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5c8770e1dba66",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "textarea",
-                    "instructions": "Voer hier de titel in van de pagina voor in de header.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "acf-heading",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 1,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5d7a29d37b9a4",
-                    "label": "Introductie",
-                    "name": "introduction",
-                    "type": "wysiwyg",
-                    "instructions": "Voer hier de introductie tekst in van de pagina.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "visual",
-                    "toolbar": "simple_content",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "simple_content",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_5d7a46f79b74d",
@@ -100,6 +83,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "template-single-market-specific-solution.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-contact.php"
             }
         ]
     ],
@@ -122,5 +110,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572348202
+    "modified": 1572447265
 }

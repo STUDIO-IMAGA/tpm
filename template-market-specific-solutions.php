@@ -9,16 +9,13 @@ use IMAGA\Theme\Assets;
 
 <?php while (have_posts()) : the_post(); ?>
 
-  <?php $header = get_field('header');?>
-  <?php $featured = get_field('featured');?>
-
   <section id="header">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
           <div class="content">
-            <h1><?php echo $header['title'];?></h1>
-            <?php echo $header['introduction'];?>
+            <h1><?php the_field('title');?></h1>
+            <?php the_field('introduction');?>
           </div>
         </div>
       </div>
@@ -69,6 +66,6 @@ use IMAGA\Theme\Assets;
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php get_template_part('templates/layouts/callout','small'); ?>
+  <?php get_template_part('templates/page-parts/callout','small'); ?>
 
 <?php endwhile; ?>

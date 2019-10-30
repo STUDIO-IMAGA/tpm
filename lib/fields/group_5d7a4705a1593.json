@@ -291,46 +291,6 @@
                             ]
                         },
                         {
-                            "key": "field_5d7a488f1b5d4",
-                            "label": "Tabbladen",
-                            "name": "tabs",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "field_5d7a489b1b5d5",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "block",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5d7a48bf1b5d6",
-                                    "label": "Content",
-                                    "name": "content",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "visual",
-                                    "toolbar": "simple_content",
-                                    "media_upload": 0,
-                                    "delay": 0
-                                }
-                            ]
-                        },
-                        {
                             "key": "field_5d93554804c85",
                             "label": "Instellingen",
                             "name": "",
@@ -350,7 +310,7 @@
                             "key": "field_5d93557204c86",
                             "label": "Content Positie",
                             "name": "content_position",
-                            "type": "text",
+                            "type": "true_false",
                             "instructions": "Kies hier aan welke kant de test\/tabbladen staan.",
                             "required": 0,
                             "conditional_logic": 0,
@@ -359,15 +319,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": "tabs-content : Tabbladen Links\r\ncontent-tabs : Tabbladen Rechts",
-                            "allow_null": 0,
-                            "default_value": "tabs-content",
-                            "layout": "horizontal",
-                            "return_format": "value",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Tabs\/Content",
+                            "ui_off_text": "Content\/Tabs"
                         }
                     ],
                     "min": "",
@@ -645,5 +601,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572350860
+    "modified": 1572449402
 }

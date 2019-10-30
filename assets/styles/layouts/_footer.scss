@@ -26,7 +26,6 @@
           width: 25px;
           margin-right: 10px;
           outline: 2px solid $blue-light;
-          background-position: center;
           background-repeat: no-repeat;
           background-color: $blue-light;
           background-image: url('../images/assets-sprite.png');
@@ -48,7 +47,7 @@
       }
       &.adres:before{
         vertical-align: top;
-        margin-top: 9px;
+        margin-top: .4rem;
         background-position-x: -280px;
       }
       .nav-link{

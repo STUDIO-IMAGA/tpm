@@ -31,11 +31,9 @@ function setup() {
     'footer_nav_4'          => __('Footer Menu #4', 'imaga'),
   ]);
 
-  // Enable post thumbnails
-  // http://codex.wordpress.org/Function_Reference/add_image_size
+  // Enable various theme supports
   add_theme_support('post-thumbnails');
-
-  // Enable HTML5 markup support
+  add_theme_support('custom-logo');
   add_theme_support('html5', ['caption', 'comment-form', 'comment-list', 'gallery', 'search-form']);
 
   // Add image sizes

@@ -20,24 +20,38 @@
               border-radius: 3px;
             }
           }
-          .project-description{
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-            width: 420px;
+        }
+      }
+      .slick-featured-projects-captions{
+        position: absolute;
+        right: -10px;
+        bottom: -30px;
+        width: 460px;
+        height: 220px;
+        background-color: rgba($blue, .6);
+        &:before{
+          position: absolute;
+          content:'';
+          height: 0px;
+          width: 0px;
+          right: -64px;
+          border-top: 220px solid rgba($blue, .6);
+          border-right: 64px solid transparent;
+          border-left: 0px solid transparent;
+          border-bottom: 0px solid transparent;
+        }
+        .project-description{
+          color: $white;
+          padding-top: 46px;
+          padding-left: 46px;
+          padding-right: 46px;
+          padding-bottom: 60px;
+          line-height: 1.5;
+          h6{
             color: $white;
-            padding-top: 46px;
-            padding-left: 46px;
-            padding-right: 46px;
-            padding-bottom: 60px;
-            background-color: rgba($blue, .6);
-            line-height: 1.5;
-            h6{
-              color: $white;
-            }
-            a{
-              color: $white;
-            }
+          }
+          a{
+            color: $white;
           }
         }
         .slick-dots{
@@ -150,6 +164,48 @@
           background-position: 0px -85px;
         }
       }
+    }
+  }
+}
+.contact{
+  .company{
+    &_phone,
+    &_email,
+    &_address{
+      margin-bottom: .8rem;
+      a{
+        display: inline-block;
+      }
+      &:before{
+        display:inline-block;
+        content:'';
+        vertical-align: middle;
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+        outline: 2px solid $blue-light;
+        background-repeat: no-repeat;
+        background-color: $blue-light;
+        background-image: url('../images/assets-sprite.png');
+        background-position-y: -145px;
+      }
+      &:hover{
+        &:before{
+          outline: 2px solid $white;
+          background-color: $white;
+          background-position-y: -120px;
+        }
+      }
+    }
+    &_phone:before{
+      background-position-x: -255px;
+    }
+    &_email:before{
+      background-position-x: -305px;
+    }
+    &_address:before{
+      vertical-align: top;
+      background-position-x: -280px;
     }
   }
 }

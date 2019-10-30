@@ -3,8 +3,27 @@
     "title": "Template: Single Market Specific Solution",
     "fields": [
         {
+            "key": "field_5db9c7d6e8ab2",
+            "label": "Titel",
+            "name": "title",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-heading",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "new_lines": ""
+        },
+        {
             "key": "field_5daf1d113b6e2",
-            "label": "introduction",
+            "label": "Introduction",
             "name": "introduction",
             "type": "wysiwyg",
             "instructions": "",
@@ -344,5 +363,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572348250
+    "modified": 1572456445
 }

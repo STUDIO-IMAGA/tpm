@@ -8,10 +8,9 @@ header{
       margin-right: .6rem;
       .nav-link{
         position: relative;
+        font-family: 'Prompt', sans-serif;
         letter-spacing: 0.01rem;
         z-index: 1;
-        font-weight: 400;
-        font-weight: 500;
       }
       &:hover,
       &.active{
@@ -24,6 +23,20 @@ header{
           right: 0px;
           bottom: .48rem;
           z-index: -1;
+        }
+      }
+    }
+    &#menu-hoofd-menu{
+      .nav-item{
+        .nav-link{
+          font-weight: 500;
+        }
+      }
+    }
+    &#menu-secundair-menu{
+      .nav-item{
+        .nav-link{
+          font-weight: 400;
         }
       }
     }

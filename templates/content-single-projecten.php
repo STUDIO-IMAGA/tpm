@@ -15,7 +15,7 @@
 
     <div class="mt-8"></div>
 
-    <?php get_template_part('templates/layouts/reviews'); ?>
+    <?php get_template_part('templates/page-parts/reviews'); ?>
 
   </article>
 <?php endwhile; ?>

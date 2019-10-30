@@ -9,11 +9,21 @@ use IMAGA\Theme\Assets;
 */
 if( function_exists('acf_add_options_page') ):
   acf_add_options_page(array(
-    'page_title' 	=> 'Thema Instellingen',
-    'menu_title'	=> 'Thema Instellingen',
-    'menu_slug' 	=> 'theme-options',
-    'capability'	=> 'edit_posts',
-    'redirect'		=> false
+    'page_title'  => 'Thema Instellingen',
+    'menu_title'  => 'Thema Instellingen',
+    'menu_slug'   => 'theme-options',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+  ));
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Bedrijfsinformatie',
+    'menu_title'  => 'Bedrijfsinformatie',
+    'parent_slug' => 'theme-options',
+  ));
+  acf_add_options_sub_page(array(
+    'page_title'  => 'Projecten Archief',
+    'menu_title'  => 'Projecten Archief',
+    'parent_slug' => 'theme-options',
   ));
 endif;
 

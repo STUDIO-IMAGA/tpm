@@ -1,7 +1,8 @@
 <?php
 $files = [
-  'lib/setup.php',                        // Theme setup
+  'lib/setup.php',                        // Theme Setup
   'lib/updater.php',                      // Theme Updater
+  'lib/functions.php',                    // Theme Functions
   'lib/integrations/acf.php',             // Advanced Custom Fields
   'lib/integrations/bootstrap_walker.php',// Navigation Bootstrap Walker
   'lib/integrations/tgmpa.php',           // TGM Plugin Activation
@@ -35,3 +36,5 @@ unset($file, $filepath);
 // Init updater
 $puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/tpm', __FILE__, 'imaga' );
 $puc->getVcsApi()->enableReleaseAssets();
+
+define('WPCF7_AUTOP', false);

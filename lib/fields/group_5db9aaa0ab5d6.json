@@ -1,0 +1,62 @@
+{
+    "key": "group_5db9aaa0ab5d6",
+    "title": "Archief: Projecten",
+    "fields": [
+        {
+            "key": "field_5db9aaaba7c98",
+            "label": "Archief Titel",
+            "name": "title",
+            "type": "textarea",
+            "instructions": "Dit is de titel in de header van de projecten overzicht pagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-heading",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5db9aac2a7c99",
+            "label": "Archief Introductie",
+            "name": "introduction",
+            "type": "wysiwyg",
+            "instructions": "Dit is de tekst in de header van de projecten overzicht pagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "simple_content",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-projecten-archief"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1572449084
+}

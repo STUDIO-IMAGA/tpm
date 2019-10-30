@@ -19,6 +19,29 @@
     'common': {
       init: function() {
 
+        function offsetSlickBlog(){
+          $('.slick-blog').css('margin-right', 0);
+          window.setTimeout(function(){
+            $('.slick-blog').css('margin-right', -($(window).width() - $('.slick-blog').offset().left - $('.slick-blog').width()));
+          }, 1);
+        }
+        function offsetSlickProjecten(){
+          $('.slick-projecten').css('margin-right', 0);
+          window.setTimeout(function(){
+            $('.slick-projecten').css('margin-right', -($(window).width() - $('.slick-projecten').offset().left - $('.slick-projecten').width()));
+          }, 1);
+        }
+        if ( $('.slick-blog').length ) {
+          offsetSlickBlog();
+        }
+        if ( $('.slick-projecten').length ) {
+          offsetSlickProjecten();
+        }
+        $(window).on('resize', function () {
+          offsetSlickBlog();
+          offsetSlickProjecten();
+        });
+
         if ($(window).width() > 769) {
           $('.navbar .dropdown').hover(function() {
             $(this).find('.dropdown-menu').first().stop(true, true).delay(50).slideDown(100);
@@ -40,6 +63,18 @@
         // init slick instances
         $(".slick-featured-projects").slick({
           infinite: true,
+          dots: false,
+          arrows: false,
+          centerMode: false,
+          draggable: true,
+          mobileFirst: true,
+          swipeToSlide: true,
+          slidesToShow: 1,
+          fade: true,
+          asNavFor: '.slick-featured-projects-captions',
+        });
+        $(".slick-featured-projects-captions").slick({
+          infinite: true,
           dots: true,
           arrows: false,
           centerMode: false,
@@ -48,6 +83,7 @@
           swipeToSlide: true,
           slidesToShow: 1,
           fade: true,
+          asNavFor: '.slick-featured-projects',
         });
 
         $(".slick-reviews").slick({

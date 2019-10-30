@@ -3,11 +3,30 @@
     "title": "Template: Market Specific Solutions",
     "fields": [
         {
-            "key": "field_5da82aa06cee7",
-            "label": "Header",
-            "name": "header",
-            "type": "group",
-            "instructions": "",
+            "key": "field_5da82aa06e60b",
+            "label": "Titel",
+            "name": "title",
+            "type": "textarea",
+            "instructions": "Voer hier de titel in van de pagina voor in de header.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "acf-heading",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 1,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5da82aa06e63e",
+            "label": "Introductie",
+            "name": "introduction",
+            "type": "wysiwyg",
+            "instructions": "Voer hier de introductie tekst in van de pagina.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,47 +34,11 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5da82aa06e60b",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "textarea",
-                    "instructions": "Voer hier de titel in van de pagina voor in de header.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "acf-heading",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5da82aa06e63e",
-                    "label": "Introductie",
-                    "name": "introduction",
-                    "type": "wysiwyg",
-                    "instructions": "Voer hier de introductie tekst in van de pagina.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "visual",
-                    "toolbar": "simple_content",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "simple_content",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_5da82addb4e2c",
@@ -77,6 +60,61 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_5db9c02bed30b",
+            "label": "Callout",
+            "name": "callout_small",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5db9c02bed30c",
+                    "label": "Tekst",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5db9c02bed30d",
+                    "label": "Knop tekst",
+                    "name": "btn_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -111,5 +149,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572348023
+    "modified": 1572456553
 }

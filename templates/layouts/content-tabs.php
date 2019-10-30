@@ -1,14 +1,12 @@
-<?php $content_tabs = get_field('content_tabs'); ?>
-
+<?php $tabs = get_sub_field('tabs'); ?>
 <section class="content-tabs">
   <div class="container">
     <div class="row py-5 py-md-6 px-sm-3 px-md-4 px-lg-5 px-xl-6">
       <div class="col-12 col-md-6">
-        <h2><?php echo $content_tabs['title']; ?></h2>
-        <?php echo $content_tabs['content']; ?>
+        <h2><?php the_sub_field('title'); ?></h2>
+        <?php the_sub_field('content'); ?>
       </div>
       <div class="col-12 col-md-6 pt-4 order-2">
-        <?php $tabs = $content_tabs['tabs']; ?>
         <ul class="tabs-nav nav" id="tab" role="tablist">
           <?php $i = 0;?>
           <?php foreach($tabs as $tab): $i++; ?>

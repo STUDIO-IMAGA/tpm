@@ -18,7 +18,7 @@ use IMAGA\Theme\Assets;
         <div class="col-12 col-md-6">
           <div class="content text-white py-md-5">
             <h5 class="text-blue-light m-0">Market specific solution</h5>
-            <h1><?php the_title(); ?></h1>
+            <h1><?php the_field('title'); ?></h1>
             <?php the_field('introduction'); ?>
           </div>
         </div>
@@ -39,12 +39,17 @@ use IMAGA\Theme\Assets;
                   <div class="project-image">
                     <img class="img-fluid" src="<?php the_post_thumbnail_url('featured-projects'); ?>" alt="<?php the_title(); ?>">
                   </div>
-                  <div class="project-description">
-                    <h6><?php the_title(); ?></h6>
-                    <div>
-                      <?php echo Extras\limit_text(get_field('excerpt'),'20'); ?>...
-                      <a href="<?php echo get_permalink(); ?>">Bekijk project</a>
-                    </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <div class="slick-featured-projects-captions">
+              <?php foreach( $post_objects as $post): ?>
+                <?php setup_postdata($post); ?>
+                <div class="project-description">
+                  <h6><?php the_title(); ?></h6>
+                  <div>
+                    <?php echo Extras\limit_text(get_field('excerpt'),'12'); ?>...
+                    <a href="<?php echo get_permalink(); ?>">Bekijk project</a>
                   </div>
                 </div>
               <?php endforeach; ?>
@@ -62,12 +67,12 @@ use IMAGA\Theme\Assets;
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php get_template_part('templates/layouts/callout','small'); ?>
+  <?php get_template_part('templates/page-parts/callout','small'); ?>
 
-  <?php get_template_part('templates/layouts/reviews'); ?>
+  <?php get_template_part('templates/page-parts/reviews'); ?>
 
-  <?php get_template_part('templates/layouts/callout','checkmarks'); ?>
+  <?php get_template_part('templates/page-parts/callout','checkmarks'); ?>
 
-  <?php get_template_part('templates/layouts/projects'); ?>
+  <?php get_template_part('templates/page-parts/projects'); ?>
 
 <?php endwhile; ?>

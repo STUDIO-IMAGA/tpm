@@ -70,6 +70,29 @@ section{
     }
   }
   &.projects{
+    &:after{
+      position: absolute;
+      content:'';
+      top: 0px;
+      bottom: 0px;
+      left: 50vw;
+      right: 0px;
+      background-color: #f5f6f7;
+      z-index: -1;
+    }
+    .container{
+      position: relative;
+      &:after{
+        position: absolute;
+        content:'';
+        top: 0px;
+        bottom: 0px;
+        left: 100px;
+        right: 0px;
+        background-color: #f5f6f7;
+        z-index: -1;
+      }
+    }
     .seperator{
       height: 2px;
       width: 90px;
@@ -77,83 +100,87 @@ section{
       margin-bottom: 4rem;
       margin-top: 2.5rem;
     }
-    .slick-slide{
-      width: 392px;
-      height: 322px;
-      padding: 16px;
-      border-radius: 2px;
-    }
-    .project-item{
-      position: relative;
-      height: 290px;
-      .project-opdrachtgever-logo{
-        position: relative;
-        text-align: center;
-        white-space: nowrap;
-        height: 200px;
-        z-index: 20;
-        .helper{
-          display: inline-block;
-          height: 100%;
-          vertical-align: middle;
-        }
-        img{
-          vertical-align: middle;
-          display: inline-block;
-        }
-      }
-      .project-opdrachtgever{
+    .slick-projecten{
+      &:before{
         position: absolute;
-        left: 28px;
-        bottom: 48px;;
-        z-index: 20;
-        color: $blue-light;
-      }
-      .project-titel{
-        position: absolute;
-        left: 26px;
-        bottom: 26px;
-        z-index: 20;
-        color: $white;
-      }
-      .background-image{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        background-size: cover;
-        background-position: center;
+        top: -20px;
+        right: 40px;
+        padding-left: 25px;
+        font-family: 'Prompt', sans-serif;
+        content:'Swipe';
+        background-image: url('../images/assets-sprite.png');
+        background-position: -405px -170px;
         background-repeat: no-repeat;
-        z-index: 10;
-        &:before{
-          position: absolute;
-          content:'';
-          top: 0px;
-          left: 0px;
-          right: 0px;
-          bottom: 0px;
-          z-index: 11;
-          background-color: rgba($blue, .6);
+      }
+      .slick-slide{
+        width: 392px;
+        height: 322px;
+        padding: 16px;
+        border-radius: 2px;
+        .project-item{
+          position: relative;
+          height: 290px;
+          .project-opdrachtgever-logo{
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+            height: 200px;
+            z-index: 20;
+            .helper{
+              display: inline-block;
+              height: 100%;
+              vertical-align: middle;
+            }
+            img{
+              vertical-align: middle;
+              display: inline-block;
+            }
+          }
+          .project-opdrachtgever{
+            position: absolute;
+            left: 28px;
+            bottom: 48px;;
+            z-index: 20;
+            color: $blue-light;
+          }
+          .project-titel{
+            position: absolute;
+            left: 26px;
+            bottom: 26px;
+            z-index: 20;
+            color: $white;
+          }
+          .background-image{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 10;
+            &:before{
+              position: absolute;
+              content:'';
+              top: 0px;
+              left: 0px;
+              right: 0px;
+              bottom: 0px;
+              z-index: 11;
+              background-color: rgba($blue, .6);
+            }
+          }
         }
       }
-    }
-    &:after{
-      position: absolute;
-      content:'';
-      top: 0px;
-      bottom: 0px;
-      left: 100px;
-      right: 0px;
-      background-color: #f5f6f7;
-      z-index: -1;
     }
   }
   &.callout{
     position: relative;
-    background-image: url('../images/math-fade.png');
-    background-size: cover;
+    background-image: url('../images/background-pattern-light.png'), url('../images/background-blue-medium.jpg');
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     &-small{
       padding-top: 5rem;
       padding-bottom: 5rem;
@@ -174,6 +201,17 @@ section{
       text-align: left;
     }
     .slick-blog{
+      &:before{
+        position: absolute;
+        top: -40px;
+        right: 40px;
+        padding-left: 25px;
+        font-family: 'Prompt', sans-serif;
+        content:'Swipe';
+        background-image: url('../images/assets-sprite.png');
+        background-position: -405px -170px;
+        background-repeat: no-repeat;
+      }
       .slick-slide{
         width: 394px;
         height: 360px;

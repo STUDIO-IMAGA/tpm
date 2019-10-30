@@ -1,4 +1,5 @@
-.home{ // Front-Page
+.home,
+.archive{
   #header{
     @extend .bg-gray-300;
     @extend .bg-grid;
@@ -51,25 +52,14 @@
     }
   }
 }
-.page:not(.home){ // All pages exept Front-Page
+.page:not(.home),
+.single:not(.home){
   #header{
-    background-image: url('../images/math-fade.png');
+    background-image: url('../images/background-pattern-dark.png'), url('../images/tpm-logo-composiet.png'), url('../images/background-blue-medium.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    &:before{
-      position: absolute;
-      content:'';
-      top:0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      background-image: url('../images/tpm-logo-composiet-large.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      opacity: .4;
-    }
+    background-size: cover, contain, cover;
+    background-blend-mode: normal, overlay, normal;
     .content{
       position: relative;
       color: $white;
@@ -100,9 +90,6 @@
     #header{
       padding-top: 1rem;
       padding-bottom: 1rem;
-      background-image: url('../images/math-fade.png');
-      background-repeat: no-repeat;
-      background-size: cover;
       img{
         max-width: 300px;
         margin-bottom: -1.6rem;
