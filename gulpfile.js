@@ -24,6 +24,7 @@ var bump          = require('gulp-bump');
 var fs            = require('fs');
 var semver        = require('semver');
 var smushit       = require('gulp-smushit');
+var release       = require('gulp-github-release');
 
 var manifest      = require('asset-builder')('./assets/manifest.json');
 var path          = manifest.paths;
@@ -294,14 +295,24 @@ gulp.task('move', ['version'], function() {
   .pipe(gulp.dest( './' + pkg.name ));
 });
 
-gulp.task('zip',['move'], function() {
+gulp.task('zip', ['move'], function() {
   var pkg = getPackageJSON();
-  var newversion = semver.inc(pkg.version, argv.production);
   return gulp.src([
     pkg.name + '/**',
   ], {
    base: '.'
   })
   .pipe(loadplugins.zip(pkg.name +'.zip'))
-  .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name + '/v' + newversion ));
+  .pipe(gulp.dest( './releases/v' + pkg.version ));
+});
+
+gulp.task('push-latest', function(){
+  var pkg = getPackageJSON();
+  return gulp.src( './releases/v' + pkg.version + '/' + pkg.name + '.zip')
+  .pipe(release({
+    token: process.env.GITHUB_TOKEN,
+    notes: 'Automated Release: v' + pkg.version,
+    prerelease: false,
+    manifest: require('./package.json')
+  }));
 });
