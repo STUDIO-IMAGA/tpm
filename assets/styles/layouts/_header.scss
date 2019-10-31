@@ -27,9 +27,6 @@
       h1{
         font-weight: 600;
       }
-      p{
-        margin-bottom: 1.6rem;
-      }
     }
     .enumeration{
       padding-bottom: 4rem;
@@ -69,6 +66,9 @@
       z-index: 0;
       h1{
         color: $white;
+      }
+      p{
+        margin-bottom: 1.6rem;
       }
       &:after{
         display: block;
