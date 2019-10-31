@@ -28,9 +28,6 @@
                 <span class="helper"></span>
                 <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
               </div>
-              <div class="project-opdrachtgever">
-                <?php echo get_the_title(get_field('opdrachtgever')); ?>
-              </div>
               <div class="project-titel">
                 <?php the_title(); ?>
               </div>

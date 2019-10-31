@@ -25,18 +25,15 @@
           display: inline-block;
         }
       }
-      &-opdrachtgever{
-        position: absolute;
-        left: 28px;
-        bottom: 48px;;
-        z-index: 20;
-        color: $blue-light;
-      }
       &-titel{
         position: absolute;
         left: 26px;
         bottom: 26px;
         z-index: 20;
+        font-family: 'Roboto Mono', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $white;
         color: $white;
       }
       &:after{

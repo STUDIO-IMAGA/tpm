@@ -1,7 +1,7 @@
 {
   "name": "tpm",
   "theme": "TPM Drachten",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "author": "Odilio Witteveen <hallo@odil.io>",
   "homepage": "https://odil.io/",
   "private": true,
@@ -35,8 +35,6 @@
     "gulp-concat": "2.6.0",
     "gulp-cssnano": "2.1.0",
     "gulp-flatten": "0.3.1",
-    "gulp-git": "^2.9.0",
-    "gulp-git-push": "^2.0.0",
     "gulp-github-release": "^1.2.1",
     "gulp-if": "2.0.1",
     "gulp-imagemin": "3.0.3",

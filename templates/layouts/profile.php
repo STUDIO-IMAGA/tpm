@@ -4,7 +4,7 @@
 <section class="profile<?php echo $tint;?>">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-8 py-4">
         <div class="row<?php echo $reverse;?>">
           <div class="col-8 pt-4">
             <h3><?php the_sub_field('title'); ?> <span><?php the_sub_field('job_title'); ?></span></h3>
