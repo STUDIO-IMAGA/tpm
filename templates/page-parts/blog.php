@@ -18,8 +18,7 @@
             <?php while( $query->have_posts() ) : $query->the_post(); ?>
               <div class="blog-item">
                 <h4><?php the_title(); ?></h4>
-                <p><?php echo Extras\limit_text(get_the_content(),'25'); ?></p>
-                <a class="more" href="<?php echo get_post_permalink(); ?>">Meer</a>
+                <p><?php the_content(); ?></p>
               </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); wp_reset_query();?>
