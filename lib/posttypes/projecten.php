@@ -21,7 +21,7 @@ function create_post_type_projecten() {
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
-    'menu_position'         => 25,
+    'menu_position'         => 21,
     'menu_icon'             => 'dashicons-clipboard',
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,

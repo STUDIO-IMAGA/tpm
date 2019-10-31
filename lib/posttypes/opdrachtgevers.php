@@ -21,7 +21,7 @@ function create_post_type_opdrachtgevers() {
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
-    'menu_position'         => 25,
+    'menu_position'         => 20,
     'menu_icon'             => 'dashicons-building',
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
