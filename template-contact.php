@@ -27,7 +27,7 @@ use IMAGA\Theme\Extras;
                   <?php the_field('content'); ?>
                 </div>
               </div>
-              <div class="row bg-gray-100 p-4">
+              <div class="row">
                 <div class="col-12">
                   <div class="row">
                     <div class="col-12">

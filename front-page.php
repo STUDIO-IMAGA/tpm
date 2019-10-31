@@ -1,6 +1,6 @@
 <?php use IMAGA\Theme\Assets; ?>
 
-<?php get_template_part('templates/header','page-parts'); ?>
+<?php get_template_part('templates/header','front-page'); ?>
 
 <?php get_template_part('templates/page-parts/content','tabs'); ?>
 

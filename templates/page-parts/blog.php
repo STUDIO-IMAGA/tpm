@@ -14,11 +14,12 @@
         </div>
         <div class="col-12 col-md-8 col-lg-9">
           <div class="slick-blog">
+            <div><!-- Embrace Empty --></div>
             <?php while( $query->have_posts() ) : $query->the_post(); ?>
               <div class="blog-item">
                 <h4><?php the_title(); ?></h4>
-                <p><?php echo Extras\limit_text(get_the_content(),'30'); ?></p>
-                <a href="<?php echo get_post_permalink(); ?>">Meer</a>
+                <p><?php echo Extras\limit_text(get_the_content(),'25'); ?></p>
+                <a class="more" href="<?php echo get_post_permalink(); ?>">Meer</a>
               </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); wp_reset_query();?>

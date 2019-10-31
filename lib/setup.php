@@ -40,7 +40,7 @@ function setup() {
   // Used for related posts and more reviews
   add_image_size('post-thumbnail-related', 500, 300, true);
   add_image_size('gallery_icon', 720, 440, true);
-  add_image_size('featured-projects', 1920, 1080, true);
+  add_image_size('featured-projects', 1200, 600, true);
 
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
@@ -90,7 +90,7 @@ add_action('acf/init', __NAMESPACE__ . '\\add_acf_google_maps_key');
 * Add Google Fonts
 */
 function add_google_fonts() {
-  wp_enqueue_style( 'imaga/google-fonts', 'http://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Prompt:300,400,500,600,700&display=swap');
+  wp_enqueue_style( 'imaga/google-fonts', 'http://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Prompt:300,400,500,600,700|Roboto+Mono:400,700&display=swap');
 }
 add_action( 'wp_head', __NAMESPACE__ . '\\add_google_fonts' , 1);
 
@@ -166,3 +166,13 @@ add_filter('xmlrpc_enabled', '__return_false');
 
 // Disabled block editor
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// Add message for Projects featured images
+function projecten_admin_post_thumbnail_html( $content, $post_id, $thumbnail_id ) {
+  global $post;
+  if($post->post_type == 'projecten'):
+    $content .= __( 'Gebruik een afbeelding met een minimale resolutie van 1200x600.', 'imaga' );
+  endif;
+  return $content;
+}
+add_filter( 'admin_post_thumbnail_html', __NAMESPACE__ . '\\projecten_admin_post_thumbnail_html', 10, 3 );

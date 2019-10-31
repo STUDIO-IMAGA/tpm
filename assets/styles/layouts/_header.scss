@@ -32,12 +32,12 @@
       }
     }
     .enumeration{
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
       text-align: center;
       span{
+        font-family: 'Prompt', sans-serif;
         font-weight: 600;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         letter-spacing: .1px;
         &.seperator{
           display: inline-block;

@@ -3,6 +3,31 @@
     "title": "Template: Single Market Specific Solution",
     "fields": [
         {
+            "key": "field_5dba98d7827a2",
+            "label": "Market Specific Solution",
+            "name": "market_specific_solution",
+            "type": "radio",
+            "instructions": "Selecteer om welke Market Specific Solution deze pagina over gaat.\r\nDit bepaald welke andere Market Specific Solution er onder aan de pagina getoond worden.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Energy": "Energy",
+                "Food": "Food",
+                "Health": "Health"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5db9c7d6e8ab2",
             "label": "Titel",
             "name": "title",
@@ -363,5 +388,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572456445
+    "modified": 1572510014
 }

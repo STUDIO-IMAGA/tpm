@@ -1,8 +1,9 @@
 #footer{
   padding-top: 70px;
-  background-image: url('../images/header-background.jpg');
+  background-image: url('../images/background-blue-medium.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   h6{
     color: $white;
   }
@@ -53,6 +54,7 @@
       .nav-link{
         display: inline-block;
         color: $blue-light;
+        font-size: .9rem;
         &:hover{
           color:$white;
         }
@@ -62,5 +64,14 @@
   .nav-copyright{
     margin-top: 16px;
     margin-bottom: 19px;
+  }
+  .contact-link{
+    display: inline-block;
+    margin-top: 1rem;
+    color: $blue-light;
+    text-decoration: none;
+    &:hover{
+      color:$white;
+    }
   }
 }

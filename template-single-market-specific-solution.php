@@ -75,4 +75,6 @@ use IMAGA\Theme\Assets;
 
   <?php get_template_part('templates/page-parts/projects'); ?>
 
+  <?php get_template_part('templates/page-parts/other-solutions'); ?>
+
 <?php endwhile; ?>

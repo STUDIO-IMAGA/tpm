@@ -26,8 +26,10 @@
           }, 1);
         }
         function offsetSlickProjecten(){
+          $('.slick-projecten').css('margin-left', 0);
           $('.slick-projecten').css('margin-right', 0);
           window.setTimeout(function(){
+            $('.slick-projecten').css('margin-left', -($('.slick-projecten').offset().left));
             $('.slick-projecten').css('margin-right', -($(window).width() - $('.slick-projecten').offset().left - $('.slick-projecten').width()));
           }, 1);
         }

@@ -12,11 +12,12 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-12 pl-0 pr-0">
+        <div class="col-12 pb-6">
           <div class="slick-projecten">
-            <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+            <div><!-- Embrace Empty --></div>
+            <?php foreach( $post_objects as $post): ?>
               <?php setup_postdata($post); ?>
-              <div class="project-item">
+              <a class="project-item" href="<?php echo get_post_permalink(); ?>">
                 <div class="project-opdrachtgever-logo">
                   <span class="helper"></span>
                   <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
@@ -28,7 +29,7 @@
                   <?php the_title(); ?>
                 </div>
                 <div class="background-image" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
-              </div>
+              </a>
             <?php endforeach; ?>
           </div>
           <?php wp_reset_postdata(); ?>

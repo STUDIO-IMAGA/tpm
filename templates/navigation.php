@@ -11,7 +11,7 @@ $phone = get_field('company_phone', 'options');
   <nav class="navbar navbar-dark navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="<?php echo esc_url( get_bloginfo('url') ); ?>">
-        <img src="<?php echo esc_url($logo[0]); ?>" width="150" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
+        <img src="<?php echo esc_url($logo[0]); ?>" width="130" class="brand-img" alt="<?php echo bloginfo('name'); ?>">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="<?php _e('Toggle navigation','imaga'); ?>">
         <span class="navbar-toggler-icon"></span>

@@ -8,14 +8,14 @@ $grid-breakpoints: (
   sm: 576px,
   md: 980px,
   lg: 1366px,
-  xl: 1600px
+  xl: 1439px
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 960px,
   lg: 1280px,
-  xl: 1480px
+  xl: 1440px
 );
 
 // Color system
@@ -140,19 +140,16 @@ $font-family-sans-serif:            'Heebo', sans-serif;
 $font-size-base:                    1rem; // Assumes the browser default, typically `16px`
 
 $font-weight-lighter:               lighter;
-$font-weight-light:                 300;
+$font-weight-light:                 400;
 $font-weight-normal:                400;
 $font-weight-bold:                  700;
 $font-weight-bolder:                700;
 
 $line-height-base:                  1.6;
 
-$font-weight-normal:                300;
-$font-weight-bold:                  600;
-
 $headings-font-family:              'Prompt', sans-serif;
 $headings-margin-bottom:            $spacer;
-$headings-font-weight:              500;
+$headings-font-weight:              600;
 $headings-line-height:              1.2;
 $headings-color:                    $blue;
 
@@ -170,11 +167,11 @@ $display4-size:                     1.4rem;
 
 $lead-font-size:                    1.28rem;
 
-$paragraph-margin-bottom:           1.5rem;
+$paragraph-margin-bottom:           3rem;
 
 $nav-link-padding-y:                .4rem;
 $navbar-padding-y:                  1.4rem;
-$navbar-nav-link-padding-x:         .65rem;
+$navbar-nav-link-padding-x:         .5rem;
 
 $navbar-dark-color:                 $white;
 $navbar-dark-hover-color:           $white;
