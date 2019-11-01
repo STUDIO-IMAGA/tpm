@@ -1,4 +1,9 @@
 section{
+  &.content-image{
+    img{
+      border-radius: 2px;
+    }
+  }
   &.profile{
     h3{
       span{

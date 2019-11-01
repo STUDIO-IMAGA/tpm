@@ -2,4 +2,6 @@
 
 echo "Producing a Minor version";
 
+gulp
+
 gulp --production=minor || exit 1
