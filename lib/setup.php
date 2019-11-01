@@ -78,11 +78,8 @@ add_filter( 'login_headerurl', __NAMESPACE__ . '\\login_logo_url' );
 * ACF Google Maps API Key
 */
 function add_acf_google_maps_key() {
-
   if( ! defined( 'GOOGLE_MAPS_API' ) ) return;
-
   acf_update_setting('google_api_key', GOOGLE_MAPS_API );
-
 }
 add_action('acf/init', __NAMESPACE__ . '\\add_acf_google_maps_key');
 
@@ -103,13 +100,11 @@ add_filter('remove_hube2_nag', '__return_true');
 * Remove 'page-template' from body class on pages with custom templates
 */
 function prefix_remove_body_class($wp_classes) {
-
   if ( is_page_template() ):
     foreach ($wp_classes as $key => $value) {
       $wp_classes[$key] = str_replace('page-template-template-', '', $value);
     }
   endif;
-
   return $wp_classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\prefix_remove_body_class', 20, 2);
@@ -176,3 +171,12 @@ function projecten_admin_post_thumbnail_html( $content, $post_id, $thumbnail_id 
   return $content;
 }
 add_filter( 'admin_post_thumbnail_html', __NAMESPACE__ . '\\projecten_admin_post_thumbnail_html', 10, 3 );
+
+/*
+ * Disable Emoji styles and scripts
+ * Source: https://www.wpfaster.org/code/how-to-remove-emoji-styles-scripts-wordpress
+ */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );

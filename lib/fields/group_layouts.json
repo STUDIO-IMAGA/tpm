@@ -35,9 +35,9 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "visual",
-            "toolbar": "simple_content",
-            "media_upload": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
             "delay": 0
         },
         {
@@ -110,5 +110,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572447265
+    "modified": 1572599516
 }

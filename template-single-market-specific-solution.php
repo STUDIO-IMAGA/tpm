@@ -69,12 +69,12 @@ use IMAGA\Theme\Assets;
 
   <?php get_template_part('templates/page-parts/callout','small'); ?>
 
+  <?php get_template_part('templates/page-parts/other-solutions'); ?>
+
   <?php get_template_part('templates/page-parts/reviews'); ?>
 
   <?php get_template_part('templates/page-parts/callout','checkmarks'); ?>
 
   <?php get_template_part('templates/page-parts/projects'); ?>
-
-  <?php get_template_part('templates/page-parts/other-solutions'); ?>
 
 <?php endwhile; ?>
