@@ -1,7 +1,6 @@
 <?php
 $files = [
   'lib/setup.php',                        // Theme Setup
-  'lib/updater.php',                      // Theme Updater
   'lib/functions.php',                    // Theme Functions
   'lib/integrations/acf.php',             // Advanced Custom Fields
   'lib/integrations/bootstrap_walker.php',// Navigation Bootstrap Walker
