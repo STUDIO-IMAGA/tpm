@@ -1,7 +1,7 @@
 {
   "name": "tpm",
   "theme": "TPM Drachten",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "author": "Odilio Witteveen <hallo@odil.io>",
   "homepage": "https://odil.io/",
   "private": true,
