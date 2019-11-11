@@ -12,7 +12,7 @@
         </div>
         <?php if( has_post_thumbnail() ): ?>
           <div class="col-12 col-md-6 text-center">
-            <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_alt(); ?>">
+            <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post, 'projecten-archive'); ?>" alt="<?php the_post_thumbnail_alt(); ?>">
           </div>
         <?php endif; ?>
       </div>

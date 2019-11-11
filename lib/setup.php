@@ -42,6 +42,7 @@ function setup() {
   add_image_size('gallery_icon', 720, 440, true);
   add_image_size('featured-projects', 1200, 600, true);
   add_image_size('project-featured-image', 500, 500, true);
+  add_image_size('projecten-archive', 900, 361, true);
 
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
