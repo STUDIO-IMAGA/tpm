@@ -31,7 +31,3 @@ foreach ($files as $file):
   require_once $filepath;
 endforeach;
 unset($file, $filepath);
-
-// Init updater
-$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/tpm', __FILE__ );
-$puc->getVcsApi()->enableReleaseAssets();

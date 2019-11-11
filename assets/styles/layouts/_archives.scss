@@ -1,19 +1,39 @@
 .archive{
   &.post-type-archive-projecten{
     .project{
-      position: relative;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding-top: 80%;
+      border-radius: 3px;
+      overflow: hidden;
+      a{
+        @extend .text-white;
+      }
+      &-featured-image{
+        & > img{
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+        &:after{
+          position: absolute;
+          content:'';
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          background-color: rgba($blue, .6);
+          transition: all .2s ease;
+        }
+      }
+      &:hover .project-featured-image:after{
+        background-color: rgba($blue, .0);
+      }
       &-opdrachtgever-logo{
         position: absolute;
         text-align: center;
         white-space: nowrap;
-        height: 200px;
         top: 0px;
         left: 0px;
         right: 0px;
+        bottom: 0px;
         z-index: 20;
         .helper{
           display: inline-block;
@@ -26,30 +46,26 @@
         }
       }
       &-titel{
-        position: absolute;
-        left: 26px;
-        bottom: 26px;
-        z-index: 20;
         font-family: 'Roboto Mono', sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        color: $white;
         color: $white;
       }
-      &:after{
-        position: absolute;
-        top:0;
-        right:0;
-        left:0;
-        bottom: 0;
-        content:'';
-        transition: all .3s ease;
-        background-color: rgba($blue, .6);
-        z-index: 1;
+      &-excerpt{
+        color: $white;
       }
-      &:hover:after{
-        background-color: rgba($blue, .4)
-      }
+      // &:after{
+      //   position: absolute;
+      //   top:0;
+      //   right:0;
+      //   left:0;
+      //   bottom: 0;
+      //   content:'';
+      //   transition: all .3s ease;
+      //   background-color: rgba($blue, .6);
+      //   z-index: 1;
+      // }
+      // &:hover:after{
+      //   background-color: rgba($blue, .4)
+      // }
     }
   }
 }
