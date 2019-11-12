@@ -545,9 +545,9 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "simple_content",
-                            "media_upload": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
                             "delay": 0
                         },
                         {
@@ -657,5 +657,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572602462
+    "modified": 1573546017
 }

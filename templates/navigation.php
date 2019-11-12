@@ -39,7 +39,6 @@ $phone = get_field('company_phone', 'options');
           )
         );
         ?>
-        <a class="navbar-text phone" href="tel:<?php echo esc_url($phone); ?>"><?php echo $phone; ?></a>
       </div>
     </div>
   </nav>

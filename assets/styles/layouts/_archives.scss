@@ -23,8 +23,13 @@
           transition: all .2s ease;
         }
       }
-      &:hover .project-featured-image:after{
-        background-color: rgba($blue, .0);
+      &:hover{
+        .project-featured-image:after{
+          background-color: rgba($blue, .0);
+        }
+        .project-opdrachtgever-logo{
+          opacity: 0;
+        }
       }
       &-opdrachtgever-logo{
         position: absolute;
@@ -35,6 +40,7 @@
         right: 0px;
         bottom: 0px;
         z-index: 20;
+        transition: all .2s ease;
         .helper{
           display: inline-block;
           height: 100%;
