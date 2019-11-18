@@ -19,8 +19,7 @@
               <?php setup_postdata($post); ?>
               <a class="project-item" href="<?php echo get_post_permalink(); ?>">
                 <div class="project-opdrachtgever-logo">
-                  <span class="helper"></span>
-                  <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
+                  <span class="helper"></span><img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
                 </div>
                 <div class="project-opdrachtgever">
                   <?php echo get_the_title(get_field('opdrachtgever')); ?>

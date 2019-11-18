@@ -6,6 +6,7 @@
         "./../node_modules/aos/dist/aos.js",
         "./../node_modules/slick-carousel/slick/slick.js",
         "./../node_modules/smooth-scroll/dist/smooth-scroll.js",
+        "./../node_modules/simple-lightbox/dist/simpleLightbox.min.js",
         "scripts/main.js"
       ],
       "main": true

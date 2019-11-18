@@ -32,8 +32,7 @@
                     <a href="<?php echo get_permalink(); ?>">
                       <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post, 'project-featured-image'); ?>" alt="<?php the_title(); ?>">
                       <div class="project-opdrachtgever-logo">
-                        <span class="helper"></span>
-                        <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
+                        <span class="helper"></span><img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
                       </div>
                     </a>
                   </div>

@@ -19,6 +19,14 @@
     'common': {
       init: function() {
 
+        // Init SimpleLightbox
+        $('a.lightbox').simpleLightbox({
+          closeBtnCaption: 'Sluiten',
+           nextBtnCaption: 'Volgende',
+           prevBtnCaption: 'Vorige',
+           loadingCaption: 'Bezig met laden...',
+        });
+
         function offsetSlickBlog(){
           $('.slick-blog').css('margin-right', 0);
           window.setTimeout(function(){
