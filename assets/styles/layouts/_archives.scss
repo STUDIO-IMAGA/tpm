@@ -12,24 +12,6 @@
           height: 100%;
           width: 100%;
         }
-        &:after{
-          position: absolute;
-          content:'';
-          top: 0px;
-          left: 0px;
-          right: 0px;
-          bottom: 0px;
-          background-color: rgba($blue, .6);
-          transition: all .2s ease;
-        }
-      }
-      &:hover{
-        .project-featured-image:after{
-          background-color: rgba($blue, .0);
-        }
-        .project-opdrachtgever-logo{
-          opacity: 0;
-        }
       }
       &-opdrachtgever-logo{
         position: absolute;
@@ -54,6 +36,36 @@
       &-titel{
         font-family: 'Roboto Mono', sans-serif;
         color: $white;
+        &.energy:after{
+          position: absolute;
+          content:'';
+          width: 60px;
+          height: 60px;
+          background-image: url('../images/assets-sprite.png');
+          background-position: -375px 0;
+          top: 22px;
+          left: 10px;
+        }
+        &.food:after{
+          position: absolute;
+          content:'';
+          width: 60px;
+          height: 60px;
+          background-image: url('../images/assets-sprite.png');
+          background-position: -315px 0;
+          top: 22px;
+          left: 10px;
+        }
+        &.health:after{
+          position: absolute;
+          content:'';
+          width: 60px;
+          height: 60px;
+          background-image: url('../images/assets-sprite.png');
+          background-position: -255px 0;
+          top: 22px;
+          left: 10px;
+        }
       }
       &-excerpt{
         color: $white;

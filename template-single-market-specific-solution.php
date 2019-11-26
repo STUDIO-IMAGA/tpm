@@ -67,7 +67,19 @@ use IMAGA\Theme\Assets;
     <?php endwhile; ?>
   <?php endif; ?>
 
-  <?php get_template_part('templates/page-parts/callout','small'); ?>
+  <?php $callout_small = get_field('callout_small'); ?>
+  <?php if( $callout_small ): ?>
+    <section class="callout-small">
+      <div class="container">
+        <div class="row px-sm-3 px-md-4 px-lg-5 px-xl-6">
+          <div class="col-12">
+            <span class="text-white"><?php echo $callout_small['text']; ?></span><a class="btn btn-white btn-agenda ml-4" href="/contact"><?php echo $callout_small['btn_text']; ?></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php endif;?>
+
 
   <?php get_template_part('templates/page-parts/other-solutions'); ?>
 

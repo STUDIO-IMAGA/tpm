@@ -13,8 +13,6 @@
       <?php endwhile; ?>
     <?php endif; ?>
 
-    <div class="mt-8"></div>
-
     <?php get_template_part('templates/page-parts/reviews'); ?>
 
   </article>

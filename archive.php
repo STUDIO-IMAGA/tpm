@@ -26,18 +26,16 @@
             <?php $i = 0; ?>
             <?php while (have_posts()) : the_post(); $i++; ?>
               <?php $toggler = ($i % 2)?'order-3':'order-1';?>
+              <?php $market_specific_solution = get_field('market_specific_solution'); ?>
               <div class="project col-12 pt-3 pt-md-5 px-md-5">
                 <div class="row">
                   <div class="project-featured-image col-12 col-sm-6 col-md-5 p-0 <?php echo $toggler; ?>">
                     <a href="<?php echo get_permalink(); ?>">
                       <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post, 'project-featured-image'); ?>" alt="<?php the_title(); ?>">
-                      <div class="project-opdrachtgever-logo">
-                        <span class="helper"></span><img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_field('opdrachtgever')); ?>" alt="<?php echo get_the_title(get_field('opdrachtgever')); ?>">
-                      </div>
                     </a>
                   </div>
-                  <div class="col-12 col-sm-6 col-md-7 bg-blue px-5 py-4 order-2">
-                    <h6 class="project-titel"><?php the_title(); ?></h6>
+                  <div class="col-12 col-sm-6 col-md-7 bg-blue pl-7 pr-5 py-4 order-2">
+                    <h6 class="project-titel <?php echo $market_specific_solution->slug; ?>"><?php the_title(); ?></h6>
                     <div class="project-excerpt">
                       <?php the_field('excerpt'); ?>
                     </div>

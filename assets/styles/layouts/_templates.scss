@@ -50,6 +50,14 @@
     }
   }
   section{
+    &.callout-small{
+      position: relative;
+      background-image: url('../images/background-pattern-light-mirrored.png'), url('../images/background-pattern-dark.png'), url('../images/background-blue-medium.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: inset 0 80px 70px -70px $black;
+    }
     &#featured-projects{
       margin-top: -2.5rem;
       .slick-featured-projects{
@@ -218,6 +226,16 @@
   }
 }
 .market-specific-solutions{
+  section{
+    &.callout-small{
+      position: relative;
+      background-image: url('../images/background-pattern-light-mirrored.png'), url('../images/background-pattern-dark.png'), url('../images/background-blue-medium.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: inset 0 80px 70px -70px $black;
+    }
+  }
   #selector{
     border-bottom: 2px solid $blue-light;
     margin-bottom: 1rem;

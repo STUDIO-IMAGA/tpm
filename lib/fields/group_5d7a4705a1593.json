@@ -57,7 +57,7 @@
                             "default_value": "",
                             "tabs": "visual",
                             "toolbar": "simple_content",
-                            "media_upload": 0,
+                            "media_upload": 1,
                             "delay": 0
                         }
                     ],
@@ -124,7 +124,7 @@
                             "default_value": "",
                             "tabs": "visual",
                             "toolbar": "simple_content",
-                            "media_upload": 0,
+                            "media_upload": 1,
                             "delay": 0
                         },
                         {
@@ -212,7 +212,7 @@
                             "default_value": "",
                             "tabs": "visual",
                             "toolbar": "simple_content",
-                            "media_upload": 0,
+                            "media_upload": 1,
                             "delay": 0
                         },
                         {
@@ -285,7 +285,7 @@
                                     "default_value": "",
                                     "tabs": "visual",
                                     "toolbar": "simple_content",
-                                    "media_upload": 0,
+                                    "media_upload": 1,
                                     "delay": 0
                                 }
                             ]
@@ -385,7 +385,7 @@
                                     "default_value": "",
                                     "tabs": "visual",
                                     "toolbar": "simple_content",
-                                    "media_upload": 0,
+                                    "media_upload": 1,
                                     "delay": 0
                                 }
                             ]
@@ -440,7 +440,7 @@
                                     "default_value": "",
                                     "tabs": "visual",
                                     "toolbar": "simple_content",
-                                    "media_upload": 0,
+                                    "media_upload": 1,
                                     "delay": 0
                                 }
                             ]
@@ -657,5 +657,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1573546017
+    "modified": 1574759891
 }
