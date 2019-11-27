@@ -16,7 +16,7 @@ $phone = get_field('company_phone', 'options');
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary_navigation" aria-controls="primary_navigation" aria-expanded="false" aria-label="<?php _e('Toggle navigation','imaga'); ?>">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="primary_navigation" class="collapse navbar-collapse navbar-toggle flex-wrap">
+      <div id="primary_navigation" class="collapse navbar-collapse navbar-toggle flex-wrap mt-3 mt-md-0">
         <?php
         // Hoofd menu
         wp_nav_menu(

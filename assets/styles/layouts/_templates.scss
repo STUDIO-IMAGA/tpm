@@ -336,6 +336,33 @@
       }
     }
   }
+  .single-market-specific-solution{
+    section{
+      &#featured-projects{
+        .slick-featured-projects-captions{
+          right: -10px;
+          bottom: 0px;
+          width: 430px;
+          height: 200px;
+          &:before{
+            right: -48px;
+            border-top: 200px solid rgba($blue, .8);
+            border-right: 48px solid transparent;
+          }
+          .project-description{
+            padding-top: 18px;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 30px;
+          }
+          .slick-dots{
+            bottom: 20px;
+            padding-left: 18px;
+          }
+        }
+      }
+    }
+  }
 }
 @include media-breakpoint-down(md){
   .market-specific-solutions{
@@ -372,6 +399,41 @@
         padding-top: 0rem;
         padding-bottom: 2rem;
         border: none;
+      }
+    }
+  }
+  .single-market-specific-solution{
+    section{
+      &#featured-projects{
+        .slick-featured-projects{
+          .featured-item{
+            .project-image{
+              img{
+                border-radius: 3px 3px 0px 0px;
+              }
+            }
+          }
+        }
+        .slick-featured-projects-captions{
+          position: relative;
+          width: 100%;
+          height: auto;
+          right: 0;
+          border-radius: 0px 0px 3px 3px;
+          &:before{
+            display: none;
+          }
+          .project-description{
+            padding-top: 18px;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 50px;
+          }
+          .slick-dots{
+            bottom: 20px;
+            padding-left: 18px;
+          }
+        }
       }
     }
   }

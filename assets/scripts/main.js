@@ -81,6 +81,7 @@
           swipeToSlide: true,
           slidesToShow: 1,
           fade: true,
+          adaptiveHeight: true,
           asNavFor: '.slick-featured-projects-captions',
         });
         $(".slick-featured-projects-captions").slick({

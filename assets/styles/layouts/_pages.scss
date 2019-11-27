@@ -433,3 +433,30 @@ section{
     }
   }
 }
+@include media-breakpoint-down(sm){
+  section{
+    &.content-tabs{
+      .tabs-nav{
+        .nav-item{
+          width: 100%;
+        }
+      }
+    }
+    &.gallery-icons{
+      .slick-gallery{
+        margin-bottom: 20px;
+        .slick-dots{
+          bottom: -34px;
+          right: 0px;
+        }
+      }
+    }
+    &.projects{
+      .slick-projecten{
+        .slick-slide:first-of-type{
+          width:20px;
+        }
+      }
+    }
+  }
+}

@@ -208,6 +208,8 @@ gulp.task('clean', require('del').bind(null, [path.dist, 'tpm/**']));
 
 gulp.task('watch', function() {
   browserSync.init({
+    watch: true,
+    injectChanges: true,
     files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
     snippetOptions: {
@@ -215,11 +217,11 @@ gulp.task('watch', function() {
       blacklist: ['/wp-admin/**']
     }
   });
-  gulp.watch([path.source + 'styles/**/*'], ['styles']);
-  gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
-  gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
-  gulp.watch([path.source + 'images/**/*'], ['images']);
-  gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
+  gulp.watch([path.source + 'styles/**/*'], ['styles']).on('change', browserSync.reload);
+  gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']).on('change', browserSync.reload);
+  gulp.watch([path.source + 'fonts/**/*'], ['fonts']).on('change', browserSync.reload);
+  gulp.watch([path.source + 'images/**/*'], ['images']).on('change', browserSync.reload);
+  gulp.watch(['bower.json', 'assets/manifest.json'], ['build']).on('change', browserSync.reload);
 });
 
 gulp.task('build', function(callback) {

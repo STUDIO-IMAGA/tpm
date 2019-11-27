@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10">
-        <div class="row align-items-center pt-3 py-md-6">
+        <div class="row align-items-center pt-5 pt-md-3 py-md-6">
           <div class="col-12 col-md-6 col-lg-5 text-white col-arrow-right">
             <h3 class="text-white"><?php echo $callout['title_left']; ?></h3>
             <?php echo $callout['content_left']; ?>

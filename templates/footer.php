@@ -10,7 +10,7 @@ use IMAGA\Theme\Bootstrap_Walker;
     <div class="row justify-content-center">
       <div class="col-12 col-md-10">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3">
             <h6><?php echo wp_get_nav_menu_name('footer_nav_1'); ?></h6>
             <div class="seperator"></div>
             <?php
@@ -25,7 +25,7 @@ use IMAGA\Theme\Bootstrap_Walker;
             );
             ?>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3">
             <h6><?php echo wp_get_nav_menu_name('footer_nav_2'); ?></h6>
             <div class="seperator"></div>
             <?php
@@ -40,7 +40,7 @@ use IMAGA\Theme\Bootstrap_Walker;
             );
             ?>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-4 col-sm-6 col-md-4 col-lg-3 mt-4 mt-md-0">
             <h6><?php echo wp_get_nav_menu_name('footer_nav_3'); ?></h6>
             <div class="seperator"></div>
             <?php
@@ -55,7 +55,7 @@ use IMAGA\Theme\Bootstrap_Walker;
             );
             ?>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-8 col-sm-6 col-md-4 col-lg-3 mt-4 mt-md-0">
             <h6><?php echo wp_get_nav_menu_name('footer_nav_4'); ?></h6>
             <div class="seperator"></div>
             <?php
