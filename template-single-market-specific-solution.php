@@ -14,7 +14,7 @@ use IMAGA\Theme\Assets;
 
   <section id="header">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center px-sm-3 px-md-4 px-lg-5 px-xl-6">
         <div class="col-12 col-md-6">
           <div class="content text-white py-md-5">
             <h5 class="text-blue-light m-0">Market specific solution</h5>

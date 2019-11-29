@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row align-items-center">
         <?php foreach( $images as $image ): ?>
-          <div class="col text-center py-5">
+          <div class="col-6 col-sm text-center py-5">
             <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
           </div>
         <?php endforeach; ?>

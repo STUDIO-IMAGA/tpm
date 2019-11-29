@@ -7,7 +7,7 @@
       <div class="col-12 col-md-8 py-4">
         <div class="row<?php echo $reverse;?>">
           <div class="col-8 pt-4">
-            <h3><?php the_sub_field('title'); ?> <span><?php the_sub_field('job_title'); ?></span></h3>
+            <h3><?php the_sub_field('title'); ?> <span class="mt-1"><?php the_sub_field('job_title'); ?></span></h3>
             <?php the_sub_field('content'); ?>
           </div>
           <div class="col-4 p-4">

@@ -1,6 +1,7 @@
 .home,
 .archive{
   #header{
+    overflow: hidden;
     @extend .bg-gray-300;
     @extend .bg-grid;
     .content{
@@ -60,6 +61,7 @@
     background-repeat: no-repeat;
     background-size: cover, contain, cover;
     background-blend-mode: normal, overlay, normal;
+    overflow: hidden;
     .content{
       position: relative;
       color: $white;
@@ -89,7 +91,8 @@
   }
 }
 @include media-breakpoint-down(sm){
-  .home{
+  .home,
+  .archive{
     #header{
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -143,6 +146,18 @@
           &.seperator{
             display: none;
           }
+        }
+      }
+    }
+  }
+  .page:not(.home),
+  .single:not(.home){
+    #header{
+      .content{
+        &:after{
+          right: -200vw;
+          transform: skew(0deg);
+          z-index: -1;
         }
       }
     }
