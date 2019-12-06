@@ -42,13 +42,6 @@
   }
 }
 .single-market-specific-solution{
-  #header{
-    .content{
-      h5{
-        font-family: 'Prompt', sans-serif;
-      }
-    }
-  }
   section{
     &.callout-small{
       position: relative;
@@ -164,7 +157,6 @@
           display: block;
           text-decoration: none;
           font-size: 2rem;
-          font-family: 'Prompt', sans-serif;
           font-weight: 600;
           line-height: 1.2;
           color: $blue;

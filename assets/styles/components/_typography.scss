@@ -1,3 +1,6 @@
+h2{
+  font-weight: 900;
+}
 a:not(.btn):not(.nav-link){
   text-decoration: underline;
 }
@@ -27,12 +30,4 @@ a:not(.btn):not(.nav-link){
       display: inline-block;
     }
   }
-}
-@include media-breakpoint-up(sm) {
-}
-@include media-breakpoint-up(md) {
-}
-@include media-breakpoint-up(lg) {
-}
-@include media-breakpoint-up(xl) {
 }

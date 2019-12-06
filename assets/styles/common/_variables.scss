@@ -136,7 +136,7 @@ $link-decoration:                   none; // it includes buttons and nav links
 $link-hover-color:                  darken($link-color, 15%);
 $link-hover-decoration:             underline;
 
-$font-family-sans-serif:            'Heebo', sans-serif;
+$font-family-sans-serif:            'Lato', sans-serif;
 $font-size-base:                    1rem; // Assumes the browser default, typically `16px`
 
 $font-weight-lighter:               lighter;
@@ -147,7 +147,7 @@ $font-weight-bolder:                700;
 
 $line-height-base:                  1.6;
 
-$headings-font-family:              'Prompt', sans-serif;
+$headings-font-family:              $font-family-sans-serif;
 $headings-margin-bottom:            $spacer;
 $headings-font-weight:              600;
 $headings-line-height:              1.2;
@@ -202,7 +202,7 @@ $input-focus-border-color:          $blue-light;
 $input-btn-line-height:             1;
 $input-btn-padding-y:               1rem;
 $input-btn-padding-x:               1.6rem;
-$input-btn-font-family:             'Heebo', sans-serif;
+$input-btn-font-family:             $font-family-sans-serif;
 
 $input-btn-focus-width:             0px;
 $input-btn-focus-color:             transparent;

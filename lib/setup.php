@@ -89,7 +89,7 @@ add_action('acf/init', __NAMESPACE__ . '\\add_acf_google_maps_key');
 * Add Google Fonts
 */
 function add_google_fonts() {
-  wp_enqueue_style( 'imaga/google-fonts', 'http://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Prompt:300,400,500,600,700|Roboto+Mono:400,700&display=swap');
+  wp_enqueue_style( 'imaga/google-fonts', 'http://fonts.googleapis.com/css?family=Lato:400,900&display=swap');
 }
 add_action( 'wp_head', __NAMESPACE__ . '\\add_google_fonts' , 1);
 

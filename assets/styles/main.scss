@@ -11,12 +11,11 @@ $fa-font-path: "../fonts";
 
 
 @import "components/backgrounds";
-@import "components/forms";
-@import "components/wp-classes";
-@import "components/typography";
 @import "components/buttons";
 @import "components/grid";
 @import "components/lightbox";
+@import "components/typography";
+@import "components/wp-classes";
 
 @import "layouts/header";
 @import "layouts/navigation";

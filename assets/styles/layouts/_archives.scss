@@ -34,7 +34,6 @@
         }
       }
       &-titel{
-        font-family: 'Roboto Mono', sans-serif;
         color: $white;
         &.energy:after{
           position: absolute;
@@ -70,20 +69,6 @@
       &-excerpt{
         color: $white;
       }
-      // &:after{
-      //   position: absolute;
-      //   top:0;
-      //   right:0;
-      //   left:0;
-      //   bottom: 0;
-      //   content:'';
-      //   transition: all .3s ease;
-      //   background-color: rgba($blue, .6);
-      //   z-index: 1;
-      // }
-      // &:hover:after{
-      //   background-color: rgba($blue, .4)
-      // }
     }
   }
 }
