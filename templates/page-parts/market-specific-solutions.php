@@ -12,7 +12,7 @@
               <div class="gallery-item">
                 <img src="<?php echo esc_url($image[0]); ?>" alt="uitgelichte '<?php echo $post['sector']; ?>' market afbeelding">
                 <div class="title">
-                  Bekijk projecten in <a href="/archive/<?php echo $post['sector']; ?>"><?php echo $post['sector']; ?></a>
+                  Bekijk projecten in <a href="<?php echo esc_url( get_bloginfo('url') ); ?>/archive/<?php echo $post['sector']; ?>"><?php echo $post['sector']; ?></a>
                 </div>
               </div>
             <?php endforeach; ?>
@@ -24,13 +24,13 @@
         <h4>Ontdek onze Market Specific Solutions</h4>
         <div class="row justify-content-center text-center icons">
           <div class="col-4 icon energy">
-            <a class="link" href="/market-specific-solutions/energy">energy</a>
+            <a class="link" href="<?php echo esc_url( get_bloginfo('url') ); ?>/energy">energy</a>
           </div>
           <div class="col-4 icon food">
-            <a class="link" href="/market-specific-solutions/food">food</a>
+            <a class="link" href="<?php echo esc_url( get_bloginfo('url') ); ?>/food">food</a>
           </div>
           <div class="col-4 icon health">
-            <a class="link" href="/market-specific-solutions/health">health</a>
+            <a class="link" href="<?php echo esc_url( get_bloginfo('url') ); ?>/health">health</a>
           </div>
         </div>
       </div>

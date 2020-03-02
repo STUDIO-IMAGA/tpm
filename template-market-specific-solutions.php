@@ -28,7 +28,7 @@ use IMAGA\Theme\Assets;
         <div class="col-12 col-md col-lg-3">
           <h4 class="m-0">Selecteer één van<br/> onze market specific<br/> solutions</h4>
         </div>
-        <a class="col-4 col-md market-solution-type energy" href="/energy">
+        <a class="col-4 col-md market-solution-type energy" href="<?php echo get_bloginfo( 'url' )?>/energy">
           <span class="separator d-none d-md-block" aria-hidden="true">
             <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon stroke-linecap="square" points="-20,-20 80,50 -20,120" stroke-width="4"></polygon>
@@ -40,14 +40,14 @@ use IMAGA\Theme\Assets;
             </div>
           </div>
         </a>
-        <a class="col-4 col-md market-solution-type food" href="/food">
+        <a class="col-4 col-md market-solution-type food" href="<?php echo get_bloginfo( 'url' )?>/food">
           <div class="row align-items-center">
             <div class="col-12 p-0">
               <h3>food</h3>
             </div>
           </div>
         </a>
-        <a class="col-4 col-md market-solution-type health" href="/health">
+        <a class="col-4 col-md market-solution-type health" href="<?php echo get_bloginfo( 'url' )?>/health">
           <div class="row align-items-center">
             <div class="col-12 p-0">
               <h3>health</h3>
